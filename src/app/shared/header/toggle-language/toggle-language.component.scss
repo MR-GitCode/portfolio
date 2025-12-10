@@ -1,0 +1,42 @@
+.toggle-slider-language{
+    width: 105px;
+    height: 35px;
+    display: flex;
+    padding-right: 72px;
+    align-items: center;
+    gap: 4px;
+    span{
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+}
+
+.switch {
+    position: relative;
+    width: 32px;
+    height: 8px;
+    background-color: #F87A55;
+    border: solid 1px #F8F9FA;
+    border-radius: 30px;
+    overflow: visible;  
+}
+
+.slider {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #3355FF;
+    border: solid 1px #F8F9FA;
+    border-radius: 30px;
+    top: -4px;
+    left: -2px;
+}
+
+.inactive {
+    color: #ffffff;
+}
+
+.active {
+    color: #ff8a65;
+}
