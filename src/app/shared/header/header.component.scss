@@ -1,0 +1,16 @@
+header{
+    height: 80px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 72px;
+    padding-right: 72px;
+    position: absolute;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

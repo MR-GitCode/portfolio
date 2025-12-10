@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: 'Bricolage';
+    src: url('/assets/fonts/bricolage_grotesque/BricolageGrotesque-VariableFont.ttf') format('truetype-variations');
+}
+
+*{
+    margin: 0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    font-family: 'Bricolage', sans-serif;
+}
