@@ -40,3 +40,44 @@
 .active {
     color: #ff8a65;
 }
+
+.span-container{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url('/assets/00_hand-drawn-lines/00_Header/Toggle.png');
+        width: 32px;
+        height: 32px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        animation-fill-mode: forwards !important;
+        clip-path: inset(100% 0 0 100%);
+    }
+}
+
+#label-de{
+    &::after {
+        transform: rotate(180deg);
+    }
+    &:hover::after {
+        animation: drawDiagonal 0.25s;
+    }
+}
+
+#label-en{
+    &:hover::after {
+        animation: drawDiagonal 0.25s;
+    }
+}
+
+@keyframes drawDiagonal {
+    from { clip-path: inset(100% 0 0 100%); }
+    to   { clip-path: inset(0 0 0 0); }
+}
