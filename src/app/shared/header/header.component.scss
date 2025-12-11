@@ -1,3 +1,5 @@
+@import '../../../styles/global.styles';
+
 header{
     height: 80px;
     width: 100%;
@@ -8,8 +10,9 @@ header{
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    color: #F8F9FA;
+    color: $white;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 .logo{

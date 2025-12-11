@@ -1,3 +1,5 @@
+@import '../../styles/global.styles';
+
 .section-bg{
     background-image: url('/assets/01_background/01_Hero.png');
     background-size: cover;
@@ -11,9 +13,7 @@
     height: 100vh;
     width: 100%;
     max-width: 1440px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     box-sizing: border-box;
 }
 
@@ -21,4 +21,57 @@
     position: absolute;
     left: 72px;
     bottom: 72px;
+}
+
+.greeting-message {
+    position: relative;
+    margin: 0;
+    border: 1px solid $white;
+    border-radius: 100px;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 0 24px;
+    width: 100px;
+    height: 40px;
+    cursor: default;
+    color: $white;
+    animation: bounceOut 0.5s ease-out forwards;
+}
+
+.text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    transition: opacity 0.3s ease;
+}
+
+.text-2 {
+    opacity: 0;  
+}
+
+.greeting-message:hover {
+    animation: bounceIn 0.5s ease-out forwards;
+    background-color: $blue;
+}
+
+.greeting-message:hover .text-1 {
+    opacity: 0;
+}
+
+.greeting-message:hover .text-2 {
+    opacity: 1;
+}
+
+@keyframes bounceIn {
+    0%   { width: 100px; }
+    70%  { width: 170px; }  
+    100% { width: 160px; }
+}
+
+@keyframes bounceOut {
+    0%   { width: 160px; }
+    70%  { width: 90px; }
+    100% { width: 100px; }
 }

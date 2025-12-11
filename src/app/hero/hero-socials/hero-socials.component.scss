@@ -1,23 +1,24 @@
+@import '../../../styles/global.styles';
+
 .socials-container{
     height: 136px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     >div{
+        @include flex-center;
         position: relative;
         overflow: hidden;
         width: 40px;
         height: 40px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: solid 1px #F8F9FA;
+        
+        border: solid 1px $white;
         border-radius: 50%;
         cursor: pointer; 
         img, a {
             width: 32px;
             height: 32px;
-            // position: relative;
+            position: relative;
             z-index: 2;
         }
         &::after {
@@ -25,7 +26,7 @@
             position: absolute;
             inset: 0;
             border-radius: 50%;
-            background-color: #1073EA;
+            background-color: $blue;
             transform: scale(0);
             transition: transform 0.3s ease-out;
             z-index: 1;

@@ -1,0 +1,11 @@
+$white: #F8F9FA;
+$black: #0E1013;
+$yellow: #F7C518;
+$blue: #3355FF;
+$orange: #F87A55;
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

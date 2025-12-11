@@ -1,3 +1,5 @@
+@import '../../../../styles/global.styles';
+
 .toggle-slider-language{
     width: 105px;
     height: 35px;
@@ -15,8 +17,8 @@
     position: relative;
     width: 32px;
     height: 8px;
-    background-color: #F87A55;
-    border: solid 1px #F8F9FA;
+    background-color: $orange;
+    border: solid 1px $white;
     border-radius: 30px;
     overflow: visible;  
 }
@@ -25,28 +27,26 @@
     position: absolute;
     width: 16px;
     height: 16px;
-    background-color: #3355FF;
-    border: solid 1px #F8F9FA;
+    background-color: $blue;
+    border: solid 1px $white;
     border-radius: 30px;
     top: -4px;
     left: -2px;
 }
 
 .inactive {
-    color: #ffffff;
+    color: $white;
 }
 
 .active {
-    color: #ff8a65;
+    color: $orange;
 }
 
 .span-container{
     position: relative;
     width: 32px;
     height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     cursor: pointer;
     &::after {
         content: "";
