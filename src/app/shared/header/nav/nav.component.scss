@@ -2,6 +2,7 @@
 nav{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     width: 800px;
     a{
        text-decoration: none;
@@ -9,4 +10,79 @@ nav{
        font-weight: 800;
        color: #F8F9FA;
     }
+}
+
+.link-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 45px;
+  width: 110px;
+  cursor: pointer;
+    &::after {
+      content: "";
+      position: absolute;
+      background-size: cover;
+      background-repeat: no-repeat;
+      clip-path: inset(100% 0 0 0);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation-fill-mode: forwards !important;   
+    }
+}
+
+#about-me{
+  &::after {
+    background-image: url('/assets/00_hand-drawn-lines/00_Header/1.png');
+    width: 105px;
+    height: 42px;
+  }
+  &:hover::after {
+    animation: drawTopToBottom 0.25s;
+  }
+}
+
+#skills{
+  &::after{
+    background-image: url('/assets/00_hand-drawn-lines/00_Header/2.png');
+    width: 68px;
+    height: 42px;
+  }
+  &:hover::after {
+    animation: drawLeftToRight 0.25s;
+  }
+}
+
+#projects{
+  &::after{
+    background-image: url('/assets/00_hand-drawn-lines/00_Header/4.png');
+    width: 105px;
+    height: 42px;
+  }
+  &:hover::after {
+    animation: drawLeftToRight 0.25s;
+  }
+}
+
+#contacts{
+  &::after{
+    background-image: url('/assets/00_hand-drawn-lines/00_Header/3.png');
+    width: 90px;
+    height: 42px;
+  }
+  &:hover::after {
+    animation: drawLeftToRight 0.25s;
+  }
+}
+
+@keyframes drawTopToBottom {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes drawLeftToRight {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
 }
