@@ -1,13 +1,15 @@
 header{
     height: 80px;
-    width: 100vw;
+    width: 100%;
+    max-width: 1440px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 72px;
-    padding-right: 72px;
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     color: #F8F9FA;
+    box-sizing: border-box;
 }
 
 .logo{

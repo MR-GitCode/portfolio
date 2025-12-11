@@ -1,0 +1,38 @@
+.socials-container{
+    height: 136px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    >div{
+        position: relative;
+        overflow: hidden;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px #F8F9FA;
+        border-radius: 50%;
+        cursor: pointer; 
+        img, a {
+            width: 32px;
+            height: 32px;
+            // position: relative;
+            z-index: 2;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background-color: #1073EA;
+            transform: scale(0);
+            transition: transform 0.3s ease-out;
+            z-index: 1;
+        }
+
+        &:hover::after {
+            transform: scale(1);
+        }
+    }
+}
