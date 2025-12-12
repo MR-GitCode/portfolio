@@ -6,6 +6,7 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+        
 }
 
 .hero{
@@ -15,6 +16,16 @@
     max-width: 1440px;
     @include flex-center;
     box-sizing: border-box;
+}
+
+.hero-content{
+    position: relative;
+    overflow: visible;
+}
+
+.bt-contact{
+    position: absolute;
+    right: 0;
 }
 
 .social-icons{

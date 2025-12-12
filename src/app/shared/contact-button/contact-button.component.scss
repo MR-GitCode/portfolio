@@ -1,0 +1,25 @@
+@import '../../../styles/global.styles';
+
+.contact-bt{
+    margin: 4px;
+    border: solid 1px $white;
+    border-radius: 100px;
+    height: 40px;
+    @include flex-center;
+    cursor: pointer;
+    box-shadow: 2px 4px 0px 0px #F8F9FA;
+    p{
+        font-size: 18px;
+        font-weight: 500;
+        color: $white;
+        padding: 0 24px;
+    }
+    &:hover{
+        background-color: $orange;
+    }
+    &:active {
+        background-color: $orange;
+        box-shadow: 0 0 0 0;
+        transform: translateY(4px);
+    }
+}
