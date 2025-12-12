@@ -1,7 +1,20 @@
 @import '../../../styles/global.styles';
 
+.title-container{
+    display: flex;
+    flex-direction: column;
+    width: 100% !important;
+    h1:first-child{
+        align-self: flex-start;
+    }
+    h1:last-child{
+       align-self: flex-end; 
+    }
+}
+
 h1{
     font-size: 128px;
     font-weight: 700;
     color: $white;
+    margin: 0;
 }

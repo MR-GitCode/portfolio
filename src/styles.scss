@@ -3,9 +3,31 @@
     src: url('/assets/fonts/bricolage_grotesque/BricolageGrotesque-VariableFont.ttf') format('truetype-variations');
 }
 
-*{
+@font-face {
+    font-family: 'Kalam';
+    src: url('/assets/fonts/Kalam/Kalam-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kalam';
+    src: url('/assets/fonts/Kalam/Kalam-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kalam';
+    src: url('/assets/fonts/Kalam/Kalam-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+html, body{
     margin: 0 auto;
     overflow: hidden;
     scroll-behavior: smooth;
     font-family: 'Bricolage', sans-serif;
+    box-sizing: border-box;
 }
