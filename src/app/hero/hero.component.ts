@@ -15,5 +15,5 @@ import { ContactButtonComponent } from '../shared/contact-button/contact-button.
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-
+  // textBtn: string  = 'Get in Touch'
 }
