@@ -11,7 +11,7 @@
     width: 100%;
     @include flex-center;
     flex-direction: column;
-    margin: 0 120px;
+    @include margin-left-right;
 }
 
 .headline-container{

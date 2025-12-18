@@ -12,11 +12,12 @@
 }
 
 .skills-content{
-    margin: 150px;
+    margin-top: 150px;
+    @include margin-left-right;
 }
 
 .skills-container{
-    width: 1200px;
+    // width: 1200px;
     height: 460px;
 }
 

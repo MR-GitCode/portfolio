@@ -12,10 +12,10 @@
 }
 
 .projects-overview-container{
-    width: 100%;
     display: flex;
     justify-content: center;
     gap: 50px;
+    @include margin-left-right;
 }
 
 .headline-container{

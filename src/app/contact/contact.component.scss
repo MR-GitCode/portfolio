@@ -1,0 +1,77 @@
+@import '../../styles/global.styles';
+
+.section-bg{
+    background-image: url('/assets/img/01_background/06_Contact.png');
+    background-size: cover;
+    // background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    @include flex-center; 
+}
+
+.contact-content{
+    width: 100%;
+    @include flex-center;
+    // flex-direction: column;
+    margin: 0 120px;
+    margin-top: 50px;
+    color: $white;
+}
+
+.headline-container{
+    width: 560px;
+    height: 457px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 48px;
+    h1{
+        font-size: 64px;
+        font-weight: 700;
+        margin: 0;
+        line-height: 100%;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0;
+    }
+    img{
+        width: 280px;
+    }
+}
+
+.headline{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+.contact-sticker{
+    position: relative;
+    color: $black;
+    font-size: 12px;
+    font-weight: 700;
+    // width: 168px;
+    // height: 168px;
+    img{
+        width: 168px;
+        height: 168px;
+    }
+    .sticker-content{
+        width: 168px;
+        height: 168px;
+        position: absolute;
+        @include flex-center;
+        img{
+            width: 54px;
+            height: 56px;
+        }
+        .sticker-text{
+            position: absolute;
+        }
+    }
+}

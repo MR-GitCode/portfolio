@@ -9,3 +9,7 @@ $orange: #F87A55;
     justify-content: center;
     align-items: center;
 }
+
+@mixin margin-left-right{
+    margin: 0 clamp(16px, 8vw, 120px);
+}
