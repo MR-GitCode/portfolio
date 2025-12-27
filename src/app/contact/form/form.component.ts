@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { ContactButtonComponent } from '../../shared/contact-button/contact-button.component';
 
 @Component({
   selector: 'app-form',
   standalone: true,
   imports: [
     FormsModule,
+    ContactButtonComponent,
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'

@@ -1,0 +1,33 @@
+@import '../../../styles/global.styles';
+
+footer{
+    height: 132px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    z-index: 300;
+    padding-bottom: 25px;
+}
+
+.footer-content{
+    height: 100%;
+    margin: 0 120px;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.copyright-info{
+    display: flex;
+    flex-direction: column; 
+    gap: 16px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}

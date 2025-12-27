@@ -1,12 +1,9 @@
 @import '../../styles/global.styles';
 
 .section-bg{
-    background-image: url('/assets/img/01_background/06_Contact.png');
-    background-size: cover;
-    // background-position: center;
-    background-repeat: no-repeat;
     width: 100%;
     @include flex-center; 
+    position: relative;
 }
 
 .contact-content{
@@ -75,5 +72,14 @@
             height: 190px;
             transform: translateX(2%);
         }
+    }
+}
+
+.form-container{
+    position: relative;
+    .sticker-container{
+        position: absolute;
+        right: 0;
+        z-index: 100;
     }
 }

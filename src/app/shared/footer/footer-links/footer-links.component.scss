@@ -1,0 +1,104 @@
+@import '../../../../styles/global.styles';
+
+.footer-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 42px;
+    a{
+        text-decoration: none;
+        color: $white;
+        font-size: 18px;
+        font-weight: 500;   
+    }
+}
+
+.link-bg{
+    position: relative;
+    height: 40px;
+    @include flex-center;
+    padding: 0 24px;
+    &:hover{
+        background-color: $blue;
+        border-radius: 100px;
+    }
+}
+
+.icon-roll::before{
+    content: "";
+    position: absolute;
+    top: -32px;                 /* oberhalb des Buttons */
+    left: 40%;                /* startet links außerhalb */
+    width: 32px;
+    height: 32px;
+
+    background-image: url('/assets/icons/socials/git_hub.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    
+    opacity: 0;                 /* zuerst unsichtbar */
+    transform: translateX(0);
+}
+
+.icon-roll:hover::before{
+    animation: roll-right 0.5s ease-out forwards;
+}
+
+/* Animation von links → rechts */
+@keyframes roll-right{
+    0%{
+        transform: translateX(0) rotate(180deg);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0.4; /* sanft auftauchen */
+    }
+    80% {
+        opacity: 1;
+        transform: translateX(110%) rotate(380deg);  /* fast ganz rechts */
+    }
+
+    90% {
+        transform: translateX(95%) rotate(350deg);   /* ➜ kleiner Overshoot */
+    }
+
+    100% {
+        transform: translateX(100%) rotate(360deg);   /* ➜ springt zurück */
+    }
+}
+
+
+.link-container {
+    position: relative;
+    @include flex-center;
+    height: 45px;
+    width: 110px;
+    cursor: pointer;
+        &::after {
+        content: "";
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: inset(100% 0 0 0);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-fill-mode: forwards !important;   
+        }
+}
+
+#legal-notice{
+  &::after{
+    background-image: url('/assets/img/00_hand-drawn-lines/00_Header/3.png');
+    width: 90px;
+    height: 42px;
+  }
+  &:hover::after {
+    animation: drawLeftToRight 0.25s;
+  }
+}
+
+@keyframes drawLeftToRight {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
