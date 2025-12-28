@@ -1,0 +1,50 @@
+@mixin icon-roll-animation(
+  $forward-name: roll-right,
+  $backward-name: roll-left,
+  $duration: 0.5s
+) {
+  &.is-hovered::before {
+    animation: #{$forward-name} $duration ease-out forwards;
+  }
+
+  &.is-leaving::before {
+    animation: #{$backward-name} $duration ease-out forwards;
+  }
+}
+
+/* hin mit Bounce */
+@keyframes roll-right{
+    0%{
+        transform: translateX(0) rotate(180deg);
+        opacity: 0;
+    }
+    30%{
+        opacity: 0.4;
+    }
+    80%{
+        opacity: 1;
+        transform: translateX(105%) rotate(370deg);
+    }
+    90%{
+        transform: translateX(95%) rotate(350deg);
+    }
+    100%{
+        transform: translateX(100%) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+/* zurück mit kleinem Bounce und Fade-out */
+@keyframes roll-left{
+    0%{
+        transform: translateX(100%) rotate(360deg);
+        opacity: 1;
+    }
+    20%{
+        transform: translateX(110%) rotate(380deg);
+    }
+    100%{
+        transform: translateX(0) rotate(180deg);
+        opacity: 0;
+    }
+}
