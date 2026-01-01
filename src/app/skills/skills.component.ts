@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from './skill-icon/skill-icon.component';
-import { collection, collectionData, Firestore } from '@angular/fire/firestore';
+import { collection, collectionData, Firestore, orderBy, query } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { Skill } from '../interfaces/skill.interface';
 import { AsyncPipe, NgFor } from '@angular/common';
@@ -19,8 +19,7 @@ import { AsyncPipe, NgFor } from '@angular/common';
 export class SkillsComponent {
   private readonly firestore = inject(Firestore);
   readonly skills$: Observable<Skill[]> = collectionData(
-    collection(this.firestore, 'skills'),
-    { idField: 'id' }
+    query(collection(this.firestore, 'skills'), orderBy('order'))
   ) as Observable<Skill[]>;
 }
   

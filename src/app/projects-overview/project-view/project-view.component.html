@@ -1,12 +1,12 @@
-<section class="project-container">
+<section class="project-container padding-bottom">
     <div class="projects-link-container">
-        <img class="img-project" src="/assets/img/04_projects_material/Laptop.png">
+        <img class="img-project" [src]="project.imgURL">
         <div class="bg-linear-gradient">
             <app-contact-button class="contact-btn" textBtn="Project details"></app-contact-button>  
         </div>
     </div>
     <div>
-        <h3>JOIN</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique iure voluptatibus fugiat magnam sit beatae atque nisi. Iste, praesentium eius quaerat saepe delectus est reprehenderit. Odit nemo corporis commodi assumenda?</p>  
+        <h3>{{project.title}}</h3>
+        <p>{{project.description.de || project.description.en}}</p>  
     </div>
 </section>

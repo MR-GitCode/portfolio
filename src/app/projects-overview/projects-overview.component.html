@@ -9,7 +9,7 @@
             </div>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, pariatur! Assumenda, cumque dolorum? Ut, eum adipisci obcaecati quae, magni sint, nulla eaque sapiente esse doloremque in omnis. Tempore, nostrum doloremque.</p>
         </div>
-        <app-project-view></app-project-view>   
+        <app-project-view *ngFor="let project of projects$ | async" [project]="project"></app-project-view>   
     </div>
     
 </section>

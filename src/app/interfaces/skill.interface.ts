@@ -1,8 +1,5 @@
 export interface Skill {
-  name: {
-    de: string;
-    en: string;
-  };
+  name: string;
   imgURL: string;
   type?: 'skill' | 'interest';
   order?: number;

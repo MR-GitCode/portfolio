@@ -12,8 +12,10 @@
 }
 
 .skills-content{
-    margin-top: 150px;
-    @include margin-left-right;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    position: relative;
+    // @include margin-left-right;
 }
 
 .skills-container{
@@ -95,15 +97,18 @@
     @include flex-center;
     position: relative;
     .skill-icons{
+        max-width: 600px;
         display: flex;
         gap: 40px;
-       
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
 }
 
 .sticker-container{
     position: absolute;
-    right: 0;
+    right: -80px;
+    top: 40%;
     transform: rotate(8deg);
     img{
         width: 200px;

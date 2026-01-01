@@ -13,8 +13,9 @@
 
 .projects-overview-container{
     display: flex;
-    justify-content: center;
-    gap: 50px;
+    flex-wrap: wrap;
+    // justify-content: center;
+    gap: 40px;
     @include margin-left-right;
 }
 
