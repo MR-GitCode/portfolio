@@ -1,4 +1,4 @@
-<section class="section-bg">
+<section class="section-bg" id="skills-section">
     <div class="skills-content">
         <div class="headline-container">
             <div class="headline">
@@ -14,14 +14,7 @@
         </div>
         <div class="skills-container">
             <div class="skill-icons">
-                <div class="icon-container">
-                    <img src="/assets/icons/skills/frontend/HTML.svg" alt="HTML">
-                    <p>HTML</p>
-                </div>
-                <div class="icon-container">
-                    <img src="/assets/icons/skills/frontend/CSS.svg" alt="CSS">
-                    <p>CSS</p>
-                </div>
+                <app-skill-icon *ngFor="let skill of skills$ | async" [skill]="skill"></app-skill-icon>
             </div>
             <div class="sticker-container">
                 <div class="sticker-content">

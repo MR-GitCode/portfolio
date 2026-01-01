@@ -97,29 +97,7 @@
     .skill-icons{
         display: flex;
         gap: 40px;
-      .icon-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 4px;
-        img{
-            width: 72px;
-            height: 72px;
-            filter: grayscale(100%);
-            transition: transform 0.15s ease, filter 0.15s ease;
-
-            &:hover {
-                transform: scale(0.78);
-                filter: none;
-            }
-        }
-        p{
-            color: $white;
-            font-size: 18px;
-            font-weight: 400;
-            margin: 0;
-        }
-      }  
+       
     }
 }
 
@@ -130,8 +108,7 @@
     img{
         width: 200px;
         height: 200px;
-    }
-    
+    }   
 }
 
 .sticker-content{
