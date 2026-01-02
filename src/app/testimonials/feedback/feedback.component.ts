@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Testimonial } from '../../interfaces/testimonials.interface';
 
 @Component({
   selector: 'app-feedback',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './feedback.component.scss'
 })
 export class FeedbackComponent {
-
+  @Input() testimonial! : Testimonial;
 }

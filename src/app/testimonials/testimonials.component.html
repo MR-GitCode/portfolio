@@ -9,6 +9,8 @@
                 <h1>Colleagues' Thoughts</h1>
             </div>
         </div>
-        <app-feedback></app-feedback>
+        <div class="testimonials-cards">
+            <app-feedback *ngFor="let testimonial of testimonials$ | async; let i = index;" [testimonial]="testimonial" [ngStyle]="{position: 'absolute', 'left.px': i * 350, 'transform': 'rotate(' + (-4 + i * 4) + 'deg)'}" [ngClass]="['stack-' + i]"></app-feedback>    
+        </div>
     </div>
 </section>

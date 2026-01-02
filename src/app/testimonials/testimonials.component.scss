@@ -12,6 +12,42 @@
     @include flex-center;
     flex-direction: column;
     @include margin-left-right;
+    .testimonials-cards{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        position: relative;
+        justify-content: center;
+    }
+}
+
+.stack-0 { 
+    z-index: 3;
+    background-image: url('/assets/img/03_stickers/02_Testimonials/A.png');
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.stack-1 {
+    z-index: 2;
+    background-image: url('/assets/img/03_stickers/02_Testimonials/B.png');
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.stack-2 {
+    z-index: 1;
+    background-image: url('/assets/img/03_stickers/02_Testimonials/A.png');
+    border-radius: 4px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+app-feedback:hover {
+  z-index: 50 !important;
 }
 
 .headline-container{
