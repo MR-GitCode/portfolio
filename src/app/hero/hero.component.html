@@ -1,10 +1,10 @@
-<section class="section-bg" id="hero-section">
+<section class="section-bg" id="hero-section" *ngIf="heroContent$ | async as heroContent">
   <div class="hero">
         <div class="hero-content">
             <div class="greeting-container">
                 <div class="greeting-message icon-roll" appIconRoll>
-                    <p class="text text-1">Hello world</p>
-                    <p class="text text-2">I'M MICHAEL RING</p>
+                    <p class="text text-1">{{ heroContent.greeting[languageService.lang].text1 }}</p>
+                    <p class="text text-2">{{ heroContent.greeting[languageService.lang].text2 }}</p>
                 </div>   
             </div>
             
@@ -13,7 +13,7 @@
             </div>
             
             <div class="bt-contact">
-                <app-contact-button textBtn="Get in Touch"></app-contact-button>  
+                <app-contact-button textBtn="{{ heroContent.buttonText[languageService.lang] }}"></app-contact-button>  
             </div>
 
             <div class="polaroid-container">

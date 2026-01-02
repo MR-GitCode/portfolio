@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { Testimonial } from '../../interfaces/testimonials.interface';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-feedback',
@@ -10,4 +11,5 @@ import { Testimonial } from '../../interfaces/testimonials.interface';
 })
 export class FeedbackComponent {
   @Input() testimonial! : Testimonial;
+  languageService = inject(LanguageService);
 }

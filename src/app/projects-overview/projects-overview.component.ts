@@ -4,6 +4,7 @@ import { AsyncPipe, NgFor } from '@angular/common';
 import { Project } from '../interfaces/project.interface';
 import { Observable } from 'rxjs';
 import { collection, collectionData, Firestore, orderBy, query } from '@angular/fire/firestore';
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-projects-overview',
@@ -18,6 +19,7 @@ import { collection, collectionData, Firestore, orderBy, query } from '@angular/
 })
 export class ProjectsOverviewComponent {
   private readonly firestore = inject(Firestore);
+  languageService = inject(LanguageService);
   readonly projects$: Observable<Project[]> = collectionData(
     query(collection(this.firestore, 'projects'), orderBy('order'))
   ) as Observable<Project[]>;

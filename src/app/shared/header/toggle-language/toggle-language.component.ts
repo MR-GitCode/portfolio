@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Language, LanguageService } from '../../../services/language.service';
 
 @Component({
   selector: 'app-toggle-language',
@@ -10,13 +11,13 @@ import { Component, EventEmitter, Output } from '@angular/core';
   templateUrl: './toggle-language.component.html',
   styleUrl: './toggle-language.component.scss'
 })
-export class ToggleLanguageComponent {  
-  lang: 'en' | 'de' = 'de';
 
-  @Output() langChange = new EventEmitter<'en' | 'de'>();
+export class ToggleLanguageComponent {
+  private languageService = inject(LanguageService);
+  lang: Language = 'de';
 
-  select(lang: 'en' | 'de') {
-    this.lang = lang;
-    this.langChange.emit(lang);
+  select(lang: Language) {
+    this.languageService.lang = lang;
+    this.lang = lang;  
   }
 }

@@ -1,6 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { ContactButtonComponent } from '../../shared/contact-button/contact-button.component';
 import { Project } from '../../interfaces/project.interface';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-project-view',
@@ -13,4 +14,5 @@ import { Project } from '../../interfaces/project.interface';
 })
 export class ProjectViewComponent {
   @Input() project!: Project;
+  languageService = inject(LanguageService);
 }
