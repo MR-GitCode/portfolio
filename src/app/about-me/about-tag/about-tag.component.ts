@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-about-tag',
@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './about-tag.component.scss'
 })
 export class AboutTagComponent {
+  @Input() textBased: string = '';
 
+  @Input() textRelocate: string = '';
+
+  @Input() textRemote: string = '';
 }

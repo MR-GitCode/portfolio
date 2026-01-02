@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Skill } from '../../interfaces/skill.interface';
+import { Skills } from '../../interfaces/skills.interface';
 
 @Component({
   selector: 'app-skill-icon',
@@ -10,5 +10,5 @@ import { Skill } from '../../interfaces/skill.interface';
   styleUrl: './skill-icon.component.scss'
 })
 export class SkillIconComponent {
-  @Input() skill!: Skill;
+  @Input() skill!: Skills;
 }

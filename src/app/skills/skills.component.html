@@ -1,15 +1,15 @@
-<section class="section-bg" id="skills-section">
+<section class="section-bg" id="skills-section" *ngIf="skillContent$ | async as skillContent">
     <div class="skills-content">
         <div class="headline-container">
             <div class="headline">
-                <p>MY STACK</p>
+                <p>{{ skillContent.subtitle[languageService.lang] }}</p>
                 <div id="headline-drawline">
-                    <h1>Skill set</h1>
+                    <h1>{{ skillContent.title[languageService.lang] }}</h1>
                 </div>
             </div>
             <div class="paper-description">
                 <img src="/assets/img/02_ripped_paper/1.Skills description.png">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, pariatur! Assumenda, cumque dolorum? Ut, eum adipisci obcaecati quae, magni sint, nulla eaque sapiente esse doloremque in omnis. Tempore, nostrum doloremque.</p>
+                <p>{{ skillContent.text[languageService.lang] }}</p>
             </div>
         </div>
         <div class="skills-container">
