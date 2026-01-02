@@ -1,15 +1,13 @@
 <div class="toggle-slider-language">
-    <div id="label-en" class="span-container">
-      <span class="active">EN</span> 
+    <div id="label-en" class="span-container" (click)="select('en')">
+      <span [class.active]="lang === 'en'" [class.inactive]="lang !== 'en'">EN</span>
     </div>
     
-
     <div class="switch">
-      <div class="slider"></div>
+      <div class="slider" [ngStyle]="{ left: lang === 'en' ? '-2px' : '18px' }"></div>
     </div>
 
-    <div id="label-de" class="span-container">
-      <span class="inactive">DE</span>  
+    <div id="label-de" class="span-container" (click)="select('de')">
+      <span [class.active]="lang === 'de'" [class.inactive]="lang !== 'de'">DE</span> 
     </div>
-    
 </div>

@@ -15,7 +15,7 @@ import { ContactComponent } from './contact/contact.component';
   standalone: true,
   imports: [
     CommonModule,
-    RouterOutlet,
+    // RouterOutlet,
     HeaderComponent,
     HeroComponent,
     AboutMeComponent,
