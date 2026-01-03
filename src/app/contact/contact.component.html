@@ -1,11 +1,11 @@
-<section class="section-bg" id="contacts-section">
+<section class="section-bg" id="contacts-section" *ngIf="contactContent$ | async as contactContent">
     <div class="contact-content">
         <div class="headline-container">
             <div class="headline">
-                <p>CONTACT ME</p>
-                <h1>Ready to work together?</h1>
+                <p>{{ contactContent.subtitle[languageService.lang] }}</p>
+                <h1>{{ contactContent.title[languageService.lang] }}</h1>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur exercitationem omnis explicabo ratione illo quae recusandae officia. Sit consequuntur dicta vitae iusto autem quos voluptas, sunt, modi odit assumenda atque.</p>
+            <p>{{ contactContent.text[languageService.lang] }}</p>
             <img src="/assets/img/00_hand-drawn-lines/05_Contact/Color_option_1.png">
         </div>
         <div class="form-container">

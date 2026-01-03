@@ -1,12 +1,12 @@
-<section class="section-bg">
+<section class="section-bg" *ngIf="testimonialsContent$ | async as testimonialsContent">
     <div class="testimonials-content">
         <div class="headline-container">
             <div class="headline">
                 <div class="sub-headline">
                     <img src="/assets/img/00_hand-drawn-lines/04_Testimonials/Color_option_1.png">
-                    <p>IN THEIR WORDS:</p>  
+                    <p>{{ testimonialsContent.subtitle[languageService.lang] }}</p>  
                 </div>
-                <h1>Colleagues' Thoughts</h1>
+                <h1>{{ testimonialsContent.title[languageService.lang] }}</h1>
             </div>
         </div>
         <div class="testimonials-cards">
