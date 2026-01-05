@@ -24,6 +24,10 @@ footer{
     gap: 16px;
     font-size: 18px;
     font-weight: 700;
+    width: fit-content;
+    a{
+        width: fit-content;
+    }
 }
 
 .logo{

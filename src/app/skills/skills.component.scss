@@ -1,25 +1,20 @@
 @import '../../styles/global.styles';
 
 .section-bg{
-    // background-image: url('/assets/img/01_background/original_size/Skills_BG.png');
     background-image: url('/assets/img/01_background/03_Skills.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: fit-content;
+    height: 900px;
     @include flex-center; 
 }
 
 .skills-content{
-    margin-top: 50px;
-    margin-bottom: 80px;
     position: relative;
-    // @include margin-left-right;
 }
 
 .skills-container{
-    // width: 1200px;
     height: 460px;
 }
 
