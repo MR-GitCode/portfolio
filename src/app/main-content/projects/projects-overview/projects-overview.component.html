@@ -1,0 +1,16 @@
+<section class="section-bg" id="projectsoverview-section" *ngIf="projectsContent$ | async as projectsContent">
+    <div class="projects-overview-container">
+        <div class="headline-container">
+            <div class="headline">
+                <p>{{ projectsContent.subtitle[languageService.lang] }}</p>
+                <div id="headline-drawline">
+                    <h1>{{ projectsContent.title[languageService.lang] }}</h1>
+                </div>
+            </div>
+            <p>{{ projectsContent.text[languageService.lang] }}</p>
+        </div>
+        <app-project-view *ngFor="let project of projects$ | async" [project]="project"></app-project-view>   
+    </div>
+    
+</section>
+ 

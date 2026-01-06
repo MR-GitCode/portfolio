@@ -7,4 +7,5 @@ export interface Project {
     imgURL: string;
     demoURL: string;
     order?: number;
+    id: string;
 }

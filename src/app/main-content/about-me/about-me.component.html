@@ -1,0 +1,21 @@
+<section class="section-bg" id="about-me-section" *ngIf="aboutContent$ | async as aboutContent">
+    <div class="about-me-content">
+        <div class="tag-container">
+            <app-about-tag 
+                textBased = "{{ aboutContent.tags[languageService.lang].tag1 }}"
+                textRelocate = "{{ aboutContent.tags[languageService.lang].tag2 }}"
+                textRemote = "{{ aboutContent.tags[languageService.lang].tag3 }}"
+            ></app-about-tag>
+        </div>
+        <div class="about-me-info">
+            <p>{{ aboutContent.subtitle[languageService.lang] }}</p>
+            <div id="about-me-title">
+                <h1>{{ aboutContent.title[languageService.lang] }}</h1>  
+            </div>
+            <span>{{ aboutContent.text[languageService.lang] }}</span>
+            <div class="contact-bt">
+                <app-contact-button textBtn="{{ aboutContent.buttonText[languageService.lang] }}" urlBtn="{{ aboutContent.buttonURL}}"></app-contact-button>  
+            </div>
+        </div>
+    </div>
+</section>

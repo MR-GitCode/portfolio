@@ -2,7 +2,8 @@ export interface AboutContent {
     buttonText: {
         de: string;
         en: string;
-    }
+    };
+    buttonURL: string;
     subtitle: {
         de: string;
         en: string;

@@ -1,0 +1,35 @@
+<section class="section-bg" id="hero-section" *ngIf="heroContent$ | async as heroContent">
+  <div class="hero">
+        <div class="hero-content">
+            <div class="greeting-container">
+                <div class="greeting-message icon-roll" appIconRoll>
+                    <p class="text text-1">{{ heroContent.greeting[languageService.lang].text1 }}</p>
+                    <p class="text text-2">{{ heroContent.greeting[languageService.lang].text2 }}</p>
+                </div>   
+            </div>
+            
+            <div class="hero-title-container">
+                <app-hero-title ></app-hero-title>
+            </div>
+            
+            <div class="bt-contact">
+                <app-contact-button textBtn="{{ heroContent.buttonText[languageService.lang] }}" urlBtn="{{ heroContent.buttonURL}}"></app-contact-button>  
+            </div>
+
+            <div class="polaroid-container">
+                <div class="polaroid">
+                    <img class="default-polaroid" src="/assets/img/polaroid_foto_default.png">
+                    <img class="hover-polaroid" src="/assets/img/polaroid_foto_hover.png">
+                    <p class="default-name">Michael :)</p>
+                    <p class="hover-name">Michael :D</p>  
+                </div>
+            </div>
+            
+        </div>
+        <div class="social-icons">
+            <app-hero-socials></app-hero-socials>
+        </div> 
+    </div>  
+</section>
+
+

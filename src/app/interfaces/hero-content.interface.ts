@@ -3,6 +3,7 @@ export interface HeroContent {
         de: string;
         en: string;
     };
+    buttonURL: string;
     greeting: {
         de: {
             text1: string;

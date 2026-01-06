@@ -1,0 +1,142 @@
+@import '../../../styles/global.styles';
+
+.section-bg{
+    background-image: url('/assets/img/01_background/03_Skills.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 900px;
+    @include flex-center; 
+}
+
+.skills-content{
+    position: relative;
+}
+
+.skills-container{
+    height: 460px;
+}
+
+.headline-container{
+    width: 100%;
+    height: 144px;
+    display: flex;
+    gap: 48px;
+    color: $white;
+    h1{
+       font-size: 64px;
+       font-weight: 700;
+       margin: 0;
+       z-index: 4;
+    }
+    p{
+        font-size: 20px;
+        font-weight: 500;
+        margin: 0;
+        padding-right: 15px;
+    }
+}
+
+.headline{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#headline-drawline{
+    position: relative;
+    @include flex-center;
+    height: 80px;
+    width: 261px;
+    // pointer-events: none;
+    &::after {
+        background-image: url('/assets/img/00_hand-drawn-lines/02_Skills/color_option_1.png');
+        height: 80px;
+        width: 261px;
+        content: "";
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: inset(100% 0 0 0);
+        transform: scaleX(-1);
+        animation-fill-mode: forwards !important;  
+    }
+    &:hover::after {
+        animation: drawTopToBottom 0.25s;
+    }
+}
+
+@keyframes drawTopToBottom {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+.paper-description{
+    position: relative;
+    img{
+        width: 656px;
+        height: 144px;
+    }
+    p{
+        position: absolute;
+        font-size: 18px;
+        font-weight: 400;
+        color: $black;
+        top: 0;
+        padding: 32px;
+    }
+}
+
+.skills-container{
+    @include flex-center;
+    position: relative;
+    .skill-icons{
+        max-width: 600px;
+        display: flex;
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+.sticker-container{
+    position: absolute;
+    right: -80px;
+    top: 40%;
+    transform: rotate(8deg);
+    img{
+        width: 200px;
+        height: 200px;
+    }   
+}
+
+.sticker-content{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    @include flex-center;
+    cursor: pointer;
+    .sticker-text{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        img{
+            width: 51px;
+            height: 40px
+        };
+        p{
+            font-size: 40px;
+            font-weight: 400;
+            font-family: 'Kalam';
+            color: $white;
+            margin: 0;
+            font-family: Kalam;
+            line-height: 40px;
+            margin-block-start: 0;
+            margin-block-end: 0;
+        }
+    }
+}

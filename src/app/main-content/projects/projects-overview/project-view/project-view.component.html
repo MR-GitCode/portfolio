@@ -1,0 +1,12 @@
+<section class="project-container padding-bottom">
+    <div class="projects-link-container">
+        <img class="img-project" [src]="project.imgURL">
+        <div class="bg-linear-gradient">
+            <app-contact-button class="contact-btn" textBtn="Project details" (click)="openProjectDetails(project.id)"></app-contact-button>  
+        </div>
+    </div>
+    <div>
+        <h3>{{project.title}}</h3>
+        <p>{{project.description[languageService.lang]}}</p>  
+    </div>
+</section>

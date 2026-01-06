@@ -13,6 +13,8 @@ import { Component, Input } from '@angular/core';
 export class ContactButtonComponent {
   @Input() textBtn: string = '';
 
+  @Input() urlBtn: string = '';
+
   @Input() class = '';
 
   // @Input() URL = '';

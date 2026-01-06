@@ -1,0 +1,72 @@
+@import '../../../../styles/global.styles';
+
+.section-bg{
+    width: 100%;
+    max-width: 1440px;
+    height: fit-content;
+    margin: 0 auto;
+    padding-top: 100px;
+}
+
+.projects-overview-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    @include margin-left-right;
+}
+
+.headline-container{
+    width: 560px;
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    h1{
+        font-size: 64px;
+        font-weight: 700;
+        margin: 0;
+        z-index: 4;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0;
+        padding-left: 10px;
+    }
+}
+
+.headline{
+    display: flex;
+    flex-direction: column;
+    p{
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
+#headline-drawline{
+    position: relative;
+    @include flex-center;
+    height: 80px;
+    width: 261px;
+    // pointer-events: none;
+    &::after {
+        background-image: url('/assets/img/00_hand-drawn-lines/03_Portfolio/color_option_1.png');
+        height: 10px;
+        width: 261px;
+        content: "";
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        clip-path: inset(100% 0 0 0);
+        animation-fill-mode: forwards !important;  
+    }
+    &:hover::after {
+        animation: drawLeftToRight 0.25s;
+    }
+}
+
+@keyframes drawLeftToRight {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
