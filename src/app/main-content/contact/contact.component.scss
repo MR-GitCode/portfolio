@@ -4,6 +4,8 @@
     width: 100%;
     @include flex-center; 
     position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .contact-content{

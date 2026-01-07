@@ -17,7 +17,7 @@ import { CommonModule } from '@angular/common';
     HeroSocialsComponent,
     HeroTitleComponent,
     ContactButtonComponent,
-    IconRollDirective
+    IconRollDirective,
 ],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'

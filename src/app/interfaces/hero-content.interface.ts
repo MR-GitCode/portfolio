@@ -15,7 +15,13 @@ export interface HeroContent {
         }
     };
     title: {
-        de: string;
-        en: string;
+        text1: {
+            de: string;
+            en: string;
+        }
+        text2: {
+            de: string;
+            en: string;
+        }
     };
 }

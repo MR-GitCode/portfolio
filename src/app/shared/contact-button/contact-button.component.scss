@@ -3,20 +3,21 @@
 .contact-bt{
     background: none;
     margin: 4px;
-    border: solid 1px $white;
+    border: solid 1px var(--border-color, $white);
     border-radius: 100px;
     height: 40px;
     @include flex-center;
     cursor: pointer;
-    box-shadow: 2px 4px 0px 0px #F8F9FA;
+    box-shadow: 2px 4px 0px 0px var(--shadow, $white);
     p{
         font-size: 18px;
         font-weight: 500;
-        color: $white;
+        color: var(--font-color, $white);
         padding: 0 24px;
     }
     &:hover{
         background-color: $orange;
+        transition: 0.3s;
     }
     &:active {
         background-color: $orange;
