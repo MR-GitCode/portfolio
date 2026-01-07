@@ -1,4 +1,4 @@
 export interface SkillsProjectDetails {
-    img: string;
+    imgURL: string;
     name: string;
 }

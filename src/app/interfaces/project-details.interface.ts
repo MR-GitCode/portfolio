@@ -1,3 +1,5 @@
+import { SkillsProjectDetails } from "./skills-project-details.interface";
+
 export interface ProjectDetails {
     description: {
         text: {
@@ -31,5 +33,6 @@ export interface ProjectDetails {
             en: string;         
         }
     };
+    skills: SkillsProjectDetails[] | Record<string, SkillsProjectDetails>;
     title: string;
 }

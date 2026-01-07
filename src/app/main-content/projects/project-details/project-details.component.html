@@ -22,14 +22,10 @@
                     <p><b>{{ projectDetails.duration.title[languageService.lang] }}: </b>{{ projectDetails.duration.duration[languageService.lang] }}</p>
                 </div>
                 <div class="project-skills">
-                    <div class="skill">
-                        <img src="/assets/icons/skills/frontend/HTML.svg" alt="HTML">
-                        <p>HTML</p>
+                    <div class="skill" *ngFor="let skill of skills$ | async">
+                        <img [src]="skill.imgURL" [alt]="skill.name">
+                        <p>{{skill.name}}</p>
                     </div>
-                    <div class="skill">
-                        <img src="/assets/icons/skills/frontend/CSS.svg" alt="CSS">
-                        <p>CSS</p>
-                    </div>                      
                 </div>
             </div>
             <div class="project-links">
@@ -48,3 +44,4 @@
         </div>
     </div>
 </section>
+
