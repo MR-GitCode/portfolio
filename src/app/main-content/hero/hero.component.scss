@@ -154,7 +154,7 @@
         background-image: url('/assets/icons/hero/waving_hand.svg');
         background-size: contain;
         background-repeat: no-repeat;
-        
+        pointer-events: none;
         opacity: 0;                 /* zuerst unsichtbar */
         transform: translateX(0) rotate(180deg);
     }

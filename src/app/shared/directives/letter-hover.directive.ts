@@ -1,41 +1,50 @@
-import { AfterViewInit, Directive, ElementRef } from "@angular/core";
+import { AfterViewInit, Directive, ElementRef, Input, OnChanges, SimpleChanges } from "@angular/core";
 
 @Directive({
   selector: '[appLetterHover]',
   standalone: true,
 })
-export class LetterHoverDirective implements AfterViewInit {
+export class LetterHoverDirective implements AfterViewInit, OnChanges {
+    @Input('appLetterHover') text: string = '';
+    private ready = false;
+    
     constructor(private el: ElementRef<HTMLElement>) {}
 
     ngAfterViewInit(): void {
-        const element = this.el.nativeElement;           // <h1>
-        const text = String(element.textContent ?? '');  // get text
+        this.ready = true;
+        this.renderSpans();
+    }
 
-        const spanContainer = [...text]
-        .map(letter => `<span>${letter}</span>`)
-        .join('');
+    ngOnChanges(_: SimpleChanges): void {
+        if (this.ready) this.renderSpans();
+    }
 
-        element.innerHTML = spanContainer;
+    private renderSpans() {
+        const element = this.el.nativeElement;
+        const text = String(this.text ?? '');
+
+        element.innerHTML = [...text].map(letter => `<span>${letter}</span>`).join('');
 
         this.letterHoverEffect(element);
     }
 
-    letterHoverEffect(element: HTMLElement) {
-        const spans = element.querySelectorAll('span');
+    private letterHoverEffect(element: HTMLElement) {
+        const spans = Array.from(element.querySelectorAll('span')) as HTMLElement[];
 
-        Array.from(spans).forEach((span) => {
+        spans.forEach(span => {
             const original = span.textContent ?? '';
-            (span as HTMLElement).dataset['original'] = original; //save original letter
+            // save original letter
+            span.setAttribute('data-original', original);
         
             span.addEventListener('mouseenter', () => {
-                const orig = (span as HTMLElement).dataset['original'] ?? '';
+                const orig = span.getAttribute('data-original') ?? '';
                 const isUpper = orig === orig.toUpperCase();
                 span.textContent = isUpper ? orig.toLowerCase() : orig.toUpperCase();
                 span.classList.add('letter-hovered');
             });
 
             span.addEventListener('mouseleave', () => {
-                const orig = (span as HTMLElement).dataset['original'] ?? '';
+                const orig = span.getAttribute('data-original') ?? '';
                 span.textContent = orig;
                 span.classList.remove('letter-hovered');
             });

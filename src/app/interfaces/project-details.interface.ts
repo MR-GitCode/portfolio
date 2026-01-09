@@ -1,6 +1,7 @@
 import { SkillsProjectDetails } from "./skills-project-details.interface";
 
 export interface ProjectDetails {
+    demoURL: string;
     description: {
         text: {
             de: string;

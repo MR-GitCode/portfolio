@@ -3,8 +3,7 @@ import { LetterHoverDirective } from '../../../shared/directives/letter-hover.di
 
 @Component({
   selector: 'app-hero-title',
-  standalone: true,
-  // encapsulation: ViewEncapsulation.None, 
+  standalone: true, 
   imports: [
      LetterHoverDirective,
   ],
@@ -12,6 +11,6 @@ import { LetterHoverDirective } from '../../../shared/directives/letter-hover.di
   styleUrl: './hero-title.component.scss'
 })
 export class HeroTitleComponent {
-  @Input() textTitle1: string = '';
-  @Input() textTitle2: string = '';
+  @Input() textTitle1?: string;
+  @Input() textTitle2?: string;
 }
