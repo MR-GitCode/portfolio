@@ -27,7 +27,13 @@
     
     <div class="check-policy">
       <img src="/assets/icons/contact/Check_mark.svg">
-      <span>{{ formContent.checkPolicy[languageService.lang] }}</span>
+      <span>
+        {{ formContent.checkPolicy[languageService.lang][0] }}
+        <a routerLink="/legal-notice">
+          {{ formContent.checkPolicy[languageService.lang][1] }}
+        </a>
+        {{ formContent.checkPolicy[languageService.lang][2] }}
+      </span>
       <!-- <span class="">Please accept the privacy policy</span> -->
     </div>
     

@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { FormContent } from '../../../interfaces/form-content.interface';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -14,7 +15,8 @@ import { CommonModule } from '@angular/common';
   imports: [
     FormsModule,
     ContactButtonComponent,
-    CommonModule
+    CommonModule,
+    RouterLink,
   ],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
@@ -38,7 +40,7 @@ export class FormComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://michaelring.eu/app/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -50,6 +52,8 @@ export class FormComponent {
 
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+      console.log(this.contactData);
+      
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {

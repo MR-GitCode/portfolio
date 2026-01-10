@@ -49,6 +49,9 @@ input[type=text], input[type=email], textarea {
   border: unset;
   padding-left: 16px;
   cursor: pointer;
+      outline: none;
+    color: $white;
+    font-size: 18px;
   &:focus {
     outline: none;
     color: $white;
@@ -66,10 +69,10 @@ input[type=text], input[type=email], textarea {
 
 .check-policy {
   position: absolute;
-  bottom: 40px;
+  bottom: 60px;
   display: flex;
   gap: 8px;
-  padding-top: 40px;
+  padding-top: 30px;
   img{
     cursor: pointer;
     width: 24px;

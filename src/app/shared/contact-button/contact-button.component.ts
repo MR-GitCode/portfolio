@@ -17,5 +17,5 @@ export class ContactButtonComponent {
 
   @Input() class = '';
 
-  // @Input() URL = '';
+  
 }

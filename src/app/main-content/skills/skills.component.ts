@@ -27,7 +27,7 @@ export class SkillsComponent {
     query(collection(this.firestore, 'skills'), orderBy('order'))
   ) as Observable<Skills[]>;
 
-    languageService = inject(LanguageService);
+  languageService = inject(LanguageService);
 
   readonly skillContent$: Observable<SkillContent> = docData(
     doc(this.firestore, 'siteContent', 'skill')
