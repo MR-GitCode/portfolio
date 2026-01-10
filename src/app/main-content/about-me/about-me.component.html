@@ -8,9 +8,11 @@
             ></app-about-tag>
         </div>
         <div class="about-me-info">
-            <p>{{ aboutContent.subtitle[languageService.lang] }}</p>
-            <div id="about-me-title">
-                <h1>{{ aboutContent.title[languageService.lang] }}</h1>  
+            
+            <div id="about-me-title" >
+                <p>{{ aboutContent.subtitle[languageService.lang] }}</p>
+                <h1>{{ aboutContent.title[languageService.lang] }}</h1>
+                <div id="drawline" appAnimateOnScroll [delay]="300"></div>  
             </div>
             <span>{{ aboutContent.text[languageService.lang] }}</span>
             <div class="contact-bt">

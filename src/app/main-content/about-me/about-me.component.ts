@@ -6,6 +6,7 @@ import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { AboutContent } from '../../interfaces/about-content.interface';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-about-me',
@@ -14,6 +15,7 @@ import { CommonModule } from '@angular/common';
     AboutTagComponent,
     ContactButtonComponent,
     CommonModule,
+    AnimateOnScrollDirective,
 ],
   templateUrl: './about-me.component.html',
   styleUrl: './about-me.component.scss'

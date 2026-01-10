@@ -7,6 +7,7 @@ import { LanguageService } from '../../../services/language.service';
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 import { CommonModule, NgFor } from '@angular/common';
 import { SkillsProjectDetails } from '../../../interfaces/skills-project-details.interface';
+import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-project-details',
@@ -15,6 +16,7 @@ import { SkillsProjectDetails } from '../../../interfaces/skills-project-details
     ContactButtonComponent,
     CommonModule,
     NgFor,
+    AnimateOnScrollDirective,
   ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss'

@@ -1,4 +1,5 @@
 @import '../../../styles/global.styles';
+@import '../../../styles/drawline.animation';
 
 .section-bg{
     width: 100%;
@@ -78,9 +79,17 @@ app-feedback:hover {
     .sub-headline{
         display: flex;
         gap: 16px;
-        img{
+        #drawline{
+            position: relative;
             width: 100px;
             height: 36px;
+            &::after{
+            background-image: url('/assets/img/00_hand-drawn-lines/04_Testimonials/Color_option_1.png');
+            @include drawline;
+            }
+            &.drawline-visible::after {
+                animation: drawRightToLeft 0.25s;
+            }
         }
     }
 }

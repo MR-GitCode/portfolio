@@ -1,0 +1,25 @@
+
+@mixin drawline {
+    content: "";
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    clip-path: inset(100% 0 0 0);
+    animation-fill-mode: forwards !important;  
+    inset: 0
+}
+
+@keyframes drawTopToBottom {
+  from { clip-path: inset(0 0 100% 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes drawLeftToRight {
+  from { clip-path: inset(0 100% 0 0); }
+  to   { clip-path: inset(0 0 0 0); }
+}
+
+@keyframes drawRightToLeft {
+  from { clip-path: inset(0 0 0 100%); }
+  to   { clip-path: inset(0 0 0 0); }
+}

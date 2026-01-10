@@ -6,6 +6,7 @@ import { collection, collectionData, doc, docData, Firestore, orderBy, query } f
 import { LanguageService } from '../../../services/language.service';
 import { Project } from '../../../interfaces/project.interface';
 import { ProjectsOverviewContent } from '../../../interfaces/projects-overview-content.interface';
+import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-projects-overview',
@@ -15,6 +16,7 @@ import { ProjectsOverviewContent } from '../../../interfaces/projects-overview-c
     NgFor,
     ProjectViewComponent,
     CommonModule,
+    AnimateOnScrollDirective,
   ],
   templateUrl: './projects-overview.component.html',
   styleUrl: './projects-overview.component.scss'

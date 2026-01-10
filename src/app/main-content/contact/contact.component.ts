@@ -5,6 +5,7 @@ import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { ContactContent } from '../../interfaces/contact-content.interface';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-contact',
@@ -12,6 +13,7 @@ import { CommonModule } from '@angular/common';
   imports: [
     FormComponent,
     CommonModule,
+    AnimateOnScrollDirective,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'

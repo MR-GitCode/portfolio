@@ -6,6 +6,7 @@ import { AsyncPipe, CommonModule, NgFor } from '@angular/common';
 import { TestimonialsContent } from '../../interfaces/testimonials-content.interface';
 import { LanguageService } from '../../services/language.service';
 import { FeedbackComponent } from './feedback/feedback.component';
+import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-testimonials',
@@ -15,6 +16,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
     NgFor,
     AsyncPipe,
     CommonModule,
+    AnimateOnScrollDirective,
 ],
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.scss'

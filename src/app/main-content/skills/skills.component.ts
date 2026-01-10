@@ -6,6 +6,7 @@ import { AsyncPipe, CommonModule, NgFor } from '@angular/common';
 import { Skills } from '../../interfaces/skills.interface';
 import { LanguageService } from '../../services/language.service';
 import { SkillContent } from '../../interfaces/skill-content.interface';
+import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
   selector: 'app-skills',
@@ -15,6 +16,7 @@ import { SkillContent } from '../../interfaces/skill-content.interface';
     NgFor,
     SkillIconComponent,
     CommonModule,
+    AnimateOnScrollDirective,
   ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
