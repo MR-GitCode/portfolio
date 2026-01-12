@@ -62,7 +62,7 @@
     position: relative;
     @include flex-center;
     height: 45px;
-    width: 110px;
+    // width: 110px;
     cursor: pointer;
         &::after {
         content: "";
@@ -70,14 +70,14 @@
         background-size: cover;
         background-repeat: no-repeat;
         clip-path: inset(100% 0 0 0);
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
         animation-fill-mode: forwards !important;   
         }
 }
 
-#legal-notice{
+#imprint{
   &::after{
     background-image: url('/assets/img/00_hand-drawn-lines/00_Header/3.png');
     width: 90px;
@@ -87,6 +87,18 @@
     animation: drawLeftToRight 0.25s;
   }
 }
+
+#privacy-policy{  
+  &::after{
+    background-image: url('/assets/img/00_hand-drawn-lines/00_Header/4.png');
+    width: 120px;
+    height: 42px;
+  }
+  &:hover::after {
+    animation: drawLeftToRight 0.25s;
+  }
+}
+
 
 @keyframes drawLeftToRight {
   from { clip-path: inset(0 100% 0 0); }
