@@ -1,0 +1,60 @@
+@import '../../../../styles/global.styles';
+
+.sticker-container{
+    position: absolute;
+    right: -80px;
+    top: 40%;
+    transform: rotate(8deg);
+    img{
+        width: 200px;
+        height: 200px;
+    }   
+}
+
+.sticker-content{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    @include flex-center;
+    cursor: pointer;
+    .sticker-text{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;  
+    }
+}
+
+.sticker-default{
+    img{
+        width: 51px;
+        height: 40px
+    };
+    p{
+        font-size: 40px;
+        font-weight: 400;
+        font-family: 'Kalam';
+        color: $white;
+        margin: 0;
+        font-family: Kalam;
+        line-height: 40px;
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }   
+}
+
+.sticker-final{
+    p{
+        height: 44px;
+        font-size: 18px;
+        font-weight: 700;
+        color: $white;
+        margin: 0;
+        margin-block-start: 0;
+        margin-block-end: 0;
+        line-height: 22px;
+        letter-spacing: 0%;
+        text-align: center;
+    } 
+}

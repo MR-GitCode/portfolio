@@ -7,6 +7,7 @@ import { Skills } from '../../interfaces/skills.interface';
 import { LanguageService } from '../../services/language.service';
 import { SkillContent } from '../../interfaces/skill-content.interface';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
+import { StickerComponent } from './sticker/sticker.component';
 
 @Component({
   selector: 'app-skills',
@@ -17,6 +18,7 @@ import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scr
     SkillIconComponent,
     CommonModule,
     AnimateOnScrollDirective,
+    StickerComponent,
   ],
   templateUrl: './skills.component.html',
   styleUrl: './skills.component.scss'
