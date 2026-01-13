@@ -1,60 +1,142 @@
 @import '../../../../styles/global.styles';
 
-.sticker-container{
-    position: absolute;
-    right: -80px;
-    top: 40%;
-    transform: rotate(8deg);
-    img{
-        width: 200px;
-        height: 200px;
-    }   
+.sticker-container {
+  position: absolute;
+  right: -80px;
+  top: 40%;
+  transform: rotate(8deg);
+  cursor: pointer;
 }
 
-.sticker-content{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    @include flex-center;
-    cursor: pointer;
-    .sticker-text{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8px;  
+.sticker-content {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  @include flex-center;
+}
+
+.sticker-text {
+  position: absolute;
+  flex-direction: column;
+  @include flex-center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+}
+
+.sticker-layer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  will-change: clip-path, opacity, filter;
+}
+
+#sticker-1 {
+    z-index: 3;
+    transform-origin: top right;
+}
+
+#sticker-2 {
+    z-index: 1;
+    img {
+        width: 200px;
+        height: 200px;
+        display: block;
     }
 }
 
+.layer-default {
+  background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Default.png");
+  opacity: 1;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+// .layer-transition {
+//   background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.png");
+//   opacity: 0;
+//   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
+// }
+
 .sticker-default{
-    img{
+    img {
         width: 51px;
-        height: 40px
-    };
-    p{
+        height: 40px;
+    }
+    p {
         font-size: 40px;
         font-weight: 400;
         font-family: 'Kalam';
         color: $white;
         margin: 0;
-        font-family: Kalam;
         line-height: 40px;
-        margin-block-start: 0;
-        margin-block-end: 0;
-    }   
+    }
 }
 
-.sticker-final{
-    p{
-        height: 44px;
-        font-size: 18px;
-        font-weight: 700;
-        color: $white;
-        margin: 0;
-        margin-block-start: 0;
-        margin-block-end: 0;
-        line-height: 22px;
-        letter-spacing: 0%;
-        text-align: center;
-    } 
+.sticker-final p {
+  height: 44px;
+  font-size: 18px;
+  font-weight: 700;
+  color: $white;
+  margin: 0;
+  line-height: 22px;
+  text-align: center;
+}
+
+/* --- PEEL --- */
+
+/* Default-sticker start peel */
+.sticker-container.is-peeling .layer-default {
+  animation: peelOut 200ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+/* done: Sticker-1 disappears */
+.sticker-container.is-peeled #sticker-1 {
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* ------------------ UNPEEL ------------------ */
+
+/* Default-sticker  comes back*/
+.sticker-container.is-unpeeling .layer-default {
+  animation: peelIn 600ms cubic-bezier(.2,.9,.2,1) forwards;
+}
+
+
+@keyframes peelOut {
+  0% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
+    filter: none;
+  }
+  40% {
+    opacity: 1;
+    clip-path: polygon(0 0, 50% 0, 100% 50%, 100% 100%, 0 100%);
+    background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.png");
+  }
+  100% {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 0 100%);
+    // clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%, 0 100%);
+    filter: blur(0.6px);
+  }
+}
+
+@keyframes peelIn {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 0 100%);
+    filter: blur(0.6px);
+  }
+  45% {
+    opacity: 0.9;
+    clip-path: polygon(0 0, 70% 0, 100% 40%, 100% 100%, 0 100%);
+    filter: blur(0.2px);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
+    filter: none;
+  }
 }

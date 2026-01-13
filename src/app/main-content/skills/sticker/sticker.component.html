@@ -1,21 +1,24 @@
-<div class="sticker-container">
-    <div id="sticker-1" class="sticker-content">
-        <img src="/assets/img/03_stickers/01_Skills - Peel off/Default.png">
+<div class="sticker-container" (click)="togglePeel()"
+     [class.is-peeling]="state === 'peeling'"
+     [class.is-peeled]="state === 'peeled'"
+     [class.is-unpeeling]="state === 'unpeeling'">
+
+  <div id="sticker-1" class="sticker-content">
+    <div class="sticker-layer layer-default">
         <div class="sticker-text sticker-default">
             <img src="/assets/img/03_stickers/Arrow.png">
             <p>Pull to<br> peel</p>
-        </div>         
+        </div>
     </div>
 
-    <div id="sticker-2">
-        <img src="/assets/img/03_stickers/01_Skills - Peel off/Transition.png"> 
-    </div>
+    <div class="sticker-layer layer-transition"></div>
+  </div>
 
-    <div id="sticker-3" class="sticker-content">
-        <img src="/assets/img/03_stickers/01_Skills - Peel off/Final.png">   
+    <div id="sticker-2" class="sticker-content">
+        <img src="/assets/img/03_stickers/01_Skills - Peel off/Final.png">
         <div class="sticker-text sticker-final">
-                <p>Also. I'm interested<br> in diving into:</p>
-            <app-skill-icon></app-skill-icon>  
-        </div>  
+            <p>Also. I'm interested<br> in diving into:</p>
+            <!-- <app-skill-icon></app-skill-icon> -->
+        </div>
     </div>
 </div>
