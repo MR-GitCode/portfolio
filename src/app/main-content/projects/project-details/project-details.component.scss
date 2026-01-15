@@ -91,11 +91,14 @@
     left: -48px;
     gap: 8px;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     cursor: pointer;
     img{
         width: 24px;
         height: 24px;
+    }
+    &:hover{
+        color: $orange;
     }
 }
 
@@ -107,12 +110,15 @@
     right: -48px;
     gap: 8px;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     color: $white;
     cursor: pointer;
     img{
         width: 24px;
         height: 24px;
+    }
+    &:hover{
+        color: $yellow;
     }
 }
 

@@ -6,6 +6,7 @@ import { ContactContent } from '../../interfaces/contact-content.interface';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
+import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circle.component';
 
 @Component({
   selector: 'app-contact',
@@ -14,6 +15,7 @@ import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scr
     FormComponent,
     CommonModule,
     AnimateOnScrollDirective,
+    StickerCircleComponent,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'

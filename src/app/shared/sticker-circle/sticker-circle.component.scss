@@ -1,0 +1,30 @@
+@import '../../../styles/global.styles.scss';
+
+.contact-sticker{
+    position: relative;
+    color: $black;
+    font-size: 12px;
+    font-weight: 700;
+    
+    img{
+        width: 168px;
+        height: 168px;
+    }
+    .sticker-content{
+        width: 168px;
+        height: 168px;
+        position: absolute;
+        @include flex-center;
+        .center-img{
+            position: absolute;
+            display: block;
+            font-weight: 400;
+        }
+        svg{
+            position: absolute;
+            width: 190px;
+            height: 190px;
+            transform: translate(5px, 5px);
+        }
+    }
+}

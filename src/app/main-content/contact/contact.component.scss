@@ -59,39 +59,12 @@
     }
 }
 
-.contact-sticker{
-    position: relative;
-    color: $black;
-    font-size: 12px;
-    font-weight: 700;
-    transform: rotate(15deg);
-    img{
-        width: 168px;
-        height: 168px;
-    }
-    .sticker-content{
-        width: 168px;
-        height: 168px;
-        position: absolute;
-        @include flex-center;
-        img{
-            width: 54px;
-            height: 56px;
-        }
-        svg{
-            position: absolute;
-            width: 190px;
-            height: 190px;
-            transform: translateX(2%);
-        }
-    }
-}
-
 .form-container{
     position: relative;
     .sticker-container{
         position: absolute;
         right: 0;
         z-index: 100;
+        transform: rotate(15deg);
     }
 }
