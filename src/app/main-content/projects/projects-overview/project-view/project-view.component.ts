@@ -3,13 +3,18 @@ import { Project } from '../../../../interfaces/project.interface';
 import { LanguageService } from '../../../../services/language.service';
 import { Router } from '@angular/router';
 import { ContactButtonComponent } from '../../../../shared/contact-button/contact-button.component';
+import { StickerCircleComponent } from '../../../../shared/sticker-circle/sticker-circle.component';
+import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-project-view',
   standalone: true,
   imports: [
     ContactButtonComponent,
-  ],
+    StickerCircleComponent,
+    NgIf,
+    CommonModule,
+],
   templateUrl: './project-view.component.html',
   styleUrl: './project-view.component.scss'
 })

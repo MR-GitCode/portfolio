@@ -1,5 +1,6 @@
 @import '../../../../styles/global.styles';
 @import '../../../../styles/icon-roll.animation';
+@import '../../../../styles/drawline.animation';
 
 .footer-links{
     display: flex;
@@ -28,17 +29,10 @@
 
 .icon-roll {
     &::before{
-        content: "";
-        position: absolute;
-        top: -32px;                 /* oberhalb des Buttons */
+        top: -32px;                 /* over the button */
         width: 32px;
         height: 32px;
-        
-        background-size: contain;
-        background-repeat: no-repeat;
-        pointer-events: none;
-        opacity: 0;                 /* zuerst unsichtbar */
-        transform: translateX(0) rotate(180deg);
+        @include icon-image();
     }
     @include icon-roll-animation();
 }
@@ -59,22 +53,18 @@
 }
 
 .link-container {
-    position: relative;
-    @include flex-center;
-    height: 45px;
-    // width: 110px;
-    cursor: pointer;
-        &::after {
-        content: "";
-        position: absolute;
-        background-size: cover;
-        background-repeat: no-repeat;
-        clip-path: inset(100% 0 0 0);
-        // top: 50%;
-        // left: 50%;
-        // transform: translate(-50%, -50%);
-        animation-fill-mode: forwards !important;   
-        }
+  position: relative;
+  @include flex-center;
+  height: 45px;
+  cursor: pointer;
+    &::after {
+    content: "";
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    clip-path: inset(100% 0 0 0);
+    animation-fill-mode: forwards !important;   
+  }
 }
 
 #imprint{
@@ -97,10 +87,4 @@
   &:hover::after {
     animation: drawLeftToRight 0.25s;
   }
-}
-
-
-@keyframes drawLeftToRight {
-  from { clip-path: inset(0 100% 0 0); }
-  to   { clip-path: inset(0 0 0 0); }
 }

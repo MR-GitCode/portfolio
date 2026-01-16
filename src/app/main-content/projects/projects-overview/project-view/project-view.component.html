@@ -1,5 +1,13 @@
 <section class="project-container padding-bottom">
     <div class="projects-link-container">
+        <div class="sticker-container" *ngIf="project.showSticker">
+                <app-sticker-circle 
+                    variant="feature"
+                    stickerColor="blue"
+                    topText="Featured Project"
+                    bottomText="Check all details">
+                </app-sticker-circle>
+            </div>
         <img class="img-project" [src]="project.imgURL">
         <div class="bg-linear-gradient">
             <app-contact-button class="contact-btn" textBtn="Project details" (click)="openProjectDetails(project.id)"></app-contact-button>  

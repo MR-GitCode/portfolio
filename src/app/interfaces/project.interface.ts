@@ -8,4 +8,5 @@ export interface Project {
     demoURL: string;
     order?: number;
     id: string;
+    showSticker?: boolean;
 }

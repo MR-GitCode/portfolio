@@ -98,7 +98,6 @@
     top: -5px;
     right: 20px;
     transform: rotate(8deg);
-
     .polaroid {
         position: relative;
         width: 100%;
@@ -108,15 +107,12 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: auto;
-        //    transition: opacity 0.3s ease; 
+            height: auto; 
         }
-        
         .hover-polaroid,
         .hover-name {
             opacity: 0;
         }
-
         &:hover {
             .default-polaroid,
             .default-name {
@@ -145,31 +141,12 @@
 
 .icon-roll {
     &::before{
-        content: "";
-        position: absolute;
-        top: -42px;                 /* oberhalb des Buttons */
+        top: -42px;                 /* over the button */
         width: 40px;
         height: 40px;
-        left: 65%;
         background-image: url('/assets/icons/hero/waving_hand.svg');
-        background-size: contain;
-        background-repeat: no-repeat;
-        pointer-events: none;
-        opacity: 0;                 /* zuerst unsichtbar */
-        transform: translateX(0) rotate(180deg);
+        left: 65%;
+        @include icon-image();
     }
     @include icon-roll-animation();
-}
-
-
-@keyframes bounceIn {
-    0%   { width: 100px; }
-    70%  { width: 170px; }  
-    100% { width: 160px; }
-}
-
-@keyframes bounceOut {
-    0%   { width: 160px; }
-    70%  { width: 90px; }
-    100% { width: 100px; }
 }

@@ -1,56 +1,46 @@
+<div class="contact-sticker">
+  <div class="sticker-content">
+    <img class="center-img"
+      [src]="centerImgSrc"
+      [style.width.px]="imgWidth"
+      [style.height.px]="imgHeight">
 
-    <div class="contact-sticker">
-        <div class="sticker-content">
-            <img class="center-img" 
-                [src]="centerImgSrc"
-                [style.width.px]="imgWidth"
-                [style.height.px]="imgHeight">
-            <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                 <path [attr.id]="topId" [attr.d]="topArcD" fill="none"></path>
+    <svg viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+      <path [attr.id]="topId" [attr.d]="topArcD" fill="none"></path>
 
-                <path
-                    [attr.id]="bottomId"
-                    [attr.d]="bottomUpsideDown ? bottomArcFlippedD : bottomArcD"
-                    fill="none">
-                </path>  
-                <text
-                    [attr.font-size]="textFontSize"
-                    [attr.fill]="textFill"
-                    [attr.letter-spacing]="textLetterSpacing"
-                    font-family="Bricolage"
-                    font-weight="bold">
-                    <!-- Text oben -->
-                    <textPath
-                        [attr.href]="'#' + topId"
-                        [attr.startOffset]="topOffset"
-                        text-anchor="middle">
-                        {{ topText }}
-                    </textPath>
+      <path
+        [attr.id]="bottomId"
+        [attr.d]="config.bottomUpsideDown ? bottomArcFlippedD : bottomArcD"
+        fill="none">
+      </path>
 
-                    <!-- Text unten -->
-                    <textPath
-                        [attr.href]="'#' + bottomId"
-                        [attr.startOffset]="bottomOffset"
-                        text-anchor="middle">
-                        {{ bottomText }}
-                    </textPath>
-                </text>
-            </svg>
-        </div>
-        <img [src]="imgSrc">
-    </div> 
+      <text
+        [attr.font-size]="config.textFontSize"
+        [attr.fill]="config.textFill"
+        [attr.letter-spacing]="config.textLetterSpacing"
+        font-family="Bricolage"
+        font-weight="bold">
 
-    <!-- <svg class="ring"
-     [attr.viewBox]="'0 0 ' + ringSize + ' ' + ringSize"
-     xmlns="http://www.w3.org/2000/svg">
+        <!-- Text top -->
+        <textPath
+          [attr.href]="'#' + topId"
+          [attr.startOffset]="topOffset"
+          text-anchor="middle">
+          {{ topText }}
+        </textPath>
 
-  <path [attr.id]="topId" [attr.d]="topArcD" fill="none"></path>
+        <!-- Text bottom -->
+        <textPath
+          [attr.href]="'#' + bottomId"
+          [attr.startOffset]="bottomOffset"
+          text-anchor="middle">
+          {{ bottomText }}
+        </textPath>
 
-  <path
-    [attr.id]="bottomId"
-    [attr.d]="bottomUpsideDown ? bottomArcFlippedD : bottomArcD"
-    fill="none">
-  </path>
-</svg> -->
+      </text>
+    </svg>
+  </div>
 
+  <img [src]="imgSrc">
+</div>
 
