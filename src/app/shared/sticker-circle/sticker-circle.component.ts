@@ -1,8 +1,10 @@
-import { Component, Input} from '@angular/core';
+import { Component, inject, Input} from '@angular/core';
+import { LanguageService } from '../../services/language.service';
+import { STICKER_TEXTS } from '../../services/circleStickerText';
 
-type StickerKey = 'orange' | 'blue' | 'yellow';
+export type StickerKey = 'orange' | 'blue' | 'yellow';
 type centerImgKey = 'logo' | 'arrow';
-type StickerVariant = 'feature' | 'logo';
+export type StickerVariant = 'feature' | 'logo';
 
 @Component({
   selector: 'app-sticker-circle',
@@ -17,9 +19,9 @@ export class StickerCircleComponent {
   @Input() imgWidth = 54;
   @Input() imgHeight = 56;
 
-  //Input for text
-  @Input() topText = '';
-  @Input() bottomText = '';
+  // //Input for text
+  // @Input() topText = '';
+  // @Input() bottomText = '';
 
   // // Position on circle
   @Input() topOffset: string = '50%';
@@ -114,5 +116,18 @@ export class StickerCircleComponent {
   get bottomArcFlippedD(): string {
     const r = this.bottomTextRadius;
     return `M ${this.cx + r},${this.cy} A ${r},${r} 0 0 1 ${this.cx - r},${this.cy}`;
+  }
+
+  private readonly languageService = inject(LanguageService);
+  get lang() {
+    return this.languageService.lang;
+  }
+
+  get topText() {
+    return STICKER_TEXTS[this.lang][this.variant].top;
+  }
+
+  get bottomText() {
+    return STICKER_TEXTS[this.lang][this.variant].bottom;
   }
 }

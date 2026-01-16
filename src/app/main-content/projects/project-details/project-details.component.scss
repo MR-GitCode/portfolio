@@ -72,6 +72,7 @@
         padding-top: 25px;
         border-radius: 20px;
         width: 560px;
+        position: relative;
     }
     .buttons{
         padding-top: 48px;
@@ -136,4 +137,11 @@
             animation: drawLeftToRight 0.25s;
         }
     }
+}
+
+.sticker-container{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
 }

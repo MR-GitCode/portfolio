@@ -1,3 +1,4 @@
+import { StickerKey, StickerVariant } from "../shared/sticker-circle/sticker-circle.component";
 import { SkillsProjectDetails } from "./skills-project-details.interface";
 
 export interface ProjectDetails {
@@ -35,5 +36,9 @@ export interface ProjectDetails {
         }
     };
     skills: SkillsProjectDetails[] | Record<string, SkillsProjectDetails>;
+    sticker: {
+        stickerColor: StickerKey;
+        variant: StickerVariant;
+    };
     title: string;
 }

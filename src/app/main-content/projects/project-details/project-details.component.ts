@@ -8,6 +8,7 @@ import { ContactButtonComponent } from '../../../shared/contact-button/contact-b
 import { CommonModule, NgFor } from '@angular/common';
 import { SkillsProjectDetails } from '../../../interfaces/skills-project-details.interface';
 import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
+import { StickerCircleComponent } from '../../../shared/sticker-circle/sticker-circle.component';
 
 @Component({
   selector: 'app-project-details',
@@ -17,6 +18,7 @@ import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-
     CommonModule,
     NgFor,
     AnimateOnScrollDirective,
+    StickerCircleComponent,
   ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss'

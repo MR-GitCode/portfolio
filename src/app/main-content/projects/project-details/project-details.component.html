@@ -30,7 +30,14 @@
                 </div>
             </div>
             <div class="project-links">
+                
                 <div class="img">
+                    <div class="sticker-container">
+                        <app-sticker-circle
+                            [variant]="projectDetails.sticker.variant"
+                            [stickerColor]="projectDetails.sticker.stickerColor">
+                        </app-sticker-circle> 
+                    </div>
                     <img src="{{ projectDetails.imgURL }}">
                 </div>
                 <div class="buttons">
