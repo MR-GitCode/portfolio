@@ -1,4 +1,4 @@
-<div class="container" *ngIf="formContent$ | async as formContent">
+<div class="container" *ngIf="formContent() as formContent">
   <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
     <div class="input-container">

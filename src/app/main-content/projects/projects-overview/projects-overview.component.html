@@ -1,16 +1,20 @@
-<section class="section-bg" id="projectsoverview-section" *ngIf="projectsContent$ | async as projectsContent">
-    <div class="projects-overview-container">
-        <div class="headline-container">
-            <div class="headline">
-                <p>{{ projectsContent.subtitle[languageService.lang] }}</p>
-                <div id="headline-drawline">
-                    <h1>{{ projectsContent.title[languageService.lang] }}</h1>
-                    <div id="drawline" appAnimateOnScroll [delay]="300"></div>
+@if (projectsContent(); as projectsContent) {
+    <section class="section-bg" id="projectsoverview-section">
+        <div class="projects-overview-container">
+            <div class="headline-container">
+                <div class="headline">
+                    <p>{{ projectsContent.subtitle[languageService.lang] }}</p>
+                    <div id="headline-drawline">
+                        <h1>{{ projectsContent.title[languageService.lang] }}</h1>
+                        <div id="drawline" appAnimateOnScroll [delay]="300"></div>
+                    </div>
                 </div>
+                <p>{{ projectsContent.text[languageService.lang] }}</p>
             </div>
-            <p>{{ projectsContent.text[languageService.lang] }}</p>
+            @for(project of projects(); track project.id ) {
+                <app-project-view [project]="project"></app-project-view>     
+            }
         </div>
-        <app-project-view *ngFor="let project of projects$ | async" [project]="project"></app-project-view>   
-    </div>
-</section>
+    </section>
+}
  

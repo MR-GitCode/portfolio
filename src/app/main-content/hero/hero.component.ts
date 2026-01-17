@@ -8,6 +8,7 @@ import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { HeroContent } from '../../interfaces/hero-content.interface';
 import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { FirestoreContentService } from '../../services/firestore-content.service';
 
 @Component({
     selector: 'app-hero',
@@ -24,9 +25,7 @@ import { CommonModule } from '@angular/common';
 })
 export class HeroComponent {
   languageService = inject(LanguageService);
-  private readonly firestore = inject(Firestore);
-
-  readonly heroContent$: Observable<HeroContent> = docData(
-    doc(this.firestore, 'siteContent', 'hero')
-  ) as Observable<HeroContent>;
+  contentService = inject(FirestoreContentService);
+  
+  heroContent = this.contentService.getHeroContent();
 }

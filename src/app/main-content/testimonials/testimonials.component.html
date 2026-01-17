@@ -1,16 +1,24 @@
-<section class="section-bg" *ngIf="testimonialsContent$ | async as testimonialsContent">
-    <div class="testimonials-content">
-        <div class="headline-container">
-            <div class="headline">
-                <div class="sub-headline">
-                    <div id="drawline" appAnimateOnScroll [delay]="300"></div> 
-                    <p>{{ testimonialsContent.subtitle[languageService.lang] }}</p>  
+@if (testimonialsContent(); as testimonialsContent) {
+    <section class="section-bg">
+        <div class="testimonials-content">
+            <div class="headline-container">
+                <div class="headline">
+                    <div class="sub-headline">
+                        <div id="drawline" appAnimateOnScroll [delay]="300"></div> 
+                        <p>{{ testimonialsContent.subtitle[languageService.lang] }}</p>  
+                    </div>
+                    <h1>{{ testimonialsContent.title[languageService.lang] }}</h1>
                 </div>
-                <h1>{{ testimonialsContent.title[languageService.lang] }}</h1>
+            </div>
+            <div class="testimonials-cards">
+                @for (testimonial of testimonials(); track $index ; let i = $index) {
+                   <app-feedback
+                        [testimonial]="testimonial"
+                        [ngStyle]="{position: 'absolute', 'left.px': i * 350, 'transform': 'rotate(' + (-4 + i * 4) + 'deg)'}"
+                        [ngClass]="['stack-' + i]">
+                    </app-feedback>  
+                }    
             </div>
         </div>
-        <div class="testimonials-cards">
-            <app-feedback *ngFor="let testimonial of testimonials$ | async; let i = index;" [testimonial]="testimonial" [ngStyle]="{position: 'absolute', 'left.px': i * 350, 'transform': 'rotate(' + (-4 + i * 4) + 'deg)'}" [ngClass]="['stack-' + i]"></app-feedback>    
-        </div>
-    </div>
-</section>
+    </section>
+}

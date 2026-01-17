@@ -25,7 +25,6 @@ import { ContactButtonComponent } from '../../../shared/contact-button/contact-b
     styleUrl: './project-details.component.scss'
 })
 export class ProjectDetailsComponent implements OnInit {
-
   languageService = inject(LanguageService);
   private readonly firestore = inject(Firestore);
   private readonly route = inject(ActivatedRoute);

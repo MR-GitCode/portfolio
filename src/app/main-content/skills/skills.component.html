@@ -1,24 +1,28 @@
-<section class="section-bg" id="skills-section" *ngIf="skillContent$ | async as skillContent">
-    <div class="skills-content">
-        <div class="headline-container">
-            <div class="headline">
-                <p>{{ skillContent.subtitle[languageService.lang] }}</p>
-                <div id="headline-drawline" appAnimateOnScroll [delay]="200">
-                    <h1>{{ skillContent.title[languageService.lang] }}</h1>
+@if (skillContent(); as skillContent) {
+    <section class="section-bg" id="skills-section">
+        <div class="skills-content">
+            <div class="headline-container">
+                <div class="headline">
+                    <p>{{ skillContent.subtitle[languageService.lang] }}</p>
+                    <div id="headline-drawline" appAnimateOnScroll [delay]="200">
+                        <h1>{{ skillContent.title[languageService.lang] }}</h1>
+                    </div>
+                </div>
+                <div class="paper-description">
+                    <img src="/assets/img/02_ripped_paper/1.Skills description.png">
+                    <p>{{ skillContent.text[languageService.lang] }}</p>
                 </div>
             </div>
-            <div class="paper-description">
-                <img src="/assets/img/02_ripped_paper/1.Skills description.png">
-                <p>{{ skillContent.text[languageService.lang] }}</p>
+            <div class="skills-container">
+                <div class="skill-icons">
+                    @for ( skill of skills(); track skill.name) {
+                        <app-skill-icon [skill]="skill"></app-skill-icon>
+                    }
+                </div>  
             </div>
-        </div>
-        <div class="skills-container">
-            <div class="skill-icons">
-                <app-skill-icon *ngFor="let skill of skills$ | async" [skill]="skill"></app-skill-icon>
-            </div>  
-        </div>
 
-        <app-sticker></app-sticker>
+            <app-sticker></app-sticker>
 
-    </div>
-</section>
+        </div>
+    </section>
+}

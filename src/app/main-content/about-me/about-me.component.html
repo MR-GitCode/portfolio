@@ -1,10 +1,10 @@
-<section class="section-bg" id="about-me-section" *ngIf="aboutContent$ | async as aboutContent">
+<section class="section-bg" id="about-me-section" *ngIf="aboutContent() as aboutContent">
     <div class="about-me-content">
         <div class="tag-container">
             <app-about-tag 
-                textBased = "{{ aboutContent.tags[languageService.lang].tag1 }}"
-                textRelocate = "{{ aboutContent.tags[languageService.lang].tag2 }}"
-                textRemote = "{{ aboutContent.tags[languageService.lang].tag3 }}"
+                [textBased]="aboutContent.tags[languageService.lang].tag1"
+                [textRelocate]="aboutContent.tags[languageService.lang].tag2"
+                [textRemote]="aboutContent.tags[languageService.lang].tag3"
             ></app-about-tag>
         </div>
         <div class="about-me-info">

@@ -1,4 +1,4 @@
-<section class="section-bg" id="hero-section" *ngIf="heroContent$ | async as heroContent">
+<section class="section-bg" id="hero-section" *ngIf="heroContent() as heroContent">
   <div class="hero">
         <div class="hero-content">
             <div class="greeting-container">

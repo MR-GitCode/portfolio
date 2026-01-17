@@ -7,6 +7,7 @@ import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circle.component';
+import { FirestoreContentService } from '../../services/firestore-content.service';
 
 @Component({
     selector: 'app-contact',
@@ -23,7 +24,7 @@ import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circ
 export class ContactComponent {
   languageService = inject(LanguageService);
   private readonly firestore = inject(Firestore);
-  readonly contactContent$: Observable<ContactContent> = docData(
-    doc(this.firestore, 'siteContent', 'contact')
-  ) as Observable<ContactContent>;
+
+  contentService = inject(FirestoreContentService);
+  contactContent = this.contentService.getContactContent();
 }

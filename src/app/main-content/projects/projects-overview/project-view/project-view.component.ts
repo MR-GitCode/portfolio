@@ -1,10 +1,10 @@
 import { Component, inject, Input } from '@angular/core';
-import { Project } from '../../../../interfaces/project.interface';
 import { LanguageService } from '../../../../services/language.service';
 import { Router } from '@angular/router';
 import { ContactButtonComponent } from '../../../../shared/contact-button/contact-button.component';
 import { StickerCircleComponent } from '../../../../shared/sticker-circle/sticker-circle.component';
 import { CommonModule, NgIf } from '@angular/common';
+import { Project } from '../../../../interfaces/projects-overview-content.interface';
 
 @Component({
     selector: 'app-project-view',
@@ -12,7 +12,6 @@ import { CommonModule, NgIf } from '@angular/common';
     imports: [
         ContactButtonComponent,
         StickerCircleComponent,
-        NgIf,
         CommonModule,
     ],
     templateUrl: './project-view.component.html',

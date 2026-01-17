@@ -1,10 +1,10 @@
-<div class="title-bg content-area" *ngIf="legalContent$ | async as legalContent">
+<div class="title-bg content-area" *ngIf="legalContent() as legalContent">
     <div class="legal-title">
         <h1>{{ legalContent.privacyPolicy.title[languageService.lang] }}</h1>   
     </div>
 </div>
 
-<div class="content-area" *ngIf="legalContent$ | async as legalContent">
+<div class="content-area" *ngIf="legalContent() as legalContent">
     <div class="privacy-policy">
         <div>
             <h2>{{ legalContent.privacyPolicy[languageService.lang][0].title }}</h2>

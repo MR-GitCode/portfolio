@@ -8,6 +8,7 @@ import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { FormContent } from '../../../interfaces/form-content.interface';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { FirestoreContentService } from '../../../services/firestore-content.service';
 
 @Component({
     selector: 'app-form',
@@ -23,10 +24,9 @@ import { RouterLink } from '@angular/router';
 })
 export class FormComponent {
   languageService = inject(LanguageService);
-  private readonly firestore = inject(Firestore);
-  readonly formContent$: Observable<FormContent> = docData(
-    doc(this.firestore, 'siteContent', 'form')
-  ) as Observable<FormContent>;
+  contentService = inject(FirestoreContentService);
+
+  formContent = this.contentService.getFormContent();
 
 
   http = inject(HttpClient);

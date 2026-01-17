@@ -1,9 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-import { doc, docData, Firestore } from '@angular/fire/firestore';
-import { LegalContent } from '../../../interfaces/legal-content.interface';
-import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
+import { FirestoreContentService } from '../../../services/firestore-content.service';
 
 @Component({
     selector: 'app-privacy-policy',
@@ -15,9 +13,8 @@ import { CommonModule } from '@angular/common';
     styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
-  languageService = inject(LanguageService);
-  private readonly firestore = inject(Firestore);
-  readonly legalContent$: Observable<LegalContent> = docData(
-  doc(this.firestore, 'siteContent', 'legal')
-  ) as Observable<LegalContent>;
+    languageService = inject(LanguageService);
+    contentService = inject(FirestoreContentService);
+  
+    legalContent = this.contentService.getLegalContent();
 }

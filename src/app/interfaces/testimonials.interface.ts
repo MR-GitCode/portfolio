@@ -9,3 +9,14 @@ export interface Testimonial {
     order?: number;
     company: string
 }
+
+export interface TestimonialsContent {
+    subtitle: {
+        de: string;
+        en: string;
+    };
+    title: {
+        de: string;
+        en: string;
+    };
+}

@@ -2,11 +2,9 @@ import { Component, inject } from '@angular/core';
 import { AboutTagComponent } from './about-tag/about-tag.component';
 import { ContactButtonComponent } from "../../shared/contact-button/contact-button.component";
 import { LanguageService } from '../../services/language.service';
-import { doc, docData, Firestore } from '@angular/fire/firestore';
-import { AboutContent } from '../../interfaces/about-content.interface';
-import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
+import { FirestoreContentService } from '../../services/firestore-content.service';
 
 @Component({
     selector: 'app-about-me',
@@ -22,9 +20,7 @@ import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scr
 })
 export class AboutMeComponent {
   languageService = inject(LanguageService);
-  private readonly firestore = inject(Firestore);
+  contentService = inject(FirestoreContentService);
 
-  readonly aboutContent$: Observable<AboutContent> = docData(
-    doc(this.firestore, 'siteContent', 'about')
-  ) as Observable<AboutContent>;
+  aboutContent = this.contentService.getAboutContent();
 }

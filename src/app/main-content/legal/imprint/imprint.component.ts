@@ -1,9 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { doc, docData, Firestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
 import { LanguageService } from '../../../services/language.service';
-import { LegalContent } from '../../../interfaces/legal-content.interface';
+import { FirestoreContentService } from '../../../services/firestore-content.service';
 
 
 @Component({
@@ -17,8 +15,7 @@ import { LegalContent } from '../../../interfaces/legal-content.interface';
 })
 export class ImprintComponent {
   languageService = inject(LanguageService);
-  private readonly firestore = inject(Firestore);
-  readonly legalContent$: Observable<LegalContent> = docData(
-    doc(this.firestore, 'siteContent', 'legal')
-  ) as Observable<LegalContent>;
+  contentService = inject(FirestoreContentService);
+  
+  legalContent = this.contentService.getLegalContent();
 }
