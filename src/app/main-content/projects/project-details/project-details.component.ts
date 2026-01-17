@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Firestore, doc, docData } from '@angular/fire/firestore';
 import { map, Observable } from 'rxjs';
 import { ProjectDetails } from '../../../interfaces/project-details.interface';
@@ -19,6 +19,7 @@ import { StickerCircleComponent } from '../../../shared/sticker-circle/sticker-c
     NgFor,
     AnimateOnScrollDirective,
     StickerCircleComponent,
+    RouterLink,
   ],
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss'

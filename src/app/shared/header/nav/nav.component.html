@@ -1,14 +1,14 @@
 <nav *ngIf="navContent$ | async as navContent">
     <div id="about-me" class="link-container">
-        <a href="#about-me-section">{{ navContent.about[languageService.lang] }}</a>
+        <a routerLink="/about-me">{{ navContent.about[languageService.lang] }}</a>
     </div>
     <div id="skills" class="link-container">
-        <a href="#skills-section">{{ navContent.skills[languageService.lang] }}</a>
+        <a routerLink="/skills">{{ navContent.skills[languageService.lang] }}</a>
     </div>
     <div id="projects" class="link-container">
-        <a href="#projectsoverview-section">{{ navContent.projects[languageService.lang] }}</a>
+        <a routerLink="/projects">{{ navContent.projects[languageService.lang] }}</a>
     </div>
     <div id="contacts" class="link-container">
-        <a href="#contact-section">{{ navContent.contact[languageService.lang] }}</a>
+        <a routerLink="/contact">{{ navContent.contact[languageService.lang] }}</a>
     </div>
 </nav>
