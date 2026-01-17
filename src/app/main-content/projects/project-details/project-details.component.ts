@@ -11,18 +11,17 @@ import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-
 import { StickerCircleComponent } from '../../../shared/sticker-circle/sticker-circle.component';
 
 @Component({
-  selector: 'app-project-details',
-  standalone: true,
-  imports: [
-    ContactButtonComponent,
-    CommonModule,
-    NgFor,
-    AnimateOnScrollDirective,
-    StickerCircleComponent,
-    RouterLink,
-  ],
-  templateUrl: './project-details.component.html',
-  styleUrl: './project-details.component.scss'
+    selector: 'app-project-details',
+    imports: [
+        ContactButtonComponent,
+        CommonModule,
+        NgFor,
+        AnimateOnScrollDirective,
+        StickerCircleComponent,
+        RouterLink,
+    ],
+    templateUrl: './project-details.component.html',
+    styleUrl: './project-details.component.scss'
 })
 export class ProjectDetailsComponent implements OnInit {
 

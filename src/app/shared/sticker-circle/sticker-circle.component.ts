@@ -7,11 +7,10 @@ type centerImgKey = 'logo' | 'arrow';
 export type StickerVariant = 'feature' | 'logo';
 
 @Component({
-  selector: 'app-sticker-circle',
-  standalone: true,
-  imports: [],
-  templateUrl: './sticker-circle.component.html',
-  styleUrl: './sticker-circle.component.scss'
+    selector: 'app-sticker-circle',
+    imports: [],
+    templateUrl: './sticker-circle.component.html',
+    styleUrl: './sticker-circle.component.scss'
 })
 export class StickerCircleComponent {
   @Input() variant: StickerVariant = 'logo';

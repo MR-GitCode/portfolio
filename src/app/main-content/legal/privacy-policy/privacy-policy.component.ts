@@ -6,13 +6,12 @@ import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-privacy-policy',
-  standalone: true,
-  imports: [
-    CommonModule
-  ],
-  templateUrl: './privacy-policy.component.html',
-  styleUrl: './privacy-policy.component.scss'
+    selector: 'app-privacy-policy',
+    imports: [
+        CommonModule
+    ],
+    templateUrl: './privacy-policy.component.html',
+    styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
   languageService = inject(LanguageService);

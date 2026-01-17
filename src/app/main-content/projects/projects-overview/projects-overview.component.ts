@@ -9,17 +9,16 @@ import { ProjectsOverviewContent } from '../../../interfaces/projects-overview-c
 import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 
 @Component({
-  selector: 'app-projects-overview',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    NgFor,
-    ProjectViewComponent,
-    CommonModule,
-    AnimateOnScrollDirective,
-  ],
-  templateUrl: './projects-overview.component.html',
-  styleUrl: './projects-overview.component.scss'
+    selector: 'app-projects-overview',
+    imports: [
+        AsyncPipe,
+        NgFor,
+        ProjectViewComponent,
+        CommonModule,
+        AnimateOnScrollDirective,
+    ],
+    templateUrl: './projects-overview.component.html',
+    styleUrl: './projects-overview.component.scss'
 })
 export class ProjectsOverviewComponent {
   private readonly firestore = inject(Firestore);

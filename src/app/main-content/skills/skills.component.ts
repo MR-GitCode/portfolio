@@ -10,18 +10,17 @@ import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scr
 import { StickerComponent } from './sticker/sticker.component';
 
 @Component({
-  selector: 'app-skills',
-  standalone: true,
-  imports: [
-    AsyncPipe,
-    NgFor,
-    SkillIconComponent,
-    CommonModule,
-    AnimateOnScrollDirective,
-    StickerComponent,
-  ],
-  templateUrl: './skills.component.html',
-  styleUrl: './skills.component.scss'
+    selector: 'app-skills',
+    imports: [
+        AsyncPipe,
+        NgFor,
+        SkillIconComponent,
+        CommonModule,
+        AnimateOnScrollDirective,
+        StickerComponent,
+    ],
+    templateUrl: './skills.component.html',
+    styleUrl: './skills.component.scss'
 })
 export class SkillsComponent {
   private readonly firestore = inject(Firestore);

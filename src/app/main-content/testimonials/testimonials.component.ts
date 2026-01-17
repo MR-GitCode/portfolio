@@ -9,17 +9,16 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 
 @Component({
-  selector: 'app-testimonials',
-  standalone: true,
-  imports: [
-    FeedbackComponent,
-    NgFor,
-    AsyncPipe,
-    CommonModule,
-    AnimateOnScrollDirective,
-],
-  templateUrl: './testimonials.component.html',
-  styleUrl: './testimonials.component.scss'
+    selector: 'app-testimonials',
+    imports: [
+        FeedbackComponent,
+        NgFor,
+        AsyncPipe,
+        CommonModule,
+        AnimateOnScrollDirective,
+    ],
+    templateUrl: './testimonials.component.html',
+    styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
   languageService = inject(LanguageService);

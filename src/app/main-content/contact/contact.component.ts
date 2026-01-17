@@ -9,16 +9,15 @@ import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scr
 import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circle.component';
 
 @Component({
-  selector: 'app-contact',
-  standalone: true,
-  imports: [
-    FormComponent,
-    CommonModule,
-    AnimateOnScrollDirective,
-    StickerCircleComponent,
-  ],
-  templateUrl: './contact.component.html',
-  styleUrl: './contact.component.scss'
+    selector: 'app-contact',
+    imports: [
+        FormComponent,
+        CommonModule,
+        AnimateOnScrollDirective,
+        StickerCircleComponent,
+    ],
+    templateUrl: './contact.component.html',
+    styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
   languageService = inject(LanguageService);

@@ -3,13 +3,12 @@ import { Component, inject } from '@angular/core';
 import { Language, LanguageService } from '../../../services/language.service';
 
 @Component({
-  selector: 'app-toggle-language',
-  standalone: true,
-  imports: [
-    CommonModule,
-  ],
-  templateUrl: './toggle-language.component.html',
-  styleUrl: './toggle-language.component.scss'
+    selector: 'app-toggle-language',
+    imports: [
+        CommonModule,
+    ],
+    templateUrl: './toggle-language.component.html',
+    styleUrl: './toggle-language.component.scss'
 })
 
 export class ToggleLanguageComponent {

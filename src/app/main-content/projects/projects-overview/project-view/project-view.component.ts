@@ -7,16 +7,15 @@ import { StickerCircleComponent } from '../../../../shared/sticker-circle/sticke
 import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
-  selector: 'app-project-view',
-  standalone: true,
-  imports: [
-    ContactButtonComponent,
-    StickerCircleComponent,
-    NgIf,
-    CommonModule,
-],
-  templateUrl: './project-view.component.html',
-  styleUrl: './project-view.component.scss'
+    selector: 'app-project-view',
+    imports: [
+        ContactButtonComponent,
+        StickerCircleComponent,
+        NgIf,
+        CommonModule,
+    ],
+    templateUrl: './project-view.component.html',
+    styleUrl: './project-view.component.scss'
 })
 export class ProjectViewComponent {
   @Input() project!: Project;

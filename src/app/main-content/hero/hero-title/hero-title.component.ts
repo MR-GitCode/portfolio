@@ -2,13 +2,12 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { LetterHoverDirective } from '../../../shared/directives/letter-hover.directive';
 
 @Component({
-  selector: 'app-hero-title',
-  standalone: true, 
-  imports: [
-     LetterHoverDirective,
-  ],
-  templateUrl: './hero-title.component.html',
-  styleUrl: './hero-title.component.scss'
+    selector: 'app-hero-title',
+    imports: [
+        LetterHoverDirective,
+    ],
+    templateUrl: './hero-title.component.html',
+    styleUrl: './hero-title.component.scss'
 })
 export class HeroTitleComponent {
   @Input() textTitle1?: string;

@@ -10,17 +10,16 @@ import { Observable } from 'rxjs';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-hero',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HeroSocialsComponent,
-    HeroTitleComponent,
-    ContactButtonComponent,
-    IconRollDirective,
-],
-  templateUrl: './hero.component.html',
-  styleUrl: './hero.component.scss'
+    selector: 'app-hero',
+    imports: [
+        CommonModule,
+        HeroSocialsComponent,
+        HeroTitleComponent,
+        ContactButtonComponent,
+        IconRollDirective,
+    ],
+    templateUrl: './hero.component.html',
+    styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
   languageService = inject(LanguageService);

@@ -10,16 +10,15 @@ import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-form',
-  standalone: true,
-  imports: [
-    FormsModule,
-    ContactButtonComponent,
-    CommonModule,
-    RouterLink,
-  ],
-  templateUrl: './form.component.html',
-  styleUrl: './form.component.scss'
+    selector: 'app-form',
+    imports: [
+        FormsModule,
+        ContactButtonComponent,
+        CommonModule,
+        RouterLink,
+    ],
+    templateUrl: './form.component.html',
+    styleUrl: './form.component.scss'
 })
 export class FormComponent {
   languageService = inject(LanguageService);

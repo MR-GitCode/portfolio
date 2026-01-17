@@ -7,13 +7,12 @@ import { LegalContent } from '../../../interfaces/legal-content.interface';
 
 
 @Component({
-  selector: 'app-imprint',
-  standalone: true,
-  imports: [
-    CommonModule,
-],
-  templateUrl: './imprint.component.html',
-  styleUrl: './imprint.component.scss'
+    selector: 'app-imprint',
+    imports: [
+        CommonModule,
+    ],
+    templateUrl: './imprint.component.html',
+    styleUrl: './imprint.component.scss'
 })
 export class ImprintComponent {
   languageService = inject(LanguageService);
