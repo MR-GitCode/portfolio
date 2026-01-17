@@ -19,10 +19,6 @@ export class StickerCircleComponent {
   @Input() imgWidth = 54;
   @Input() imgHeight = 56;
 
-  // //Input for text
-  // @Input() topText = '';
-  // @Input() bottomText = '';
-
   // // Position on circle
   @Input() topOffset: string = '50%';
   @Input() bottomOffset: string = '50%';
