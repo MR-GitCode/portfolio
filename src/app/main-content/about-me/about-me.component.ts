@@ -10,6 +10,7 @@ import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scr
 
 @Component({
     selector: 'app-about-me',
+    standalone: true,
     imports: [
         AboutTagComponent,
         ContactButtonComponent,

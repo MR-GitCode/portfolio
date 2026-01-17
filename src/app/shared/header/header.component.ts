@@ -4,6 +4,7 @@ import { ToggleLanguageComponent } from './toggle-language/toggle-language.compo
 
 @Component({
     selector: 'app-header',
+    standalone: true,
     imports: [
         NavComponent,
         ToggleLanguageComponent

@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-footer-links',
+    standalone: true,
     imports: [
         RouterLink,
         IconRollDirective,

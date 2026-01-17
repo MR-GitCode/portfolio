@@ -11,6 +11,7 @@ import { StickerComponent } from './sticker/sticker.component';
 
 @Component({
     selector: 'app-skills',
+    standalone: true,
     imports: [
         AsyncPipe,
         NgFor,

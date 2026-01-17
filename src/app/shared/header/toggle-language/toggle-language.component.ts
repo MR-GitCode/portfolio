@@ -4,6 +4,7 @@ import { Language, LanguageService } from '../../../services/language.service';
 
 @Component({
     selector: 'app-toggle-language',
+    standalone: true,
     imports: [
         CommonModule,
     ],

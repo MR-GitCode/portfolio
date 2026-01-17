@@ -11,6 +11,7 @@ import { RouterLink } from '@angular/router';
 
 @Component({
     selector: 'app-form',
+    standalone: true,
     imports: [
         FormsModule,
         ContactButtonComponent,

@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-hero',
+    standalone: true,
     imports: [
         CommonModule,
         HeroSocialsComponent,

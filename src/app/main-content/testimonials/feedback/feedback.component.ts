@@ -4,6 +4,7 @@ import { LanguageService } from '../../../services/language.service';
 
 @Component({
     selector: 'app-feedback',
+    standalone: true,
     imports: [],
     templateUrl: './feedback.component.html',
     styleUrl: './feedback.component.scss'

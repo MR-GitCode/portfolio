@@ -8,6 +8,7 @@ import { LegalContent } from '../../../interfaces/legal-content.interface';
 
 @Component({
     selector: 'app-imprint',
+    standalone: true,
     imports: [
         CommonModule,
     ],

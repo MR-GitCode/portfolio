@@ -9,6 +9,7 @@ import { FooterComponent } from '../shared/footer/footer.component';
 
 @Component({
     selector: 'app-main-content',
+    standalone: true,
     imports: [
         HeroComponent,
         AboutMeComponent,

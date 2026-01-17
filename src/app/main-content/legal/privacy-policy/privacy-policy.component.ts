@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-privacy-policy',
+    standalone: true,
     imports: [
         CommonModule
     ],

@@ -3,6 +3,7 @@ import { LetterHoverDirective } from '../../../shared/directives/letter-hover.di
 
 @Component({
     selector: 'app-hero-title',
+    standalone: true,
     imports: [
         LetterHoverDirective,
     ],

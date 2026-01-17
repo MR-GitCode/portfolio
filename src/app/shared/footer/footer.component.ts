@@ -3,6 +3,7 @@ import { FooterLinksComponent } from './footer-links/footer-links.component';
 
 @Component({
     selector: 'app-footer',
+    standalone: true,
     imports: [
         FooterLinksComponent,
     ],

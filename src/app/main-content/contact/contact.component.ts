@@ -10,6 +10,7 @@ import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circ
 
 @Component({
     selector: 'app-contact',
+    standalone: true,
     imports: [
         FormComponent,
         CommonModule,

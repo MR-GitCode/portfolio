@@ -10,6 +10,7 @@ import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-
 
 @Component({
     selector: 'app-projects-overview',
+    standalone: true,
     imports: [
         AsyncPipe,
         NgFor,

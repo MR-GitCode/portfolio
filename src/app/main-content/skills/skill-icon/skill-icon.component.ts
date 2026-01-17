@@ -3,6 +3,7 @@ import { Skills } from '../../../interfaces/skills.interface';
 
 @Component({
     selector: 'app-skill-icon',
+    standalone: true,
     imports: [],
     templateUrl: './skill-icon.component.html',
     styleUrl: './skill-icon.component.scss'

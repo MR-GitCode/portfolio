@@ -58,6 +58,7 @@ export class StickerCircleComponent {
     },
   };
 
+
   readonly stickerSrc: Record<StickerKey, string> = {
     orange: '/assets/img/03_stickers/00_Round/01_Color_option_1_Orange.png',
     blue:   '/assets/img/03_stickers/00_Round/00_Color_option_1_Blue.png',

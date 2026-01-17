@@ -4,6 +4,7 @@ import { AsyncPipe, NgFor } from '@angular/common';
 
 @Component({
     selector: 'app-sticker',
+    standalone: true,
     imports: [
     // AsyncPipe,
     // NgFor,
