@@ -8,6 +8,7 @@ export type StickerVariant = 'feature' | 'logo';
 
 @Component({
     selector: 'app-sticker-circle',
+    standalone: true,
     imports: [],
     templateUrl: './sticker-circle.component.html',
     styleUrl: './sticker-circle.component.scss'

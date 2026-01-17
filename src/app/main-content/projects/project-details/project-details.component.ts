@@ -4,14 +4,15 @@ import { Firestore, doc, docData } from '@angular/fire/firestore';
 import { map, Observable } from 'rxjs';
 import { ProjectDetails } from '../../../interfaces/project-details.interface';
 import { LanguageService } from '../../../services/language.service';
-import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 import { CommonModule, NgFor } from '@angular/common';
 import { SkillsProjectDetails } from '../../../interfaces/skills-project-details.interface';
 import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 import { StickerCircleComponent } from '../../../shared/sticker-circle/sticker-circle.component';
+import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 
 @Component({
     selector: 'app-project-details',
+    standalone: true,
     imports: [
         ContactButtonComponent,
         CommonModule,

@@ -3,6 +3,7 @@ import { Component, Input } from '@angular/core';
 
 @Component({
     selector: 'app-contact-button',
+    standalone: true,
     imports: [
         CommonModule,
     ],

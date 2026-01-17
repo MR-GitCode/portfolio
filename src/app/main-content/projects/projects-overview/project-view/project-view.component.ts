@@ -8,6 +8,7 @@ import { CommonModule, NgIf } from '@angular/common';
 
 @Component({
     selector: 'app-project-view',
+    standalone: true,
     imports: [
         ContactButtonComponent,
         StickerCircleComponent,
