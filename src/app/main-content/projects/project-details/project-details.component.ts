@@ -11,17 +11,17 @@ import { StickerCircleComponent } from '../../../shared/sticker-circle/sticker-c
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 
 @Component({
-    selector: 'app-project-details',
-    standalone: true,
-    imports: [
-    ContactButtonComponent,
-    CommonModule,
-    AnimateOnScrollDirective,
-    StickerCircleComponent,
-    RouterLink
-],
-    templateUrl: './project-details.component.html',
-    styleUrl: './project-details.component.scss'
+  selector: 'app-project-details',
+  standalone: true,
+  imports: [
+      ContactButtonComponent,
+      CommonModule,
+      AnimateOnScrollDirective,
+      StickerCircleComponent,
+      RouterLink
+  ],
+  templateUrl: './project-details.component.html',
+  styleUrl: './project-details.component.scss'
 })
 export class ProjectDetailsComponent implements OnInit {
   languageService = inject(LanguageService);

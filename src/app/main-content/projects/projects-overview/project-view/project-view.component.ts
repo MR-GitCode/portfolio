@@ -1,32 +1,31 @@
 import { Component, inject, Input } from '@angular/core';
 import { LanguageService } from '../../../../services/language.service';
-import { Router } from '@angular/router';
 import { ContactButtonComponent } from '../../../../shared/contact-button/contact-button.component';
 import { StickerCircleComponent } from '../../../../shared/sticker-circle/sticker-circle.component';
-
 import { Project } from '../../../../interfaces/projects-overview-content.interface';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'app-project-view',
     standalone: true,
     imports: [
-    ContactButtonComponent,
-    StickerCircleComponent
-],
+      ContactButtonComponent,
+      StickerCircleComponent
+  ],
     templateUrl: './project-view.component.html',
     styleUrl: './project-view.component.scss'
 })
 export class ProjectViewComponent {
-  @Input() project!: Project;
-  languageService = inject(LanguageService);
+  @Input({ required: true }) project!: Project;
+  readonly languageService = inject(LanguageService);
+  private router = inject(Router);
 
-  constructor(private router: Router) {}
-
-  openProjectDetails(id: string) {
-    const url = this.router.serializeUrl(
-      this.router.createUrlTree(['/projects', id])
-    );
-
-    window.open(url, '_blank');
+  openProjectDetails(projectId: string): void{
+    console.log('🚀 Navigating to:', projectId);
+    this.router.navigate(['/projects', projectId]).then(success => {
+      console.log('✅ Navigation success:', success);
+    }).catch(error => {
+      console.error('❌ Navigation error:', error);
+    });
   }
 }

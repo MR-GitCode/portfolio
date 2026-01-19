@@ -11,18 +11,18 @@ import { ProjectsOverviewComponent } from './main-content/projects/projects-over
 
 export const routes: Routes = [
     { path: '', component: MainContentComponent},
-    { path: 'about-me', component: AboutMeComponent },
-    { path: 'skills', component: SkillsComponent },
-    { path: 'projects', component: ProjectsOverviewComponent },
-    { path: 'contact', component: ContactComponent },
+    // { path: 'about-me', component: AboutMeComponent },
+    // { path: 'skills', component: SkillsComponent },
+    // { path: 'projects', component: ProjectsOverviewComponent },
+    // { path: 'contact', component: ContactComponent },
 
-    { path: 'projects/:id', component: ProjectDetailsComponent },
+    { path: 'projects/:id', component: ProjectDetailsComponent, title: 'Project Details'},
     { path: 'legal', component: LegalComponent,
         children: [
-            { path: 'imprint', component: ImprintComponent },
-            { path: 'privacy-policy', component: PrivacyPolicyComponent },
+            { path: 'imprint', component: ImprintComponent, title: 'Imprint' },
+            { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy' },
             { path: '', redirectTo: 'imprint', pathMatch: 'full' }
         ]
     },
     { path: '**', redirectTo: '' }     
-];
+] as const;;
