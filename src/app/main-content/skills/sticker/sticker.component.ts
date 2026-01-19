@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
-import { AsyncPipe, NgFor } from '@angular/common';
+import { AsyncPipe } from '@angular/common';
 
 @Component({
     selector: 'app-sticker',

@@ -6,7 +6,7 @@ import { LanguageService } from '../../../services/language.service';
 import { Observable } from 'rxjs';
 import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { FormContent } from '../../../interfaces/form-content.interface';
-import { CommonModule } from '@angular/common';
+
 import { RouterLink } from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 
@@ -14,11 +14,10 @@ import { FirestoreContentService } from '../../../services/firestore-content.ser
     selector: 'app-form',
     standalone: true,
     imports: [
-        FormsModule,
-        ContactButtonComponent,
-        CommonModule,
-        RouterLink,
-    ],
+    FormsModule,
+    ContactButtonComponent,
+    RouterLink
+],
     templateUrl: './form.component.html',
     styleUrl: './form.component.scss'
 })

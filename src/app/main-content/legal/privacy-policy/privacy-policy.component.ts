@@ -1,14 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-import { CommonModule } from '@angular/common';
+
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 
 @Component({
     selector: 'app-privacy-policy',
     standalone: true,
-    imports: [
-        CommonModule
-    ],
+    imports: [],
     templateUrl: './privacy-policy.component.html',
     styleUrl: './privacy-policy.component.scss'
 })

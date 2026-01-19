@@ -1,26 +1,28 @@
-<div class="title-bg content-area" *ngIf="legalContent() as legalContent">
+@if (legalContent(); as legalContent) {
+  <div class="title-bg content-area">
     <div class="legal-title">
-        <h1>{{ legalContent.imprint.title[languageService.lang] }}</h1>  
+      <h1>{{ legalContent.imprint.title[languageService.lang] }}</h1>
     </div>
-</div>
+  </div>
+}
 
-<div class="content-area" *ngIf="legalContent() as legalContent">
+@if (legalContent(); as legalContent) {
+  <div class="content-area">
     <div class="imprint">
-        <div>
-            <h2>{{ legalContent.imprint[languageService.lang][0].title }}</h2><br/>
-            <p>
-                Michael Ring<br/>
-                Liselotte-Herrmann-Straße, 26b<br />
-                07747 Jena
-            </p>
-        </div>
-        
-        <div>
-            <h2>{{ legalContent.imprint[languageService.lang][1].title }}</h2><br/>
-            <p>
-                <a href="mailto:max&#64;muster.de">post&#64;michaelring.eu</a>
-            </p>    
-        </div>
-        
+      <div>
+        <h2>{{ legalContent.imprint[languageService.lang][0].title }}</h2><br/>
+        <p>
+          Michael Ring<br/>
+          Liselotte-Herrmann-Straße, 26b<br />
+          07747 Jena
+        </p>
+      </div>
+      <div>
+        <h2>{{ legalContent.imprint[languageService.lang][1].title }}</h2><br/>
+        <p>
+          <a href="mailto:max&#64;muster.de">post&#64;michaelring.eu</a>
+        </p>
+      </div>
     </div>
-</div>
+  </div>
+}

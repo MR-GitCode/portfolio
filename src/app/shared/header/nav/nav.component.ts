@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-import { CommonModule } from '@angular/common';
+
 import { RouterLink } from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 
@@ -9,9 +9,8 @@ import { FirestoreContentService } from '../../../services/firestore-content.ser
     selector: 'app-nav',
     standalone: true,
     imports: [
-        CommonModule,
-        RouterLink,
-    ],
+    RouterLink
+],
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.scss'
 })

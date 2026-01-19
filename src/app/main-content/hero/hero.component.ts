@@ -7,19 +7,18 @@ import { LanguageService } from '../../services/language.service';
 import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { HeroContent } from '../../interfaces/hero-content.interface';
 import { Observable } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 import { FirestoreContentService } from '../../services/firestore-content.service';
 
 @Component({
     selector: 'app-hero',
     standalone: true,
     imports: [
-        CommonModule,
-        HeroSocialsComponent,
-        HeroTitleComponent,
-        ContactButtonComponent,
-        IconRollDirective,
-    ],
+    HeroSocialsComponent,
+    HeroTitleComponent,
+    ContactButtonComponent,
+    IconRollDirective
+],
     templateUrl: './hero.component.html',
     styleUrl: './hero.component.scss'
 })

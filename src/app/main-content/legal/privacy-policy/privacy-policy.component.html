@@ -1,76 +1,75 @@
-<div class="title-bg content-area" *ngIf="legalContent() as legalContent">
+@if (legalContent(); as legalContent) {
+  <div class="title-bg content-area">
     <div class="legal-title">
-        <h1>{{ legalContent.privacyPolicy.title[languageService.lang] }}</h1>   
+      <h1>{{ legalContent.privacyPolicy.title[languageService.lang] }}</h1>
     </div>
-</div>
+  </div>
+}
 
-<div class="content-area" *ngIf="legalContent() as legalContent">
+@if (legalContent(); as legalContent) {
+  <div class="content-area">
     <div class="privacy-policy">
-        <div>
-            <h2>{{ legalContent.privacyPolicy[languageService.lang][0].title }}</h2>
-            <p>
-                Michael Ring<br />
-                Liselotte-Herrmann-Str. 26<br />
-                07747 Jena<br />
-                E-Mail: <a href="mailto:max&#64;muster.de">post&#64;michaelring.eu</a>
-            </p>
-        </div>
-
-        <div>
-            <h2>{{ legalContent.privacyPolicy[languageService.lang][1].title }}</h2>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][1].text[0] }}
-            </p><br/>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][1].text[1] }}
-            </p> 
-        </div>
-    
-        <div>
-            <h2>{{ legalContent.privacyPolicy[languageService.lang][2].title }}</h2>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][2].text[0] }}
-            </p><br/>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][2].text[1] }}
-            </p>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][2].text[2] }}
-            </p><br/>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][2].text[3] }}
-            </p><br/>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][2].text[4] }}
-                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
-                    https://policies.google.com/privacy
-                </a>
-            </p> 
-        </div>
-    
-        <div>
-            <h2>{{ legalContent.privacyPolicy[languageService.lang][3].title }}</h2>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][3].text[0] }}
-            </p><br/>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][3].text[1] }}
-            </p><br/>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][3].text[2] }}
-            </p>
-        </div>
-    
-        <div>
-            <h2>{{ legalContent.privacyPolicy[languageService.lang][4].title }}</h2>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][4].text[0] }}
-            </p><br/>
-            <p>
-                {{ legalContent.privacyPolicy[languageService.lang][4].text[1] }}
-            </p><br/>
-            
-            <p>{{ legalContent.privacyPolicy[languageService.lang][4].text[2] }}</p>
-        </div>
+      <div>
+        <h2>{{ legalContent.privacyPolicy[languageService.lang][0].title }}</h2>
+        <p>
+          Michael Ring<br />
+          Liselotte-Herrmann-Str. 26<br />
+          07747 Jena<br />
+          E-Mail: <a href="mailto:max&#64;muster.de">post&#64;michaelring.eu</a>
+        </p>
+      </div>
+      <div>
+        <h2>{{ legalContent.privacyPolicy[languageService.lang][1].title }}</h2>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][1].text[0] }}
+        </p><br/>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][1].text[1] }}
+        </p>
+      </div>
+      <div>
+        <h2>{{ legalContent.privacyPolicy[languageService.lang][2].title }}</h2>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][2].text[0] }}
+        </p><br/>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][2].text[1] }}
+        </p>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][2].text[2] }}
+        </p><br/>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][2].text[3] }}
+        </p><br/>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][2].text[4] }}
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+            https://policies.google.com/privacy
+          </a>
+        </p>
+      </div>
+      <div>
+        <h2>{{ legalContent.privacyPolicy[languageService.lang][3].title }}</h2>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][3].text[0] }}
+        </p><br/>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][3].text[1] }}
+        </p><br/>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][3].text[2] }}
+        </p>
+      </div>
+      <div>
+        <h2>{{ legalContent.privacyPolicy[languageService.lang][4].title }}</h2>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][4].text[0] }}
+        </p><br/>
+        <p>
+          {{ legalContent.privacyPolicy[languageService.lang][4].text[1] }}
+        </p><br/>
+        <p>{{ legalContent.privacyPolicy[languageService.lang][4].text[2] }}</p>
+      </div>
     </div>
-</div>
+  </div>
+}

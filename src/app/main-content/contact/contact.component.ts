@@ -4,7 +4,7 @@ import { LanguageService } from '../../services/language.service';
 import { doc, docData, Firestore } from '@angular/fire/firestore';
 import { ContactContent } from '../../interfaces/contact-content.interface';
 import { Observable } from 'rxjs';
-import { CommonModule } from '@angular/common';
+
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circle.component';
 import { FirestoreContentService } from '../../services/firestore-content.service';
@@ -13,11 +13,10 @@ import { FirestoreContentService } from '../../services/firestore-content.servic
     selector: 'app-contact',
     standalone: true,
     imports: [
-        FormComponent,
-        CommonModule,
-        AnimateOnScrollDirective,
-        StickerCircleComponent,
-    ],
+    FormComponent,
+    AnimateOnScrollDirective,
+    StickerCircleComponent
+],
     templateUrl: './contact.component.html',
     styleUrl: './contact.component.scss'
 })

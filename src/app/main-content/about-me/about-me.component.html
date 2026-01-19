@@ -1,27 +1,28 @@
-<section class="section-bg" id="about-me-section" *ngIf="aboutContent() as aboutContent">
+@if (aboutContent(); as aboutContent) {
+  <section class="section-bg" id="about-me-section">
     <div class="about-me-content">
-        <div class="tag-container">
-            <app-about-tag 
-                [textBased]="aboutContent.tags[languageService.lang].tag1"
-                [textRelocate]="aboutContent.tags[languageService.lang].tag2"
-                [textRemote]="aboutContent.tags[languageService.lang].tag3"
-            ></app-about-tag>
+      <div class="tag-container">
+        <app-about-tag
+          [textBased]="aboutContent.tags[languageService.lang].tag1"
+          [textRelocate]="aboutContent.tags[languageService.lang].tag2"
+          [textRemote]="aboutContent.tags[languageService.lang].tag3"
+        ></app-about-tag>
+      </div>
+      <div class="about-me-info">
+        <div id="about-me-title" >
+          <p>{{ aboutContent.subtitle[languageService.lang] }}</p>
+          <h1>{{ aboutContent.title[languageService.lang] }}</h1>
+          <div id="drawline" appAnimateOnScroll [delay]="300"></div>
         </div>
-        <div class="about-me-info">
-            
-            <div id="about-me-title" >
-                <p>{{ aboutContent.subtitle[languageService.lang] }}</p>
-                <h1>{{ aboutContent.title[languageService.lang] }}</h1>
-                <div id="drawline" appAnimateOnScroll [delay]="300"></div>  
-            </div>
-            <span>{{ aboutContent.text[languageService.lang] }}</span>
-            <div class="contact-bt">
-                <app-contact-button textBtn="{{ aboutContent.buttonText[languageService.lang] }}" urlBtn="{{ aboutContent.buttonURL}}" 
+        <span>{{ aboutContent.text[languageService.lang] }}</span>
+        <div class="contact-bt">
+          <app-contact-button textBtn="{{ aboutContent.buttonText[languageService.lang] }}" urlBtn="{{ aboutContent.buttonURL}}"
                     style=" --border-color: #0E1013;
                             --font-color: #0E1013;
                             --shadow: #0E1013">
-                </app-contact-button>  
-            </div>
+          </app-contact-button>
         </div>
+      </div>
     </div>
-</section>
+  </section>
+}

@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { LanguageService } from '../../../services/language.service';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 
@@ -7,9 +7,7 @@ import { FirestoreContentService } from '../../../services/firestore-content.ser
 @Component({
     selector: 'app-imprint',
     standalone: true,
-    imports: [
-        CommonModule,
-    ],
+    imports: [],
     templateUrl: './imprint.component.html',
     styleUrl: './imprint.component.scss'
 })
