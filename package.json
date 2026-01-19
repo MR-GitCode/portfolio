@@ -6,8 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:portfolio": "node dist/portfolio/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -21,7 +20,6 @@
     "@angular/platform-browser": "^20.3.16",
     "@angular/platform-browser-dynamic": "^20.3.16",
     "@angular/router": "^20.3.16",
-    "@angular/ssr": "^20.3.14",
     "firebase": "^12.8.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
