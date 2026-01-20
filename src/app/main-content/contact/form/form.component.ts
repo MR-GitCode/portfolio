@@ -3,10 +3,6 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 import { LanguageService } from '../../../services/language.service';
-import { Observable } from 'rxjs';
-import { doc, docData, Firestore } from '@angular/fire/firestore';
-import { FormContent } from '../../../interfaces/form-content.interface';
-
 import { RouterLink } from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 

@@ -4,11 +4,11 @@
 .section-bg{
     background-image: url('/assets/img/01_background/07_project_details.png');
     background-size: cover;
+    background-position-x: center;
     background-repeat: no-repeat;
     background-color: $darkgrey;
     width: 100%;
     height: 100vh !important;
-    padding-top: 100px;
 }
 
 .projects-details-container{
@@ -17,15 +17,16 @@
     flex-direction: column;
     justify-content: center;
     gap: 48px;
-    margin: 0 auto;
-    max-width: 1440px;
+    align-items: center;
 }
 
 .projects-details-content{
     display: flex;
     justify-content: space-between;
-    margin: 0 120px;
     position: relative;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 120px;
     .project-description{
         width: 488px;
         display: flex;
@@ -37,30 +38,32 @@
             margin: 0;
         }
         h2{
-            font-size: 24px;
+            font-size: 28px;
             font-weight: 700;
             margin: 0;
             margin-bottom: 16px;
         }
         p{
-            font-size: 18px;
+            font-size: 20px;
             font-weight: 400;
             margin: 0;
+            line-height: 30px;
+            text-align: justify
         }
     }
     .project-skills{
         display: flex;
-        gap: 8px;
+        gap: 12px;
         .skill{
             display: flex;
             align-items: center;
             gap: 4px;
             img{
-            width: 24px;
-            height: 24px;
+                width: 32px;
+                height: 32px;
             }
             p{
-                font-size: 16px;
+                font-size: 18px;
             }
         } 
     }
@@ -88,12 +91,15 @@
     position: absolute;
     top: -48px;
     left: -48px;
+    a{
+        text-decoration: none;
+    }
     .arrow-back{
-        color: $white;
+        color: $black;
         display: flex;
         align-items: center;
         gap: 8px;
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 700;
         cursor: pointer;
         img{
@@ -113,7 +119,7 @@
     bottom: -58px;
     right: -48px;
     gap: 8px;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 700;
     color: $white;
     cursor: pointer;

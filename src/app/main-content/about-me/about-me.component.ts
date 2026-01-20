@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { AboutTagComponent } from './about-tag/about-tag.component';
 import { ContactButtonComponent } from "../../shared/contact-button/contact-button.component";
 import { LanguageService } from '../../services/language.service';
-
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 import { FirestoreContentService } from '../../services/firestore-content.service';
 

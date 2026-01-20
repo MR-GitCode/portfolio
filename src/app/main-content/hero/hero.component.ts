@@ -4,10 +4,6 @@ import { HeroTitleComponent } from './hero-title/hero-title.component';
 import { ContactButtonComponent } from '../../shared/contact-button/contact-button.component';
 import { IconRollDirective } from "../../shared/directives/icon-roll.directive";
 import { LanguageService } from '../../services/language.service';
-import { doc, docData, Firestore } from '@angular/fire/firestore';
-import { HeroContent } from '../../interfaces/hero-content.interface';
-import { Observable } from 'rxjs';
-
 import { FirestoreContentService } from '../../services/firestore-content.service';
 
 @Component({

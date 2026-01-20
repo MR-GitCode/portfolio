@@ -1,6 +1,5 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 
 @Component({

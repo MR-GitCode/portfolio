@@ -1,9 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-
 import { RouterLink } from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
-
 
 @Component({
     selector: 'app-nav',

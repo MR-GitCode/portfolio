@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavComponent } from './nav/nav.component';
 import { ToggleLanguageComponent } from './toggle-language/toggle-language.component';
 
