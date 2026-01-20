@@ -17,7 +17,7 @@ footer{
 
 .footer-content{
     height: 100%;
-    color: $white;
+    color: var(--font-color, $white);
     display: flex;
     flex-direction: column;
 }

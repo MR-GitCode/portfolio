@@ -11,5 +11,5 @@ import { FooterLinksComponent } from './footer-links/footer-links.component';
     styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+    
 }

@@ -9,7 +9,7 @@
     height: 42px;
     a{
         text-decoration: none;
-        color: $white;
+        color: var(--font-color, $white);
         font-size: 18px;
         font-weight: 500; 
         z-index: 100;  
@@ -24,6 +24,7 @@
     &:hover{
         background-color: $blue;
         border-radius: 100px;
+        color: var(--font-color-hover, $white);
     }
 }
 
