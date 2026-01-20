@@ -4,7 +4,7 @@
 .section-bg{
     background-image: url('/assets/img/01_background/03_Skills.png');
     background-size: cover;
-    background-position: center;
+    background-position-y: bottom;
     background-repeat: no-repeat;
     width: 100%;
     height: 900px;
@@ -55,7 +55,6 @@
         background-image: url('/assets/img/00_hand-drawn-lines/02_Skills/color_option_1.png');
         height: 80px;
         width: 261px;
-        // transform: scaleX(-1);
         @include drawline;
     }
     &.drawline-visible::after {
@@ -75,7 +74,9 @@
         font-weight: 400;
         color: $black;
         top: 0;
-        padding: 32px;
+        padding: 32px 23px;
+        line-height: 25px;
+        text-align: justify;
     }
 }
 

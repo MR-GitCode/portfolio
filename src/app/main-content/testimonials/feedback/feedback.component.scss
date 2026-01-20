@@ -16,6 +16,9 @@
     position: relative;
     p{
         z-index: 3;
+        text-align: justify;
+        font-size: 18px;
+        margin: 0;
     }
     &:hover{
         .hover-bg{
@@ -54,7 +57,7 @@
             height: 24px;
         }
         p{
-            margin: 0
+            margin: 0;
         }
         &:hover{
             color: $white;

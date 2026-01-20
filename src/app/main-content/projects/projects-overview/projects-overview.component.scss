@@ -2,26 +2,27 @@
 @import '../../../../styles/drawline.animation';
 
 .section-bg{
-    width: 100%;
-    max-width: 1440px;
-    height: fit-content;
-    margin: 0 auto;
-    padding-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 .projects-overview-container{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px;
-    @include margin-left-right;
+    max-width: 1440px;
+    margin: 0 120px;
+}
+
+.projects-overview-container > *{
+    flex: 0 0 536px;
 }
 
 .headline-container{
-    width: 560px;
-    height: 560px;
+    width: 536px !important;
     display: flex;
     flex-direction: column;
-    gap: 48px;
+    padding-left: 100px;
     h1{
         font-size: 64px;
         font-weight: 700;
@@ -32,7 +33,8 @@
         font-size: 18px;
         font-weight: 400;
         margin: 0;
-        padding-left: 10px;
+        line-height: 30px;
+        text-align: justify;
     }
 }
 

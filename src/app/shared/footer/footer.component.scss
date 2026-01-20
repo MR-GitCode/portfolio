@@ -5,22 +5,21 @@ footer{
     width: 100%;
     z-index: 300;
     padding-bottom: 25px;
-    max-width: 1440px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
 }
 
 .content-area{
-    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 120px;
 }
 
 .footer-content{
-    max-width: 1440px;
     height: 100%;
-    margin: 0 120px;
     color: $white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .copyright-info{

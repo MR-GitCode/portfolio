@@ -2,10 +2,7 @@
 
 .project-container{
     width: 536px;
-    height: 560px;
-    .padding-bottom{
-        padding-bottom: 88px;
-    }
+    padding: 0 100px;
 }
 
 .projects-link-container{
@@ -65,4 +62,6 @@ p{
     font-size: 18px;
     font-weight: 400;
     margin: 0;
+    line-height: 30px;
+    text-align: justify;
 }
