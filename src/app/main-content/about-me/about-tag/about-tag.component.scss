@@ -40,8 +40,8 @@
     @include flex-center;
     gap: 16px;
     img{
-       width: 40px;
-       height: 40px; 
+       width: 40px !important;
+       height: 40px !important; 
     }
     p{
         font-size: 24px;
@@ -53,3 +53,44 @@
 .padding{
         padding-bottom: 20px;
     }
+
+@media only screen and  (max-width: 600px) {  
+    .about-tag-container{
+        width: 480px;   
+        img{
+            width: 480px;
+        };
+    }
+}
+
+@media only screen and  (max-width: 500px) {  
+    .about-tag-container{
+        width: 420px;
+        height: 300px !important;   
+        img{
+            width: 400px;
+            height: 128px;
+        };
+    }
+    .paper-conent p{
+        font-size: 20px; 
+    }
+}
+
+@media only screen and  (max-width: 450px) {
+    .about-tag-container{
+        width: 315px;  
+        img{
+            width: 300px;
+        };
+    }
+    .job-preferences{
+        img{
+            width: 32px !important;
+            height: 32px !important; 
+        }
+    }
+    .paper-conent p{
+        font-size: 16px; 
+    }
+}

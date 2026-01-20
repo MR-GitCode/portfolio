@@ -150,3 +150,33 @@
     }
     @include icon-roll-animation();
 }
+
+@media only screen and  (max-width: $displayWidth-xs) {
+    .hero-content{
+        width: 343px;
+        height: 260px !important;
+    }
+}
+
+@media only screen and  (max-width: $displayWidth-sm) {
+    .hero-content{
+        width: fit-content !important;
+        height: 320px;
+    }
+    .polaroid-container{
+        top: unset !important;
+        right: unset !important;
+        bottom: -300px !important;
+    }
+}
+
+@media only screen and  (max-width: $displayWidth-md) {
+    .hero-content{
+        width: 650px;
+        height: 380px;
+    }
+
+    .polaroid-container{
+        top: -70px;
+    }
+}

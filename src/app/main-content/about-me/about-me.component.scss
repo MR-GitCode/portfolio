@@ -79,3 +79,34 @@
         animation: drawLeftToRight 0.25s;
     }
 }
+
+@media only screen and  (max-width: 1200px) {
+    .section-bg{
+        height: 850px !important;
+    }
+
+    .about-me-content{
+        flex-direction: column-reverse !important;
+        padding-bottom: 80px;
+        width: 400px;
+    }
+}
+
+@media only screen and  (max-width: 500px) {
+    .about-me-info span{
+        font-size: 18px !important; 
+    }
+
+    .about-me-content div{
+        width: 400px;
+    }
+}
+
+@media only screen and  (max-width: 450px) {
+    .about-me-content {
+        width: 320px !important;
+        div{
+            width: 315px;
+        }
+    }
+}

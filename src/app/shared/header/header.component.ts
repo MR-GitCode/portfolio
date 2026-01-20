@@ -10,7 +10,7 @@ import { ToggleLanguageComponent } from './toggle-language/toggle-language.compo
         ToggleLanguageComponent
     ],
     templateUrl: './header.component.html',
-    styleUrl: './header.component.scss'
+    styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
 }

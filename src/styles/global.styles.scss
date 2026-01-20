@@ -6,6 +6,14 @@ $orange: #F87A55;
 $red: #FF3A00;
 $darkgrey: #1D1D1D;
 
+$displayWidth-xs: 375px;   
+$displayWidth-sm: 720px;
+$displayWidth-md: 1024px;  
+$displayWidth-lg: 1280px;  
+$displayWidth-xl: 1440px; 
+
+$margin-sm: 40px;
+$margin-md: 80px;
 
 @mixin flex-center {
     display: flex;

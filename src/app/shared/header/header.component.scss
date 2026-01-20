@@ -26,3 +26,15 @@ header{
     height: 40px;
     cursor: pointer;
 }
+
+@media (max-width: $displayWidth-lg) {
+  .header-content{
+    margin: 0 $margin-md;
+  }
+}
+
+@media (max-width: $displayWidth-md) {
+  .header-content{
+    margin: 0 $margin-sm;
+  }
+}
