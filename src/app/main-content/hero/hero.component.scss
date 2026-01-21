@@ -152,6 +152,15 @@
 }
 
 @media only screen and  (max-width: $displayWidth-xs) {
+    .section-bg{
+        align-items: unset;
+        padding-top: 50px;
+    }
+
+    .hero{
+        align-items: unset;
+    }
+    
     .hero-content{
         width: 343px;
         height: 260px !important;

@@ -65,7 +65,7 @@
 }
 
 #about-me-title {
-    width: 343px;
+    width: fit-content
 }
 
 #drawline{
@@ -108,5 +108,24 @@
         div{
             width: 315px;
         }
+    }
+}
+
+@media only screen and  (max-width: $displayWidth-xs) { 
+    .about-me-info span{
+        font-size: 16px !important; 
+    }
+    
+    .about-me-content {
+        h1{
+            font-size: 45px;
+        }
+        div{
+            width: 280px;
+        }
+    }
+
+    #drawline{
+        width: 220px;
     }
 }

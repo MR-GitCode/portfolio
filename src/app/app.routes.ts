@@ -16,4 +16,4 @@ export const routes: Routes = [
         ]
     },
     { path: '**', redirectTo: '' }     
-] as const;;
+] as const;
