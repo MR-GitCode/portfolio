@@ -14,7 +14,8 @@ header{
 .header-content{
     width: 1440px;
     height: 100%;
-    margin: 0 120px;
+    @include margin-left-right;
+    // margin: 0 120px;
     color: $white;
     display: flex;
     align-items: center;

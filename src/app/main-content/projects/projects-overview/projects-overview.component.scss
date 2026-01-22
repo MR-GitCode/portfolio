@@ -7,22 +7,21 @@
 }
 
 .projects-overview-container{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 80px;
+    grid-row-gap: 10px;
     max-width: 1440px;
-    margin: 0 120px;
-}
-
-.projects-overview-container > *{
-    flex: 0 0 536px;
+    @include margin-left-right;
+    // margin: 0 120px;
+    padding-top: 80px;
 }
 
 .headline-container{
-    width: 536px !important;
+    width: 536px;
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
     h1{
         font-size: 64px;
         font-weight: 700;
@@ -48,7 +47,7 @@
 }
 
 #headline-drawline{
-    width: 261px;
+    width: fit-content;
     #drawline{
         position: relative;
         height: 80px;
@@ -59,5 +58,37 @@
         &.drawline-visible::after {
             animation: drawLeftToRight 0.25s;
         }
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .projects-overview-container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-row-gap: 50px;
+        justify-items: center;
+    }
+}
+
+@media screen and (max-width: $displayWidth-sm) {
+    .headline-container {
+        width: clamp(290px, 90%, 560px);
+    }
+}
+
+@media screen and (max-width: $displayWidth-xs) {
+    .headline-container {
+        h1{
+            font-size: 45px;
+        }
+        p{
+            font-size: 16px;
+            line-height: 25px;
+        }
+    }
+
+    #headline-drawline #drawline {
+        height: 50px;
     }
 }

@@ -26,7 +26,8 @@
     position: relative;
     max-width: 1440px;
     width: 100%;
-    margin: 0 120px;
+    @include margin-left-right;
+    // margin: 0 120px;
     .project-description{
         width: 488px;
         display: flex;

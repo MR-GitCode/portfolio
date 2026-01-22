@@ -1,5 +1,7 @@
 @import 'styles/global.styles.scss';
 
+:root { color-scheme: light; }
+
 @font-face {
     font-family: 'Bricolage';
     src: url('/assets/fonts/bricolage_grotesque/BricolageGrotesque-VariableFont.ttf') format('truetype-variations');

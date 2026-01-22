@@ -12,7 +12,8 @@ footer{
 .content-area{
     width: 100%;
     max-width: 1440px;
-    margin: 0 120px;
+    @include margin-left-right;
+    // margin: 0 120px;
 }
 
 .footer-content{

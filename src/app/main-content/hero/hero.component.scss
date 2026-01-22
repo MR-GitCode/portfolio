@@ -18,7 +18,8 @@
     max-width: 1440px;
     @include flex-center;
     box-sizing: border-box;
-    margin: 0 120px;
+    @include margin-left-right;
+    // margin: 0 120px;
 }
 
 .hero-content{

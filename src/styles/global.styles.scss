@@ -22,5 +22,5 @@ $margin-md: 80px;
 }
 
 @mixin margin-left-right{
-    margin: 0 clamp(16px, 8vw, 120px);
+    margin: 0 clamp(16px, 5vw, 120px);
 }

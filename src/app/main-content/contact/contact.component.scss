@@ -13,7 +13,8 @@
     width: 100%;
     @include flex-center;
     justify-content: space-between;
-    margin: 0 120px;
+    @include margin-left-right;
+    // margin: 0 120px;
     margin-top: 100px;
     color: $white;
 }

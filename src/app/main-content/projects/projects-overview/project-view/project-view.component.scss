@@ -2,20 +2,18 @@
 
 .project-container{
     width: 536px;
-    padding: 0 100px;
 }
 
 .projects-link-container{
     position: relative;
     width: 560px;
-    height: 398px;
     @include flex-center;
     border-radius: 20px;
     overflow: hidden;
     .contact-btn{
         position: absolute;
-        left: 345px;
-        top: 314px;
+        right: 20px;
+        bottom: 20px;
         pointer-events: auto;
     }
     &:hover {
@@ -36,7 +34,6 @@
 
 .img-project {
     width: 560px;
-    height: 337px;
     transition: transform 0.4s ease;
 }
 
@@ -64,4 +61,68 @@ p{
     margin: 0;
     line-height: 30px;
     text-align: justify;
+}
+
+.btn-touch{
+    display: none;
+    justify-content: flex-end;
+    padding-top: 22px;
+}
+
+@media screen and (max-width: $displayWidth-sm) {
+    .project-container {
+        width: 435px;
+    }
+
+    .projects-link-container,
+    .img-project {
+        width: 450px;
+    }
+}
+
+@media (max-width: $displayWidth-sm) and (pointer: coarse) {
+    .btn-touch {
+        display: flex;
+    }
+
+    .bg-linear-gradient{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .project-container {
+        width: 335px;
+    }
+
+    .projects-link-container,
+    .img-project {
+        width: 350px;
+    }
+
+
+}
+
+@media screen and (max-width: $displayWidth-xs) {
+    .project-container {
+        width: 280px;
+    }
+
+    .projects-link-container,
+    .img-project {
+        width: 280px;
+    }
+
+    p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .btn-touch {
+        display: flex;
+    }
+
+    .bg-linear-gradient{
+        display: none;
+    }
 }

@@ -19,7 +19,8 @@
     align-items: center; 
     height: 100%;
     width: 1440px;
-    margin: 0 120px;
+    @include margin-left-right;
+    // margin: 0 120px;
 }
 
 .imprint{

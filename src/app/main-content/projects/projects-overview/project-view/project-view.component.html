@@ -21,4 +21,14 @@
     <h3>{{project.title}}</h3>
     <p>{{project.description[languageService.lang]}}</p>
   </div>
+  <div class="btn-touch">
+    <app-contact-button
+        class="contact-btn"
+        textBtn="Project details"
+        (click)="openProjectDetails(project.id)"
+        style=" --border-color: #0E1013;
+                --font-color: #0E1013;
+                --shadow: #0E1013">
+    </app-contact-button>
+  </div>
 </section>
