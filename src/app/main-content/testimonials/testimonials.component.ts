@@ -17,9 +17,9 @@ import { FirestoreContentService } from '../../services/firestore-content.servic
     styleUrl: './testimonials.component.scss'
 })
 export class TestimonialsComponent {
-  languageService = inject(LanguageService);
-  contentService = inject(FirestoreContentService);
+    languageService = inject(LanguageService);
+    contentService = inject(FirestoreContentService);
 
-  testimonials = this.contentService.getTestimonials();
-  testimonialsContent = this.contentService.getTestimonialsContent();
+    testimonials = this.contentService.getTestimonials();
+    testimonialsContent = this.contentService.getTestimonialsContent();
 }
