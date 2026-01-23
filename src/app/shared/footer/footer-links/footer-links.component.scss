@@ -3,60 +3,62 @@
 @import '../../../../styles/drawline.animation';
 
 .footer-links{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 42px;
-    a{
-        text-decoration: none;
-        color: var(--font-color, $white);
-        font-size: 18px;
-        font-weight: 500; 
-        z-index: 100;  
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 42px;
+  a{
+    text-decoration: none;
+    color: var(--font-color, $white);
+    font-size: 18px;
+    font-weight: 500; 
+    z-index: 100;  
+  }
 }
 
 .link-bg{
-    position: relative;
-    height: 40px;
-    @include flex-center;
-    padding: 0 24px;
-    &:hover{
-        background-color: $blue;
-        border-radius: 100px;
-        color: var(--font-color-hover, $white);
-    }
+  position: relative;
+  height: 40px;
+  width: max-content;
+  @include flex-center;
+  padding: 0 24px;
+  &:hover{
+    background-color: $blue;
+    border-radius: 100px;
+    color: var(--font-color-hover, $white);
+  }
 }
 
 .icon-roll {
-    &::before{
-        top: -32px;                 /* over the button */
-        width: 32px;
-        height: 32px;
-        @include icon-image();
-    }
-    @include icon-roll-animation();
+  &::before{
+    top: -32px;                 /* over the button */
+    width: 32px;
+    height: 32px;
+    @include icon-image();
+  }
+  @include icon-roll-animation();
 }
 
 #github::before{
-    left: 40%;                /* startet links*/
-    background-image: url('/assets/icons/socials/git_hub.svg');
+  left: 40%;                /* startet links*/
+  background-image: url('/assets/icons/socials/git_hub.svg');
 }
 
 #linkedin::before{
-    left: 45%;                /* startet links*/
-    background-image: url('/assets/icons/socials/linledin.svg');
+  left: 45%;                /* startet links*/
+  background-image: url('/assets/icons/socials/linledin.svg');
 }
 
 #email::before{
-    left: 30%;                /* startet links*/
-    background-image: url('/assets/icons/socials/email.svg');
+  left: 30%;                /* startet links*/
+  background-image: url('/assets/icons/socials/email.svg');
 }
 
 .link-container {
   position: relative;
   @include flex-center;
   height: 45px;
+  width: max-content;
   cursor: pointer;
     &::after {
     content: "";
@@ -87,5 +89,36 @@
   }
   &:hover::after {
     animation: drawLeftToRight 0.25s;
+  }
+}
+
+@media screen and (max-width: $displayWidth-md) {
+  .footer-links {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      ". imprint privacy"
+      "github linkedin email";
+    gap: 24px;
+    justify-items: center;
+    align-items: center;
+  }
+
+  #imprint        { grid-area: imprint; justify-self: end; }
+  #privacy-policy { grid-area: privacy; justify-self: end; }
+
+  #github   { grid-area: github; }
+  #linkedin { grid-area: linkedin; }
+  #email    { grid-area: email; }
+
+  .link-bg {
+    width: 100%;
+    width: max-content;
+    justify-content: center;
+  }
+
+  .link-container {
+    justify-self: end;
   }
 }

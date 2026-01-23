@@ -13,7 +13,6 @@ footer{
     width: 100%;
     max-width: 1440px;
     @include margin-left-right;
-    // margin: 0 120px;
 }
 
 .footer-content{
@@ -40,4 +39,13 @@ footer{
     height: 40px;
     cursor: pointer;
     font-weight: 400;
+}
+
+@media screen and (max-width: $displayWidth-md) {
+    .copyright-info{
+        justify-content: space-between;
+        align-items: center;
+        width: unset;
+        flex-direction: unset;
+    }
 }
