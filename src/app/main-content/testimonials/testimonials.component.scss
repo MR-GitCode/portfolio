@@ -123,9 +123,14 @@ app-feedback:hover {
 }
 
 @media screen and (max-width: 500px) {
-    .headline-container h1{
-        font-size: 45px;
-    }
+    .headline-container{
+        h1{
+            font-size: 45px;
+        }
+        p{
+            font-size: 18px;
+        }
+    } 
     
     .stack-0, .stack-1, .stack-2 {
         width: 320px !important;

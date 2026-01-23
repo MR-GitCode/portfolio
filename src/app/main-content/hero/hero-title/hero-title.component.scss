@@ -40,7 +40,7 @@ h1{
     }
 }
 
-@media only screen and  (max-width: $displayWidth-xs) {
+@media only screen and  (max-width: 450px) {
     h1{
         font-size: 45px !important;
     }

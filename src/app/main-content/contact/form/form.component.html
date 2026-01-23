@@ -33,7 +33,10 @@
         </span>
         <!-- <span class="">Please accept the privacy policy</span> -->
       </div>
-      <app-contact-button class="send-btn" textBtn="{{ formContent.buttonText[languageService.lang] }}" type="submit" value="Submit"></app-contact-button>
+      <div class="submit-container">
+        <div id="drawline" appAnimateOnScroll [delay]="300"></div>
+        <app-contact-button class="send-btn" textBtn="{{ formContent.buttonText[languageService.lang] }}" type="submit" value="Submit"></app-contact-button>
+      </div>
     </form>
   </div>
 }

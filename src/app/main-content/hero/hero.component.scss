@@ -19,7 +19,6 @@
     @include flex-center;
     box-sizing: border-box;
     @include margin-left-right;
-    // margin: 0 120px;
 }
 
 .hero-content{
@@ -152,26 +151,32 @@
     @include icon-roll-animation();
 }
 
-@media only screen and  (max-width: $displayWidth-xs) {
-    .section-bg{
-        align-items: unset;
-        padding-top: 50px;
-    }
-
-    .hero{
-        align-items: unset;
-    }
-    
+@media only screen and  (max-width: $displayWidth-xs) {  
     .hero-content{
         width: 343px;
         height: 260px !important;
     }
 }
 
+@media screen and (max-width: 450px) {
+    .hero-content{
+        height: 275px !important;
+    }
+}
+
 @media only screen and  (max-width: $displayWidth-sm) {
+    .section-bg{
+        align-items: unset;
+        padding-top: 100px;
+    }
+
+    .hero{
+        align-items: unset;
+    }
+
     .hero-content{
         width: fit-content !important;
-        height: 320px;
+        height: 320px !important;
     }
     .polaroid-container{
         top: unset !important;

@@ -5,18 +5,21 @@ import { ContactButtonComponent } from '../../../shared/contact-button/contact-b
 import { LanguageService } from '../../../services/language.service';
 import { RouterLink } from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
+import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 
 @Component({
-    selector: 'app-form',
-    standalone: true,
-    imports: [
+  selector: 'app-form',
+  standalone: true,
+  imports: [
     FormsModule,
     ContactButtonComponent,
-    RouterLink
-],
-    templateUrl: './form.component.html',
-    styleUrl: './form.component.scss'
+    RouterLink,
+    AnimateOnScrollDirective,
+  ],
+  templateUrl: './form.component.html',
+  styleUrl: './form.component.scss'
 })
+
 export class FormComponent {
   languageService = inject(LanguageService);
   contentService = inject(FirestoreContentService);

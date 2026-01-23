@@ -1,11 +1,13 @@
 @import '../../../../styles/global.styles';
+@import '../../../../styles/drawline.animation';
 
 .container {
   width: 480px;
   height: 560px;
   form{
     position: relative;
-    @include flex-center;
+    display: flex;
+    justify-content: flex-end;
     flex-direction: column;
     height: 520px;
   }
@@ -28,7 +30,7 @@
   align-items: flex-start;
   gap: 10px;
   width: 480px;
-  height: 91px;
+  min-height: 91px;
   border-bottom: 1px solid $yellow;
   label{
     padding-left: 16px;
@@ -49,7 +51,7 @@ input[type=text], input[type=email], textarea {
   border: unset;
   padding-left: 16px;
   cursor: pointer;
-      outline: none;
+    outline: none;
     color: $white;
     font-size: 18px;
   &:focus {
@@ -68,8 +70,6 @@ input[type=text], input[type=email], textarea {
 }
 
 .check-policy {
-  position: absolute;
-  bottom: 60px;
   display: flex;
   gap: 8px;
   padding-top: 30px;
@@ -91,8 +91,81 @@ input[type=text], input[type=email], textarea {
   }
 }
 
-.send-btn{
-  position: absolute;
-  right: 0;
-  bottom: 0;
+.submit-container{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 30px;
+  #drawline{
+    display: none;
+    position: relative;
+    height: 41px;
+    width: 280px;
+    &::after{
+      background-image: url('/assets/img/00_hand-drawn-lines/05_Contact/Color_option_1.png');
+      @include drawline;
+    }
+    &.drawline-visible::after {
+      animation: drawLeftToRight 0.25s;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .submit-container #drawline {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .container {
+    width: 360px;
+    height: fit-content;
+  }
+
+  .input-container {
+    width: 360px;
+    textarea {
+      height: 45px !important;
+    }
+  }
+
+  .submit-container #drawline{
+    height: 35px;
+  }
+
+  input[type=text], input[type=email], textarea {
+    cursor: pointer;
+      font-size: 16px;
+    &:focus {
+      font-size: 16px;
+    }
+  }
+
+  .container {
+    label{
+      font-size: 20px;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+   .container {
+    width: 300px;
+    label{
+      font-size: 18px;
+    }
+  }
+
+  .input-container {
+    width: 300px;
+  }
+  
+  .submit-container #drawline{
+    height: 25px;
+  }
 }

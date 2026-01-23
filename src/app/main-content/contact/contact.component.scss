@@ -14,7 +14,6 @@
     @include flex-center;
     justify-content: space-between;
     @include margin-left-right;
-    // margin: 0 120px;
     margin-top: 100px;
     color: $white;
 }
@@ -56,6 +55,12 @@
 .headline{
     display: flex;
     flex-direction: column;
+    .sticker-container{
+        display: none;
+        position: unset;
+        width: fit-content;
+        align-self: flex-end;
+    }
     p{
         font-size: 20px;
         font-weight: 500;
@@ -65,9 +70,56 @@
 .form-container{
     position: relative;
     .sticker-container{
-        position: absolute;
         right: 0;
-        z-index: 100;
-        transform: rotate(15deg);
+    }
+}
+
+.sticker-container{
+    position: absolute;
+    z-index: 100;
+    transform: rotate(15deg);
+}
+
+@media screen and (max-width: 1200px) {
+    .contact-content{
+        flex-direction: column;
+    }
+
+    .headline .sticker-container{
+        display: block;
+    }
+
+    .form-container .sticker-container{
+        display: none;
+    }
+
+    .headline-container #drawline {
+        display: none;
+    }
+}
+
+@media screen and (max-width: $displayWidth-sm) {
+    .headline-container {
+        width: 480px;
+    }
+
+    .headline h1 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .headline-container {
+        width: 360px;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .headline-container {
+        width: 300px;
+    }
+
+    .headline h1 {
+        font-size: 35px;
     }
 }
