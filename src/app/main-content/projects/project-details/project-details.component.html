@@ -1,60 +1,62 @@
 @if (projectDetails$ | async; as projectDetails) {
   <section class="section-bg">
     <div class="projects-details-container">
-      <div class="projects-details-content">
         <div class="arrow-back-container">
-          <a routerLink="">
-            <div class="arrow-back">
-              <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Breadcrumb_arrow_1.png">
-              <p>Go Back</p>
+            <a routerLink="">
+              <div class="arrow-back">
+                <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Breadcrumb_arrow_1.png">
+                <p>Go Back</p>
             </div>
           </a>
         </div>
-        <div class="project-description">
-          <div class="headline" id="headline-drawline">
-            <h1>{{ projectDetails.title }}</h1>
-            <div id="drawline" appAnimateOnScroll [delay]="300"></div>
-          </div>
-          <div class="description-project">
-            <h2>{{ projectDetails.description.title[languageService.lang] }}</h2>
-            <p>{{ projectDetails.description.text[languageService.lang] }}</p>
-          </div>
-          <div class="description-process">
-            <h2>{{ projectDetails.process.title[languageService.lang] }}</h2>
-            <p>{{ projectDetails.process.text[languageService.lang] }}</p>
-          </div>
-          <div class="duration">
-            <p><b>{{ projectDetails.duration.title[languageService.lang] }}: </b>{{ projectDetails.duration.duration[languageService.lang] }}</p>
-          </div>
-          <div class="project-skills">
-            @for (skill of skills$ | async; track skill) {
-              <div class="skill">
-                <img [src]="skill.imgURL" [alt]="skill.name">
-                <p>{{skill.name}}</p>
-              </div>
-            }
-          </div>
-        </div>
-        <div class="project-links">
-          <div class="img">
-            <div class="sticker-container">
-              <app-sticker-circle
-                [variant]="projectDetails.sticker.variant"
-                [stickerColor]="projectDetails.sticker.stickerColor">
-              </app-sticker-circle>
+
+        <div class="projects-details-content">
+          <div class="project-description">
+            <div class="headline" id="headline-drawline">
+              <h1>{{ projectDetails.title }}</h1>
+              <div id="drawline" appAnimateOnScroll [delay]="300"></div>
             </div>
-            <img src="{{ projectDetails.imgURL }}">
+            <div class="description-project">
+              <h2>{{ projectDetails.description.title[languageService.lang] }}</h2>
+              <p>{{ projectDetails.description.text[languageService.lang] }}</p>
+            </div>
+            <div class="description-process">
+              <h2>{{ projectDetails.process.title[languageService.lang] }}</h2>
+              <p>{{ projectDetails.process.text[languageService.lang] }}</p>
+            </div>
+            <div class="duration">
+              <p><b>{{ projectDetails.duration.title[languageService.lang] }}: </b>{{ projectDetails.duration.duration[languageService.lang] }}</p>
+            </div>
+            <div class="project-skills">
+              @for (skill of skills$ | async; track skill) {
+                <div class="skill">
+                  <img [src]="skill.imgURL" [alt]="skill.name">
+                  <p>{{skill.name}}</p>
+                </div>
+              }
+            </div>
           </div>
-          <div class="buttons">
-            <app-contact-button textBtn="GitHub" urlBtn="{{ projectDetails.githubURL }}"></app-contact-button>
-            <app-contact-button textBtn="Live Test" urlBtn="{{ projectDetails.demoURL }}" ></app-contact-button>
+          <div class="project-links">
+            <div class="img">
+              <div class="sticker-container">
+                <app-sticker-circle
+                  [variant]="projectDetails.sticker.variant"
+                  [stickerColor]="projectDetails.sticker.stickerColor">
+                </app-sticker-circle>
+              </div>
+              <img src="{{ projectDetails.imgURL }}">
+            </div>
+            <div class="buttons">
+              <app-contact-button textBtn="GitHub" urlBtn="{{ projectDetails.githubURL }}"></app-contact-button>
+              <app-contact-button textBtn="Live Test" urlBtn="{{ projectDetails.demoURL }}" ></app-contact-button>
+            </div>
           </div>
         </div>
+
         <div class="arrow-next">
           <p>Next Project</p>
           <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Next_project_arrow_1.png">
         </div>
-      </div>
     </div>
   </section>
 }
