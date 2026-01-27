@@ -17,6 +17,7 @@
     }
     &:hover{
         background-color: $orange;
+        mix-blend-mode: none !important;
         transition: 0.3s;
     }
     &:active {
@@ -28,3 +29,6 @@
         text-decoration: none;
     }
 }
+
+
+

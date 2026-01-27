@@ -72,7 +72,6 @@
     .img{
         padding-top: 25px;
         border-radius: 20px;
-        width: 560px;
         position: relative;
     }
     .buttons{
@@ -80,7 +79,7 @@
         position: absolute;
         display: flex;
         gap: 32px;
-        right: 25px;
+        right: 0;
         bottom: 0;
     }
 }
@@ -146,4 +145,113 @@
     right: 0;
     top: 50%;
     transform: translate(50%, -50%);
+}
+
+.blend-diff {
+    color: $white;
+    mix-blend-mode: difference;      
+}
+
+
+@media screen and (max-width: 1350px) {
+    .projects-details-container{
+        margin-top: 100px;
+        width: unset;
+    }
+
+    .projects-details-content {
+        flex-direction: column;
+        align-items: center;
+        p{
+            color: $white;
+            mix-blend-mode: difference;
+        } 
+        .project-description {
+            gap: 30px;
+        }
+    }
+
+    .project-links .img {
+        padding-top: 50px;
+        padding-bottom: 80px;
+    }
+
+    .sticker-container {
+        top: 55%;
+    }
+
+    .section-bg{
+        background-image: url('/assets/img/01_background/07_project_details_rotate.png');
+    }
+}
+
+@media screen and (max-width: 750px) {  
+    .project-links img{
+        width: 400px;
+    }
+
+    .projects-details-content .project-description {
+        width: unset;
+    }
+}
+
+@media screen and (max-width: 600px) { 
+    .sticker-container {
+            bottom: 85px;
+            right: 5px;
+            top: unset;
+            transform: unset;
+        }
+    .projects-details-content {
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 500px) { 
+    .projects-details-content .project-description {
+        width: 340px;
+        p {
+            font-size: 18px;
+            height: fit-content;
+        }
+    }
+
+    .projects-details-content .project-skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 20px;
+        align-self: center;
+    }
+
+    .project-links {
+        img{
+            width: 310px;
+        };
+        .buttons {
+            gap: 15px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) { 
+    .projects-details-content .project-description {
+        width: 290px;
+        h2{
+            font-size: 24px
+        };
+        p {
+            font-size: 16px;
+        }
+    }
+
+    .project-links {
+        img{
+            width: 290px;
+        };
+        .buttons {
+            gap: 10;
+        }
+    }
 }

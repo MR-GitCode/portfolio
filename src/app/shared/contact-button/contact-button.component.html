@@ -1,6 +1,8 @@
 @if (hasUrl) {
-    <button class="contact-bt" [ngClass]="class">
-        <a href="{{urlBtn}}"><p>{{textBtn}}</p></a>
+    <button class="contact-bt" >
+        <div class="border" [ngClass]="class">
+           <a href="{{urlBtn}}"><p>{{textBtn}}</p></a> 
+        </div>
     </button> 
 } @else {
     <button class="contact-bt" [ngClass]="class">
