@@ -2,6 +2,9 @@
 @import '../../../../styles/drawline.animation';
 
 .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 480px;
   height: 560px;
   form{
@@ -61,6 +64,20 @@ input[type=text], input[type=email], textarea {
   }
 }
 
+// AUTOFILL FIX
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-text-fill-color: $white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-moz-autofill,
+textarea:-moz-autofill {
+  background-color: transparent !important;
+  color: $white !important;
+}
+// END AUTOFILL FIX
+
 .input-container:hover {
   border-bottom: 1px solid $blue;
   border-top: 1px solid $blue;
@@ -108,6 +125,31 @@ input[type=text], input[type=email], textarea {
     &.drawline-visible::after {
       animation: drawLeftToRight 0.25s;
     }
+  }
+}
+
+.message-container{
+  position: relative;
+  width: 400px;
+  .success-message {
+    position: absolute;
+    margin-top: 20px;
+    padding: 5px 15px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 20px;
+    text-align: center;
+  }
+  .error-message {
+    position: absolute;
+    margin-top: 20px;
+    padding: 5px 15px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 20px;
+    text-align: center;
   }
 }
 

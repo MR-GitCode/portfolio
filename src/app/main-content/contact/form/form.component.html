@@ -37,6 +37,20 @@
         <div id="drawline" appAnimateOnScroll [delay]="300"></div>
         <app-contact-button class="send-btn" textBtn="{{ formContent.buttonText[languageService.lang] }}" type="submit" value="Submit"></app-contact-button>
       </div>
+
+      
     </form>
+      <div class="message-container">
+        @if (showSuccessMessage) {
+          <div class="success-message">
+            ✅ Vielen Dank! Deine Nachricht wurde erfolgreich versendet.
+          </div>
+        }
+        @if (showErrorMessage) {
+          <div class="error-message">
+            ❌ Fehler beim Versenden. Bitte versuchen Sie es später erneut.
+          </div>
+        }
+      </div>
   </div>
 }

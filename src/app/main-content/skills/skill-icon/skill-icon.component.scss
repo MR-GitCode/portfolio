@@ -24,6 +24,11 @@
     }
 }
 
+@media screen and (pointer: coarse) {
+    .icon-container img{
+        filter: unset;  
+    }
+}
 
 @media screen and (max-width: $displayWidth-xs ) {     
     .icon-container{

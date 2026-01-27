@@ -35,10 +35,12 @@ export class FormComponent {
     message: "",
   }
 
-  mailTest = true;
+  mailTest = false;
+  showSuccessMessage = false;
+  showErrorMessage = false;
 
   post = {
-    endPoint: 'https://michaelring.eu/app/sendMail.php',
+    endPoint: 'https://michaelring.eu/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -48,23 +50,42 @@ export class FormComponent {
     },
   };
 
-  onSubmit(ngForm: NgForm) {
+onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      console.log(this.contactData);
+      console.log('Sending email with data:', this.contactData);
       
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response) => {
-
+          next: (response: any) => {
+            console.log('SUCCESS:', response);
+            
+            if (response.status === 'success') {
+              // show success Message
+              this.showSuccessMessage = true;
+              this.showErrorMessage = false;
+              
+              setTimeout(() => {
+                this.showSuccessMessage = false;
+              }, 3000);
+            }
+            
             ngForm.resetForm();
           },
           error: (error) => {
-            console.error(error);
+            console.error('ERROR:', error);
+            
+            // Show error message
+            this.showErrorMessage = true;
+            this.showSuccessMessage = false;
+            
+            setTimeout(() => {
+              this.showErrorMessage = false;
+            }, 3000);
           },
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      console.log('Test mode - not sending email');
       ngForm.resetForm();
     }
   }
