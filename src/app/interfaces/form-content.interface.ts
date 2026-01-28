@@ -23,6 +23,16 @@ export interface FormContent {
             en: string;
         }
     },
+    message: {
+        error: {
+            de: string;
+            en: string;
+        }
+        success: {
+            de: string;
+            en: string;
+        }
+    }
 
     interest: {
         input: {

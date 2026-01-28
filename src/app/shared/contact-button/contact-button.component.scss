@@ -24,6 +24,29 @@
         box-shadow: 0 0 0 0;
         transform: translateY(4px);
     }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+        &:hover {
+            background-color: transparent;
+            transition: none;
+        }
+        
+        &:active {
+            background-color: transparent;
+            box-shadow: 2px 4px 0px 0px var(--shadow, $white);
+            transform: none;
+        }
+        
+        .border {
+            border-color: #666;
+        }
+        
+        p {
+            color: #999;
+        }
+    }
+    
     a {
         text-decoration: none;
     }

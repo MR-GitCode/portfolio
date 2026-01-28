@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 import { LanguageService } from '../../../services/language.service';
@@ -39,6 +39,8 @@ export class FormComponent {
   showSuccessMessage = false;
   showErrorMessage = false;
 
+  privacyAccepted = signal(false)
+
   post = {
     endPoint: 'https://michaelring.eu/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -49,6 +51,10 @@ export class FormComponent {
       },
     },
   };
+
+  togglePrivacy() {
+    this.privacyAccepted.set(!this.privacyAccepted());
+  }
 
 onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
@@ -70,6 +76,7 @@ onSubmit(ngForm: NgForm) {
             }
             
             ngForm.resetForm();
+            this.privacyAccepted.set(false);
           },
           error: (error) => {
             console.error('ERROR:', error);

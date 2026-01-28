@@ -23,7 +23,13 @@
         }
       </div>
       <div class="check-policy">
-        <img src="/assets/icons/contact/Check_mark.svg">
+        <div class="checkbox-container" (click)="togglePrivacy()">
+          @if (privacyAccepted()) {
+            <img src="/assets/icons/contact/checked_mark.svg" alt="Checked">
+          } @else {
+            <img src="/assets/icons/contact/check_mark.svg" alt="Unchecked">
+          }
+        </div>
         <span>
           {{ formContent.checkPolicy[languageService.lang][0] }}
           <a routerLink="/legal/privacy-policy">
@@ -35,7 +41,13 @@
       </div>
       <div class="submit-container">
         <div id="drawline" appAnimateOnScroll [delay]="300"></div>
-        <app-contact-button class="send-btn" textBtn="{{ formContent.buttonText[languageService.lang] }}" type="submit" value="Submit"></app-contact-button>
+        <app-contact-button
+          class="send-btn"
+          textBtn="{{ formContent.buttonText[languageService.lang] }}"
+          type="submit"
+          value="Submit"
+          [disabled]="!privacyAccepted()">
+        </app-contact-button>
       </div>
 
       
@@ -43,12 +55,12 @@
       <div class="message-container">
         @if (showSuccessMessage) {
           <div class="success-message">
-            ✅ Vielen Dank! Deine Nachricht wurde erfolgreich versendet.
+            {{ formContent.message.success[languageService.lang] }}
           </div>
         }
         @if (showErrorMessage) {
           <div class="error-message">
-            ❌ Fehler beim Versenden. Bitte versuchen Sie es später erneut.
+            {{ formContent.message.error[languageService.lang] }}
           </div>
         }
       </div>

@@ -17,6 +17,8 @@ export class ContactButtonComponent {
 
   @Input() class = '';
 
+  @Input() disabled = false;
+
   get hasUrl(): boolean {
     return !!this.urlBtn;
   }
