@@ -113,14 +113,18 @@
     .headline-container {
         width: 360px;
     }
+    
+    .section-bg {
+        padding-bottom: 85px;
+    }
 }
 
 @media screen and (max-width: 390px) {
     .headline-container {
-        width: 300px;
+        width: 290px;
     }
 
     .headline h1 {
-        font-size: 35px;
+        font-size: 32px;
     }
 }

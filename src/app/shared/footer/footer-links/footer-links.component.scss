@@ -123,3 +123,16 @@
     justify-self: end;
   }
 }
+
+@media screen and (max-width: 500px ) {
+  #imprint        { grid-area: imprint; justify-self: center; }
+  #privacy-policy { grid-area: privacy; justify-self: center; }
+}
+
+@media screen and (max-width: $displayWidth-xs ) {
+  .footer-links {
+    grid-template-areas:
+      "imprint . privacy"
+      "github linkedin email";
+  }
+}

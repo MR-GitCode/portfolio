@@ -1,39 +1,62 @@
+@use  '@angular/material' as mat;
 @import '../../../styles/global.styles';
 
+
 header{
-    height: 80px;
-    width: 100%;
-    margin: 0 auto;
-    position: fixed;
-    z-index: 1000;
-    background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 0)
-    );
-    display: flex;
-    justify-content: center;
+  height: 80px;
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 1000;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0)
+  );
+  display: flex;
+  justify-content: center;
 }
 
 .header-content{
-    width: 1440px;
-    height: 100%;
-    @include margin-left-right;
-    color: $white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 1440px;
+  height: 100%;
+  @include margin-left-right;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo{
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav-menu{
+  display: none;
+  cursor: pointer;
+  &:hover{
+    img {
+      content:url('/assets/icons/header/hover.png');
+    }
+  }
 }
 
 @media (max-width: $displayWidth-lg) {
   .header-content{
     margin: 0 $margin-md;
+  }
+}
+
+@media (max-width: 950px) {
+  app-nav,
+  app-toggle-language{
+    display: none;
+  }
+
+  .nav-menu{
+    display: block;
   }
 }
 

@@ -1,0 +1,35 @@
+.section-bg{
+    width: 100%;
+}
+
+.logo{
+    width: 24px;
+    height: 24px;
+} 
+
+.top{
+    .menu-close{
+        cursor: pointer;
+        width: 32px;
+        height: 32px;
+        &:hover{
+            img {
+                content:url('/assets/icons/header/close_hover.png');
+            }
+        }
+    }
+}
+
+
+.center{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    app-nav {
+        flex-direction: column;
+        justify-content: unset;
+        align-items: unset;
+        gap: 20px;
+    }
+}

@@ -20,6 +20,12 @@
         </a>
         <app-nav></app-nav>
         <app-toggle-language></app-toggle-language>
+        <button class="nav-menu" matButton [matMenuTriggerFor]="menu">
+            <img src="/assets/icons/header/default.png">
+        </button>
+        <mat-menu #menu="matMenu">
+            <app-nav-menu></app-nav-menu>
+        </mat-menu>
     </div>
 </header>
     

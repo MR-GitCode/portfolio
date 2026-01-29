@@ -56,7 +56,7 @@ export class FormComponent {
     this.privacyAccepted.set(!this.privacyAccepted());
   }
 
-onSubmit(ngForm: NgForm) {
+  onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
       console.log('Sending email with data:', this.contactData);
       

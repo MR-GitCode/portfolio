@@ -133,7 +133,7 @@ textarea:-moz-autofill {
   width: 400px;
   .success-message {
     position: absolute;
-    margin-top: 20px;
+    margin: 20px 0;
     padding: 5px 15px;
     background-color: #d4edda;
     color: #155724;
@@ -163,6 +163,7 @@ textarea:-moz-autofill {
   .container {
     width: 360px;
     height: fit-content;
+    align-items: unset;
   }
 
   .input-container {
@@ -193,21 +194,29 @@ textarea:-moz-autofill {
       font-size: 16px;
     }
   }
+
+  .message-container {
+    width: 350px;
+  }
 }
 
 @media screen and (max-width: 390px) {
-   .container {
-    width: 300px;
+  .container {
+    width: 295px;
     label{
       font-size: 18px;
     }
   }
 
   .input-container {
-    width: 300px;
+    width: 295px;
   }
   
   .submit-container #drawline{
     height: 25px;
+  }
+
+  .message-container {
+    width: 295px;
   }
 }
