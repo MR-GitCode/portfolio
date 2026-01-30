@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
 import { Router} from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';

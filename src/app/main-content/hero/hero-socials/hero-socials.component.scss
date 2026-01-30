@@ -1,9 +1,9 @@
 @import '../../../../styles/global.styles';
 
 .socials-container{
-    height: 136px;
+    height: var(--socials-height, 136px);
     display: flex;
-    flex-direction: column;
+    flex-direction: var(--socials-direction, column);
     gap: 8px;
     >div{
         @include flex-center;
@@ -36,10 +36,4 @@
             transform: scale(1);
         }
     }
-}
-
-@media (max-width: 950px) {
-  .socials-container{
-    display: none;
-  }
 }

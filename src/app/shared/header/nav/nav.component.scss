@@ -5,7 +5,9 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: var(--nav-direction, row);
     width: 800px;
+    gap: var(--nav-gap, 0);
     a{
        text-decoration: none;
        font-size: 18px;
