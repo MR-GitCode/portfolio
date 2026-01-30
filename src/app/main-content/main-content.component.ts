@@ -23,5 +23,4 @@ import { FooterComponent } from '../shared/footer/footer.component';
     styleUrl: './main-content.component.scss'
 })
 export class MainContentComponent {
-
 }

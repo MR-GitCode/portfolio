@@ -34,7 +34,7 @@ nav{
     }
 }
 
-#about-me{
+#nav-about-me{
   &::after {
     background-image: url('/assets/img/00_hand-drawn-lines/00_Header/1.png');
     width: 105px;
@@ -45,7 +45,7 @@ nav{
   }
 }
 
-#skills{
+#nav-skills{
   &::after{
     background-image: url('/assets/img/00_hand-drawn-lines/00_Header/2.png');
     width: 68px;
@@ -56,7 +56,7 @@ nav{
   }
 }
 
-#projects{
+#nav-projects{
   &::after{
     background-image: url('/assets/img/00_hand-drawn-lines/00_Header/4.png');
     width: 105px;
@@ -67,7 +67,7 @@ nav{
   }
 }
 
-#contacts{
+#nav-contacts{
   &::after{
     background-image: url('/assets/img/00_hand-drawn-lines/00_Header/3.png');
     width: 90px;

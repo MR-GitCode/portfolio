@@ -1,20 +1,29 @@
 import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
-import { RouterLink } from '@angular/router';
+import { Router} from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
     selector: 'app-nav',
     standalone: true,
-    imports: [
-    RouterLink
-],
+    imports: [],
     templateUrl: './nav.component.html',
     styleUrl: './nav.component.scss'
 })
 export class NavComponent {
-  languageService = inject(LanguageService);
-  contentService = inject(FirestoreContentService);
+    languageService = inject(LanguageService);
+    contentService = inject(FirestoreContentService);
 
-  navContent = this.contentService.getNavContent();
+    navContent = this.contentService.getNavContent();
+    private router = inject(Router);
+    private viewportScroller = inject(ViewportScroller);
+
+    navigateToSection(section: string): void{
+        this.router.navigate(['/'], { fragment: section }).then(() => {
+            setTimeout(() => {
+                this.viewportScroller.scrollToAnchor(section);
+            }, 100);
+        });
+    }
 }

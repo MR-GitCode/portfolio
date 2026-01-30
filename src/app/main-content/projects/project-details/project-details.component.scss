@@ -11,6 +11,7 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    padding-top: 70px;
 }
 
 .projects-details-container{
@@ -155,7 +156,6 @@
 
 @media screen and (max-width: 1350px) {
     .projects-details-container{
-        margin-top: 100px;
         width: unset;
     }
 

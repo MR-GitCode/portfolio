@@ -21,11 +21,6 @@ export class ProjectViewComponent {
   private router = inject(Router);
 
   openProjectDetails(projectId: string): void{
-    console.log('🚀 Navigating to:', projectId);
-    this.router.navigate(['/projects', projectId]).then(success => {
-      console.log('✅ Navigation success:', success);
-    }).catch(error => {
-      console.error('❌ Navigation error:', error);
-    });
+    this.router.navigate(['/projects', projectId]);
   }
 }

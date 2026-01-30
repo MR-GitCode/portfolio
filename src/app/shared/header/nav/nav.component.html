@@ -1,16 +1,16 @@
 @if(navContent(); as navContent) {
     <nav>
-        <div id="about-me" class="link-container">
-            <a routerLink="/" fragment="about-me-section">{{ navContent.about[languageService.lang] }}</a>
+        <div id="nav-about-me" class="link-container">
+            <a (click)="navigateToSection('about-me')">{{ navContent.about[languageService.lang] }}</a>
         </div>
-        <div id="skills" class="link-container">
-            <a routerLink="/" fragment="skills-section">{{ navContent.skills[languageService.lang] }}</a>
+        <div id="nav-skills" class="link-container">
+            <a (click)="navigateToSection('skills')">{{ navContent.skills[languageService.lang] }}</a>
         </div>
-        <div id="projects" class="link-container">
-            <a routerLink="/" fragment="projectsoverview-section">{{ navContent.projects[languageService.lang] }}</a>
+        <div id="nav-projects" class="link-container">
+            <a (click)="navigateToSection('projectsoverview')">{{ navContent.projects[languageService.lang] }}</a>
         </div>
-        <div id="contacts" class="link-container">
-            <a routerLink="/" fragment="contact-section">{{ navContent.contact[languageService.lang] }}</a>
+        <div id="nav-contacts" class="link-container">
+            <a (click)="navigateToSection('contact')">{{ navContent.contact[languageService.lang] }}</a>
         </div>
     </nav>
 }
