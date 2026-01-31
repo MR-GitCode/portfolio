@@ -42,7 +42,7 @@ header{
   }
 }
 
-.nav-menu-overlay{
+#nav-menu-overlay{
   position: absolute;
   z-index: 500;
   top: 0;
@@ -61,7 +61,7 @@ header{
     display: none;
   }
 
-  .nav-menu{
+  .nav-menu-icon{
     display: block;
   }
 }

@@ -1,5 +1,4 @@
 <section class="section-bg">
-    <!-- <div> -->
         <div class="top">
             <svg class="logo" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
                 <defs>
@@ -17,7 +16,7 @@
                     </text>
                 </g>
             </svg>
-            <div class="menu-close">
+            <div class="menu-close" (click)="navMenuService.closeNavMenu()">
                 <img src="/assets/icons/header/close.png">
             </div>
         </div>
@@ -26,6 +25,4 @@
             <app-toggle-language></app-toggle-language>
         </div>
         <app-hero-socials></app-hero-socials>  
-    <!-- </div> -->
-    
 </section>

@@ -3,6 +3,7 @@ import { LanguageService } from '../../../services/language.service';
 import { Router} from '@angular/router';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 import { ViewportScroller } from '@angular/common';
+import { NavMenuService } from '../../../services/nav-menu.service';
 
 @Component({
     selector: 'app-nav',
@@ -13,6 +14,7 @@ import { ViewportScroller } from '@angular/common';
 })
 export class NavComponent {
     languageService = inject(LanguageService);
+    navMenuService = inject(NavMenuService);
     contentService = inject(FirestoreContentService);
 
     navContent = this.contentService.getNavContent();
@@ -20,6 +22,7 @@ export class NavComponent {
     private viewportScroller = inject(ViewportScroller);
 
     navigateToSection(section: string): void{
+        this.navMenuService.closeNavMenu();
         this.router.navigate(['/'], { fragment: section }).then(() => {
             setTimeout(() => {
                 this.viewportScroller.scrollToAnchor(section);

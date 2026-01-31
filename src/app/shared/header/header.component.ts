@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { NavComponent } from './nav/nav.component';
 import { ToggleLanguageComponent } from './toggle-language/toggle-language.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { NavMenuService } from '../../services/nav-menu.service';
 
 @Component({
     selector: 'app-header',
@@ -15,7 +16,5 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
     styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
-    openNavMenu(){
-
-    }
+    navMenuService = inject(NavMenuService) 
 }

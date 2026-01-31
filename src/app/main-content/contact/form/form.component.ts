@@ -39,7 +39,7 @@ export class FormComponent {
   showSuccessMessage = false;
   showErrorMessage = false;
 
-  privacyAccepted = signal(false)
+  privacyAccepted = signal(false);
 
   post = {
     endPoint: 'https://michaelring.eu/sendMail.php',
