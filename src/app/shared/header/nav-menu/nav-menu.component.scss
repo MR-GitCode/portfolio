@@ -17,15 +17,33 @@
 .logo{
     width: 24px;
     height: 24px;
-} 
+    cursor: pointer;
+}
+
+a {
+  .logo {
+    color: #3355FF;
+    transition: color 0.2s ease;
+  }
+
+  &:hover .logo {
+    color: $yellow;
+  }
+}
 
 .top{
     position: absolute;
     top: 0;
-    display: flex;
-    justify-content: space-around;
     width: 100%;
-    padding: 16px;
+    // margin: 0 $margin-md;
+    div:first-child{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+            
+        margin: 0 $margin-md;
+        padding-top: 16px;
+    }
     .menu-close{
         cursor: pointer;
         img{

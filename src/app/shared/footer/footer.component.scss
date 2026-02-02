@@ -41,6 +41,17 @@ footer{
     font-weight: 400;
 }
 
+a {
+  .logo {
+    color: #3355FF;
+    transition: color 0.2s ease;
+  }
+
+  &:hover .logo {
+    color: $yellow;
+  }
+}
+
 @media screen and (max-width: $displayWidth-md) {
     .copyright-info{
         justify-content: space-between;

@@ -38,3 +38,12 @@ html, body{
 .letter-hovered{
     color: $yellow !important;
 }
+
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button {
+  user-select: none;
+  -webkit-user-select: none;
+}

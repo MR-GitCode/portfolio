@@ -66,7 +66,7 @@ export class StickerCircleComponent {
   };
 
   readonly centerSrc: Record<centerImgKey, string> = {
-    logo: '/assets/img/00_hand-drawn-lines/00_Header/logo_mr_black.svg',
+    logo: '/assets/icons/logo/logo_mr_black.svg',
     arrow: '/assets/img/03_stickers/00_Round/Sticker_arrow_weiß.png',
   };
          
