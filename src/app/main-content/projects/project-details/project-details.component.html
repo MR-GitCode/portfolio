@@ -45,16 +45,17 @@
               </div>
               <img src="{{ projectDetails.imgURL }}">
             </div>
-            <div class="buttons">
-              <app-contact-button textBtn="GitHub" urlBtn="{{ projectDetails.githubURL }}" class="blend-diff"></app-contact-button>
-              <app-contact-button textBtn="Live Test" urlBtn="{{ projectDetails.demoURL }}" class="blend-diff"></app-contact-button>
-            </div>
           </div>
         </div>
-
-        <div class="arrow-next" (click)="nextProject()">
-          <p>Next Project</p>
-          <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Next_project_arrow_1.png">
+        <div class="btn-links">
+          <div class="buttons">
+            <app-contact-button textBtn="GitHub" urlBtn="{{ projectDetails.githubURL }}" class="blend-diff"></app-contact-button>
+            <app-contact-button textBtn="Live Test" urlBtn="{{ projectDetails.demoURL }}" class="blend-diff"></app-contact-button>
+          </div>
+          <div class="arrow-next" (click)="nextProject(projectDetails.id)">
+            <p>Next Project</p>
+            <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Next_project_arrow_1.png">
+          </div>
         </div>
     </div>
   </section>

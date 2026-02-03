@@ -11,15 +11,15 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    padding-top: 70px;
 }
 
 .projects-details-container{
     display: flex;
     @include margin-left-right;
-    justify-content: center;
     flex-direction: column;
     width: 1440px;
+    margin-top: 110px;
+    position: relative;
 }
 
 .projects-details-content{
@@ -75,14 +75,6 @@
         border-radius: 20px;
         position: relative;
     }
-    .buttons{
-        padding-top: 48px;
-        position: absolute;
-        display: flex;
-        gap: 32px;
-        right: 0;
-        bottom: 0;
-    }
 }
 
 .arrow-back-container{
@@ -107,10 +99,22 @@
     }
 }
 
+.btn-links {
+    position: absolute;
+    bottom: 2%;
+    right: 0;
+    .buttons{
+        padding-top: 48px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 32px;
+    }
+}
+
 .arrow-next{
     display: flex;
     align-items: center;
-    align-self: end;
+    justify-content: flex-end;
     gap: 8px;
     font-size: 20px;
     font-weight: 700;
@@ -173,7 +177,7 @@
 
     .project-links .img {
         padding-top: 50px;
-        padding-bottom: 80px;
+        padding-bottom: 40px;
     }
 
     .sticker-container {
@@ -182,6 +186,15 @@
 
     .section-bg{
         background-image: url('/assets/img/01_background/07_project_details_rotate.png');
+    }
+
+    .btn-links {
+        position: unset;
+        bottom: 2%;
+        right: 0;
+        .buttons{
+            padding-top: 0;
+        }
     }
 }
 
@@ -250,8 +263,9 @@
         img{
             width: 290px;
         };
-        .buttons {
-            gap: 10;
-        }
+    }
+
+    .btn-links .buttons {
+        gap: 15px;
     }
 }

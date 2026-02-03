@@ -17,4 +17,8 @@ import { NavMenuService } from '../../services/nav-menu.service';
 })
 export class HeaderComponent {
     navMenuService = inject(NavMenuService) 
+
+    ngOnInit() {
+  console.log('🔴 HEADER WIRD NEU GELADEN!');
+}
 }
