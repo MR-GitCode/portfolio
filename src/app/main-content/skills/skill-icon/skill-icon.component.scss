@@ -6,11 +6,11 @@
     align-items: center;
     gap: 4px;
     img{
-        width: 72px;
-        height: 72px;
+        width: var(--icon-width, 72px);
+        height: var(--icon-height, 72px);
         filter: grayscale(100%);
         transition: transform 0.15s ease, filter 0.15s ease;
-
+        
         &:hover {
             transform: scale(0.78);
             filter: none;

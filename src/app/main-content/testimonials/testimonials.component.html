@@ -15,7 +15,7 @@
                     <!-- @if (testimonial.author) { -->
                         <app-feedback
                             [testimonial]="testimonial"
-                            [ngStyle]="{ position: 'absolute', 'transform': 'rotate(' + (-4 + i * 4) + 'deg)', 'left.px': i * 350}"
+                            [ngStyle]="{ 'transform': 'rotate(' + (-4 + i * 4) + 'deg)' }"
                             [ngClass]="['stack-' + i]">
                         </app-feedback>    
                     <!-- } -->

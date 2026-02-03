@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
-import { AsyncPipe } from '@angular/common';
+import { FirestoreContentService } from '../../../services/firestore-content.service';
 
 @Component({
     selector: 'app-sticker',
     standalone: true,
     imports: [
-    // AsyncPipe,
-    // NgFor,
-    // SkillIconComponent,
+      SkillIconComponent,
     ],
     templateUrl: './sticker.component.html',
     styleUrl: './sticker.component.scss'
@@ -16,6 +14,9 @@ import { AsyncPipe } from '@angular/common';
 export class StickerComponent {
 state: 'default' | 'peeling' | 'peeled' | 'unpeeling' = 'default';
 private peelTimer?: number;
+contentService = inject(FirestoreContentService);
+
+skills = this.contentService.getSkills();
 
 togglePeel() {
   if (this.state === 'peeling' || this.state === 'unpeeling') return;

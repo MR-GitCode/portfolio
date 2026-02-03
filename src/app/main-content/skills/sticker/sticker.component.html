@@ -18,7 +18,18 @@
         <img src="/assets/img/03_stickers/01_Skills - Peel off/Final.png">
         <div class="sticker-text sticker-final">
             <p>Also. I'm interested<br> in diving into:</p>
-            <!-- <app-skill-icon></app-skill-icon> -->
+            <div class="interest-skills">
+                @for ( skill of skills(); track skill.name) {
+                    @if (skill.type == 'interest') {
+                        <app-skill-icon 
+                            [skill]="skill";
+                            style=" --icon-width: 50px;
+                                    --icon-height: 50px;">
+                        </app-skill-icon> 
+                    }
+                }  
+            </div>
+
         </div>
     </div>
 </div>

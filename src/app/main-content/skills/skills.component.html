@@ -16,7 +16,9 @@
             <div class="skills-container">
                 <div class="skill-icons">
                     @for ( skill of skills(); track skill.name) {
-                        <app-skill-icon [skill]="skill"></app-skill-icon>
+                        @if (skill.type == 'skill') {
+                           <app-skill-icon [skill]="skill"></app-skill-icon> 
+                        }
                     }
                 </div>
                 <div class="sticker-position">
