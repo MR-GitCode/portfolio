@@ -58,7 +58,7 @@
     .about-tag-container{
         width: 480px;   
         img{
-            width: 480px;
+            width: 470px;
         };
     }
 }
@@ -79,7 +79,7 @@
 
 @media only screen and  (max-width: 450px) {
     .about-tag-container{
-        width: 315px;  
+        width: 300px;  
         img{
             width: 300px;
         };
@@ -92,5 +92,16 @@
     }
     .paper-conent p{
         font-size: 16px; 
+    }
+}
+@media only screen and  (max-width: 375px) {
+    .about-tag-container{
+        width: 280px;  
+        img{
+            width: 280px;
+        };
+        .job-preferences[_ngcontent-ng-c1937722749] {
+            gap: 5px;
+        }
     }
 }

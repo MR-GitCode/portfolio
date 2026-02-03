@@ -2,14 +2,13 @@
   <section class="section-bg">
     <div class="projects-details-container">
         <div class="arrow-back-container">
-            <a routerLink="">
+            <a (click)="navigateToProjectOverview(projectDetails.id)">
               <div class="arrow-back">
                 <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Breadcrumb_arrow_1.png">
                 <p>Go Back</p>
             </div>
           </a>
         </div>
-
         <div class="projects-details-content">
           <div class="project-description">
             <div class="headline" id="headline-drawline">
@@ -53,7 +52,7 @@
           </div>
         </div>
 
-        <div class="arrow-next">
+        <div class="arrow-next" (click)="nextProject()">
           <p>Next Project</p>
           <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Next_project_arrow_1.png">
         </div>

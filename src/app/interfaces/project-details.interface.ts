@@ -24,6 +24,7 @@ export interface ProjectDetails {
         }
     };
     githubURL: string;
+    id: string;
     imgURL: string;
     process: {
         text: {

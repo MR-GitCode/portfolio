@@ -12,11 +12,13 @@
             </div>
             <div class="testimonials-cards">
                 @for (testimonial of testimonials(); track $index ; let i = $index) {
-                   <app-feedback
-                        [testimonial]="testimonial"
-                        [ngStyle]="{ position: 'absolute', 'transform': 'rotate(' + (-4 + i * 4) + 'deg)', 'left.px': i * 350}"
-                        [ngClass]="['stack-' + i]">
-                    </app-feedback>  
+                    <!-- @if (testimonial.author) { -->
+                        <app-feedback
+                            [testimonial]="testimonial"
+                            [ngStyle]="{ position: 'absolute', 'transform': 'rotate(' + (-4 + i * 4) + 'deg)', 'left.px': i * 350}"
+                            [ngClass]="['stack-' + i]">
+                        </app-feedback>    
+                    <!-- } -->
                 }    
             </div>
         </div>

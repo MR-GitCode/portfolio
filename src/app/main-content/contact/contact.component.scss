@@ -101,7 +101,7 @@
 
 @media screen and (max-width: $displayWidth-sm) {
     .headline-container {
-        width: 480px;
+        width: 400px;
     }
 
     .headline h1 {
@@ -111,7 +111,7 @@
 
 @media screen and (max-width: 530px) {
     .headline-container {
-        width: 360px;
+        width: 340px;
     }
     
     .section-bg {
@@ -119,9 +119,12 @@
     }
 }
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 410px) {
     .headline-container {
-        width: 290px;
+        width: 270px;
+        .sticker-container{
+            margin: 10px;
+        }
     }
 
     .headline h1 {

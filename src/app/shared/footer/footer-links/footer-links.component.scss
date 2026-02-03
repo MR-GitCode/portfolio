@@ -7,13 +7,12 @@
   justify-content: space-between;
   align-items: center;
   height: 42px;
-  mix-blend-mode: difference;
   a{
     text-decoration: none;
     color: var(--font-color, $white);
     font-size: 18px;
     font-weight: 500; 
-    z-index: 100;  
+    z-index: 300;  
   }
 }
 
@@ -134,5 +133,10 @@
     grid-template-areas:
       "imprint . privacy"
       "github linkedin email";
+    grid-column-gap: 0;
+    grid-row-gap: 24px;
+    a{
+      font-size: 16px; 
+    }
   }
 }
