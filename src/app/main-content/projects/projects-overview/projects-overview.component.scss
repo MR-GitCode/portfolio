@@ -52,7 +52,7 @@
         position: relative;
         height: 80px;
         &::after{
-            background-image: url('/assets/img/00_hand-drawn-lines/03_Portfolio/color_option_1.png');
+            background-image: url('/assets/img/00_hand-drawn-lines/03_Portfolio/color_option_1.webp');
             @include drawline;
         }
         &.drawline-visible::after {

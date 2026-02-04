@@ -49,13 +49,13 @@
 }
 
 .layer-default {
-  background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Default.png");
+  background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Default.webp");
   opacity: 1;
   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
 }
 
 // .layer-transition {
-//   background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.png");
+//   background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.webp");
 //   opacity: 0;
 //   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
 // }
@@ -115,7 +115,7 @@
   40% {
     opacity: 1;
     clip-path: polygon(0 0, 50% 0, 100% 50%, 100% 100%, 0 100%);
-    background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.png");
+    background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.webp");
   }
   100% {
     opacity: 0;

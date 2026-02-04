@@ -60,14 +60,14 @@ export class StickerCircleComponent {
 
 
   readonly stickerSrc: Record<StickerKey, string> = {
-    orange: '/assets/img/03_stickers/00_Round/01_Color_option_1_Orange.png',
-    blue:   '/assets/img/03_stickers/00_Round/00_Color_option_1_Blue.png',
-    yellow: '/assets/img/03_stickers/00_Round/02_Color_option_1_Yellow.png',
+    orange: '/assets/img/03_stickers/00_Round/01_Color_option_1_Orange.webp',
+    blue:   '/assets/img/03_stickers/00_Round/00_Color_option_1_Blue.webp',
+    yellow: '/assets/img/03_stickers/00_Round/02_Color_option_1_Yellow.webp',
   };
 
   readonly centerSrc: Record<centerImgKey, string> = {
     logo: '/assets/icons/logo/logo_mr_black.svg',
-    arrow: '/assets/img/03_stickers/00_Round/Sticker_arrow_weiß.png',
+    arrow: '/assets/img/03_stickers/00_Round/Sticker_arrow_weiß.webp',
   };
          
   get config() {

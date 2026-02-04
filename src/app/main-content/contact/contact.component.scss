@@ -44,7 +44,7 @@
         height: 41px;
         width: 280px;
         &::after{
-            background-image: url('/assets/img/00_hand-drawn-lines/05_Contact/Color_option_1.png');
+            background-image: url('/assets/img/00_hand-drawn-lines/05_Contact/Color_option_1.webp');
             @include drawline;
         }
         &.drawline-visible::after {

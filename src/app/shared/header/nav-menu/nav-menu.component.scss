@@ -4,7 +4,7 @@
     position: relative;
     width: 100vw;
     height: 650px;
-    background-image: url('/assets/img/01_background/01_Hero.png');
+    background-image: url('/assets/img/01_background/01_Hero.webp');
     background-size: cover;
     background-position-y: bottom;
     background-repeat: no-repeat;
@@ -53,7 +53,7 @@ a {
         
         &:hover{
             img {
-                content:url('/assets/icons/header/close_hover.png');
+                content:url('/assets/icons/header/close_hover.webp');
             }
         }
     }

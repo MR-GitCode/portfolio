@@ -2,7 +2,7 @@
 
 .feedback-container{
     width: 480px;
-    height: 320px;
+    height: 318px;
     padding: 48px 40px;
     
     border-radius: 4px;
@@ -94,7 +94,7 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 525px) {
   .feedback-container {
     width: 320px;
     height: 353px;

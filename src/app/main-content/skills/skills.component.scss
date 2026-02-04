@@ -2,7 +2,7 @@
 @import '../../../styles/drawline.animation';
 
 .section-bg{
-    background-image: url('/assets/img/01_background/03_Skills.png');
+    background-image: url('/assets/img/01_background/03_Skills.webp');
     background-size: cover;
     background-position-y: bottom;
     background-repeat: no-repeat;
@@ -68,7 +68,7 @@
     width: 261px;
     pointer-events: none;
     &::after {
-        background-image: url('/assets/img/00_hand-drawn-lines/02_Skills/color_option_1.png');
+        background-image: url('/assets/img/00_hand-drawn-lines/02_Skills/color_option_1.webp');
         height: 80px;
         width: 261px;
         @include drawline;
@@ -170,10 +170,18 @@
     }
     
     .skills-container{
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
         .skill-icons {
             grid-template-columns: repeat(3, 1fr);
             grid-column-gap: 30px;
             grid-row-gap: 30px;
+        }
+        .sticker-position {
+            position: unset;
+            height: 100px;
+            width: 100px
         }
     }
 }
