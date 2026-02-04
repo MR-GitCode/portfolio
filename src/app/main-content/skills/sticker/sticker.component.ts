@@ -25,10 +25,10 @@ togglePeel() {
 
   if (this.state === 'default') {
     this.state = 'peeling';
-    this.peelTimer = window.setTimeout(() => this.state = 'peeled', 600);
+    this.peelTimer = window.setTimeout(() => this.state = 'peeled', 400);
   } else if (this.state === 'peeled') {
     this.state = 'unpeeling';
-    this.peelTimer = window.setTimeout(() => this.state = 'default', 600);
+    this.peelTimer = window.setTimeout(() => this.state = 'default', 400);
   }
 }
 }

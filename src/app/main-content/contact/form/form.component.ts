@@ -26,7 +26,6 @@ export class FormComponent {
 
   formContent = this.contentService.getFormContent();
 
-
   http = inject(HttpClient);
   
   contactData = {

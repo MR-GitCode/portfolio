@@ -5,7 +5,7 @@
   cursor: pointer;
 }
 
-.interest-skills{
+.interest-skills {
   display: flex;
   gap: 16px;
 }
@@ -31,21 +31,23 @@
   inset: 0;
   background-size: cover;
   background-repeat: no-repeat;
-  will-change: clip-path, opacity, filter;
+  will-change: clip-path, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Hardware-Beschleunigung */
 }
 
 #sticker-1 {
-    z-index: 3;
-    transform-origin: top right;
+  z-index: 3;
+  transform-origin: top right;
 }
 
 #sticker-2 {
-    z-index: 1;
-    img {
-        width: 200px;
-        height: 200px;
-        display: block;
-    }
+  z-index: 1;
+  img {
+    width: 200px;
+    height: 200px;
+    display: block;
+  }
 }
 
 .layer-default {
@@ -54,25 +56,26 @@
   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
 }
 
-// .layer-transition {
-//   background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.webp");
-//   opacity: 0;
-//   clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
-// }
+.layer-transition {
+  background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.webp");
+  opacity: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
+  pointer-events: none;
+}
 
-.sticker-default{
-    img {
-        width: 51px;
-        height: 40px;
-    }
-    p {
-        font-size: 40px;
-        font-weight: 400;
-        font-family: 'Kalam';
-        color: $white;
-        margin: 0;
-        line-height: 40px;
-    }
+.sticker-default {
+  img {
+    width: 51px;
+    height: 40px;
+  }
+  p {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Kalam';
+    color: $white;
+    margin: 0;
+    line-height: 40px;
+  }
 }
 
 .sticker-final p {
@@ -86,59 +89,98 @@
 }
 
 /* --- PEEL --- */
-
-/* Default-sticker start peel */
 .sticker-container.is-peeling .layer-default {
-  animation: peelOut 200ms cubic-bezier(.2,.9,.2,1) forwards;
+  animation: peelOutDefault 400ms ease-out forwards;
 }
 
-/* done: Sticker-1 disappears */
+.sticker-container.is-peeling .layer-transition {
+  animation: peelOutTransition 400ms ease-out forwards;
+}
+
 .sticker-container.is-peeled #sticker-1 {
   pointer-events: none;
   opacity: 0;
 }
 
-/* ------------------ UNPEEL ------------------ */
-
-/* Default-sticker  comes back*/
+/* --- UNPEEL --- */
 .sticker-container.is-unpeeling .layer-default {
-  animation: peelIn 600ms cubic-bezier(.2,.9,.2,1) forwards;
+  animation: peelInDefault 400ms ease-out forwards;
 }
 
+.sticker-container.is-unpeeling .layer-transition {
+  animation: peelInTransition 400ms ease-out forwards;
+}
 
-@keyframes peelOut {
+/* Peel Out Animations */
+@keyframes peelOutDefault {
   0% {
     opacity: 1;
     clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
-    filter: none;
+  }
+  30% {
+    opacity: 0.5;
+    clip-path: polygon(0 0, 35% 0, 100% 65%, 100% 100%, 0 100%);
   }
   40% {
-    opacity: 1;
-    clip-path: polygon(0 0, 50% 0, 100% 50%, 100% 100%, 0 100%);
-    background-image: url("/assets/img/03_stickers/01_Skills - Peel off/Transition.webp");
+    opacity: 0;
+    clip-path: polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%);
   }
   100% {
     opacity: 0;
     clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 0 100%);
-    // clip-path: polygon(0 100%, 0 100%, 0 100%, 0 100%, 0 100%);
-    filter: blur(0.6px);
   }
 }
 
-@keyframes peelIn {
+@keyframes peelOutTransition {
   0% {
     opacity: 0;
-    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 0 100%);
-    filter: blur(0.6px);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
   }
-  45% {
-    opacity: 0.9;
-    clip-path: polygon(0 0, 70% 0, 100% 40%, 100% 100%, 0 100%);
-    filter: blur(0.2px);
+  30% {
+    opacity: 0.5;
+    clip-path: polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%);
+  }
+  40% {
+    opacity: 0.2;
+    clip-path: polygon(0 0, 60% 0, 100% 40%, 100% 100%, 0 100%);
+  }
+  50% {
+    opacity: 0.1;
+    clip-path: polygon(0 0, 30% 0, 100% 70%, 100% 100%, 0 100%);
   }
   100% {
-    opacity: 1;
+    opacity: 0;
+    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 0 100%);
+  }
+}
+
+/* Peel In Animations */
+@keyframes peelInDefault {
+  0% {
+    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 0 100%);
+  }
+  55% {
+    clip-path: polygon(0 0, 55% 0, 100% 45%, 100% 100%, 0 100%);
+  }
+  75% {
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%);
+  }
+  100% {
     clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
-    filter: none;
+  }
+}
+
+@keyframes peelInTransition {
+  0% {
+    clip-path: polygon(0 0, 0 0, 100% 100%, 100% 100%, 0 100%);
+  }
+  55% {
+    clip-path: polygon(0 0, 55% 0, 100% 45%, 100% 100%, 0 100%);
+  }
+  75% {
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 100% 100%, 0 100%);
   }
 }

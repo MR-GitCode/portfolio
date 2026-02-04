@@ -22,10 +22,13 @@
   width: max-content;
   @include flex-center;
   padding: 0 24px;
+  cursor: pointer;;
   &:hover{
     background-color: $blue;
     border-radius: 100px;
-    color: var(--font-color-hover, $white);
+    a{
+      color: var(--font-color-hover, $white);
+    }
   }
 }
 
@@ -41,17 +44,20 @@
 
 #github::before{
   left: 40%;                /* startet links*/
-  background-image: url('/assets/icons/socials/git_hub.svg')
+  background-image: url('/assets/icons/socials/git_hub.svg');
+  filter: var(--img-filter, invert(0));
 }
 
 #linkedin::before{
   left: 45%;                /* startet links*/
   background-image: url('/assets/icons/socials/linledin.svg');
+  filter: var(--img-filter, invert(0));
 }
 
 #email::before{
   left: 30%;                /* startet links*/
   background-image: url('/assets/icons/socials/email.svg');
+  filter: var(--img-filter, invert(0));
 }
 
 .link-container {
