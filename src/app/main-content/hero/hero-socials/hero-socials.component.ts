@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
     templateUrl: './hero-socials.component.html',
     styleUrl: './hero-socials.component.scss'
 })
-export class HeroSocialsComponent {
-
-}
+export class HeroSocialsComponent {}

@@ -10,6 +10,4 @@ import { FooterLinksComponent } from './footer-links/footer-links.component';
     templateUrl: './footer.component.html',
     styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
-    
-}
+export class FooterComponent {}

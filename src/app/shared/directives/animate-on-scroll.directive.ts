@@ -13,6 +13,10 @@ export class AnimateOnScrollDirective implements AfterViewInit, OnDestroy {
 
   constructor(private readonly elementRef: ElementRef<HTMLElement>, private readonly renderer: Renderer2) {}
 
+  /**
+   * Initializes the IntersectionObserver after view initialization.
+   * Shows underline animations of headlines.
+   */
   ngAfterViewInit(): void {
     this.observer = new IntersectionObserver(
       ([entry]) => {
@@ -37,6 +41,9 @@ export class AnimateOnScrollDirective implements AfterViewInit, OnDestroy {
     this.observer.observe(this.elementRef.nativeElement);
   }
 
+  /**
+   * Cleanup method that disconnects the IntersectionObserver.
+   */
   ngOnDestroy(): void {
     this.observer?.disconnect();
   }

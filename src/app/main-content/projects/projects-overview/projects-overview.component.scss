@@ -14,7 +14,6 @@
     grid-row-gap: 10px;
     max-width: 1440px;
     @include margin-left-right;
-    // margin: 0 120px;
     padding-top: 80px;
 }
 
@@ -28,6 +27,7 @@
         margin: 0;
         z-index: 4;
     }
+
     p{
         font-size: 18px;
         font-weight: 400;
@@ -40,6 +40,7 @@
 .headline{
     display: flex;
     flex-direction: column;
+
     p{
         font-size: 20px;
         font-weight: 500;
@@ -48,6 +49,7 @@
 
 #headline-drawline{
     width: fit-content;
+
     #drawline{
         position: relative;
         height: 80px;
@@ -82,6 +84,7 @@
         h1{
             font-size: 45px;
         }
+        
         p{
             font-size: 16px;
             line-height: 25px;

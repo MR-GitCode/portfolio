@@ -23,21 +23,18 @@ import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-
 export class FormComponent {
   languageService = inject(LanguageService);
   contentService = inject(FirestoreContentService);
+  http = inject(HttpClient);
 
   formContent = this.contentService.getFormContent();
-
-  http = inject(HttpClient);
   
   contactData = {
     name: "",
     email: "",
     message: "",
   }
-
   mailTest = false;
   showSuccessMessage = false;
   showErrorMessage = false;
-
   privacyAccepted = signal(false);
 
   post = {
@@ -51,48 +48,56 @@ export class FormComponent {
     },
   };
 
+  /**
+   * Toggles the privacy acceptance state.
+   */
   togglePrivacy() {
     this.privacyAccepted.set(!this.privacyAccepted());
   }
-
+  
+  /**
+   * Handles form submission and sends contact data to the server.
+   * @param ngForm The Angular form instance.
+   */
   onSubmit(ngForm: NgForm) {
     if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
-      console.log('Sending email with data:', this.contactData);
-      
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
-          next: (response: any) => {
-            console.log('SUCCESS:', response);
-            
-            if (response.status === 'success') {
-              // show success Message
-              this.showSuccessMessage = true;
-              this.showErrorMessage = false;
-              
-              setTimeout(() => {
-                this.showSuccessMessage = false;
-              }, 3000);
-            }
-            
-            ngForm.resetForm();
-            this.privacyAccepted.set(false);
-          },
-          error: (error) => {
-            console.error('ERROR:', error);
-            
-            // Show error message
-            this.showErrorMessage = true;
-            this.showSuccessMessage = false;
-            
-            setTimeout(() => {
-              this.showErrorMessage = false;
-            }, 3000);
-          },
-          complete: () => console.info('send post complete'),
+          next: (response) => this.handleSuccess(response, ngForm),
+          error: () => this.handleError(),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      console.log('Test mode - not sending email');
       ngForm.resetForm();
     }
+  }
+
+  /**
+   * 
+   * @param response The server response object containing status information
+   * @param ngForm The form instance to be reset after successful submission
+   */
+  handleSuccess(response: any, ngForm: NgForm): void {
+    if (response.status === 'success') {
+      this.showSuccessMessage = true;
+      this.showErrorMessage = false;
+
+      setTimeout(() => {
+        this.showSuccessMessage = false;
+      }, 3000);
+    }
+    ngForm.resetForm();
+    this.privacyAccepted.set(false);
+  }
+  
+  /**
+   * Handles form submission errors.
+   * Displays error message for 3 seconds and hides success message. 
+   */
+  handleError(): void {
+    this.showErrorMessage = true;
+    this.showSuccessMessage = false;
+    setTimeout(() => {
+      this.showErrorMessage = false;
+    }, 3000);
   }
 }

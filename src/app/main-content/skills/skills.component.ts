@@ -19,7 +19,6 @@ import { LanguageService } from '../../services/language.service';
 export class SkillsComponent {
   languageService = inject(LanguageService);
   contentService = inject(FirestoreContentService);
-  
   skills = this.contentService.getSkills();
   skillContent = this.contentService.getSkillContent();
 }

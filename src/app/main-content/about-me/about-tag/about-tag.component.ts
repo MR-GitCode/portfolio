@@ -9,8 +9,6 @@ import { Component, Input } from '@angular/core';
 })
 export class AboutTagComponent {
   @Input() textBased: string = '';
-
   @Input() textRelocate: string = '';
-
   @Input() textRemote: string = '';
 }

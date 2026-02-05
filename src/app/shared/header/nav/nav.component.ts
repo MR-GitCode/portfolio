@@ -21,6 +21,10 @@ export class NavComponent {
     private router = inject(Router);
     private viewportScroller = inject(ViewportScroller);
 
+    /**
+     * Navigate to the landigpage and scrolled to the section.
+     * @param section The name of the section.
+     */
     navigateToSection(section: string): void{
         this.navMenuService.closeNavMenu();
         this.router.navigate(['/'], { fragment: section }).then(() => {

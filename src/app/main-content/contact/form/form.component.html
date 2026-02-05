@@ -52,17 +52,19 @@
 
       
     </form>
-      <div class="message-container">
-        @if (showSuccessMessage) {
-          <div class="success-message">
-            {{ formContent.message.success[languageService.lang] }}
-          </div>
-        }
-        @if (showErrorMessage) {
-          <div class="error-message">
-            {{ formContent.message.error[languageService.lang] }}
-          </div>
-        }
-      </div>
+
+    <div class="message-container">
+      @if (showSuccessMessage) {
+        <div class="success-message">
+          {{ formContent.message.success[languageService.lang] }}
+        </div>
+      }
+      
+      @if (showErrorMessage) {
+        <div class="error-message">
+          {{ formContent.message.error[languageService.lang] }}
+        </div>
+      }
+    </div>
   </div>
 }

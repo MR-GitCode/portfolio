@@ -9,6 +9,7 @@ import { LanguageService } from '../../../services/language.service';
     templateUrl: './feedback.component.html',
     styleUrl: './feedback.component.scss'
 })
+
 export class FeedbackComponent {
   @Input() testimonial! : Testimonial;
   languageService = inject(LanguageService);

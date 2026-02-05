@@ -3,6 +3,7 @@ import { SkillsProjectDetails } from "./skills-project-details.interface";
 
 export interface ProjectDetails {
     demoURL: string;
+
     description: {
         text: {
             de: string;
@@ -13,6 +14,7 @@ export interface ProjectDetails {
             en: string;         
         }
     };
+
     duration: {
         duration: {
             de: string;
@@ -23,9 +25,11 @@ export interface ProjectDetails {
             en: string;         
         }
     };
+
     githubURL: string;
     id: string;
     imgURL: string;
+
     process: {
         text: {
             de: string;
@@ -36,10 +40,13 @@ export interface ProjectDetails {
             en: string;         
         }
     };
+
     skills: SkillsProjectDetails[] | Record<string, SkillsProjectDetails>;
+
     sticker: {
         stickerColor: StickerKey;
         variant: StickerVariant;
     };
+
     title: string;
 }

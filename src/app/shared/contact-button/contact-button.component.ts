@@ -10,13 +10,11 @@ import { Component, Input } from '@angular/core';
     templateUrl: './contact-button.component.html',
     styleUrl: './contact-button.component.scss'
 })
+
 export class ContactButtonComponent {
   @Input() textBtn: string = '';
-
   @Input() urlBtn: string = '';
-
   @Input() class = '';
-
   @Input() disabled = false;
 
   get hasUrl(): boolean {

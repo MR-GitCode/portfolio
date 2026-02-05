@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { LanguageService } from '../../../services/language.service';
 import { FirestoreContentService } from '../../../services/firestore-content.service';
 
-
 @Component({
     selector: 'app-imprint',
     standalone: true,
@@ -13,6 +12,5 @@ import { FirestoreContentService } from '../../../services/firestore-content.ser
 export class ImprintComponent {
   languageService = inject(LanguageService);
   contentService = inject(FirestoreContentService);
-  
   legalContent = this.contentService.getLegalContent();
 }

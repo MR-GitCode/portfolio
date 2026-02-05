@@ -5,6 +5,7 @@
     flex-direction: column;
     align-items: center;
     gap: 4px;
+
     img{
         width: var(--icon-width, 72px);
         height: var(--icon-height, 72px);
@@ -16,6 +17,7 @@
             filter: none;
         }
     }
+
     p{
         color: $white;
         font-size: 18px;
@@ -35,6 +37,7 @@
         p{
             font-size: 16px;
         }
+        
         img {
             width: 56px;
             height: 56px;

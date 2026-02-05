@@ -9,21 +9,25 @@
     @include flex-center;
     cursor: pointer;
     box-shadow: 2px 4px 0px 0px var(--shadow, $white);
+
     p{
         font-size: 18px;
         font-weight: 500;
         color: var(--font-color, $white);
         padding: 0 24px;
     }
+
     &:hover{
         background-color: $orange;
         transition: 0.3s;
     }
+
     &:active {
         background-color: $orange;
         box-shadow: 0 0 0 0;
         transform: translateY(4px);
     }
+
     &:disabled {
         opacity: 0.5;
         cursor: not-allowed;
@@ -51,6 +55,3 @@
         text-decoration: none;
     }
 }
-
-
-

@@ -3,11 +3,14 @@ export interface AboutContent {
         de: string;
         en: string;
     };
+
     buttonURL: string;
+
     subtitle: {
         de: string;
         en: string;
     };
+
     tags: {
         de: {
             tag1: string;
@@ -20,10 +23,12 @@ export interface AboutContent {
             tag3: string;
         }
     }
+
     text: {
         de: string;
         en: string;
     };
+    
     title: {
         de: string;
         en: string;

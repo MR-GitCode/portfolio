@@ -6,6 +6,7 @@
     height: 400px;
     left: 50%;
     transform: translateX(-50%);
+
     .paper-conent {
         @include flex-center;
         position: absolute;
@@ -39,10 +40,12 @@
     position: absolute;
     @include flex-center;
     gap: 16px;
+
     img{
        width: 40px !important;
        height: 40px !important; 
     }
+
     p{
         font-size: 24px;
         font-weight: 400;
@@ -72,6 +75,7 @@
             height: 128px;
         };
     }
+
     .paper-conent p{
         font-size: 20px; 
     }
@@ -84,16 +88,19 @@
             width: 300px;
         };
     }
+
     .job-preferences{
         img{
             width: 32px !important;
             height: 32px !important; 
         }
     }
+
     .paper-conent p{
         font-size: 16px; 
     }
 }
+
 @media only screen and  (max-width: 375px) {
     .about-tag-container{
         width: 280px;  

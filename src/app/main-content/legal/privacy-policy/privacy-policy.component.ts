@@ -12,6 +12,5 @@ import { FirestoreContentService } from '../../../services/firestore-content.ser
 export class PrivacyPolicyComponent {
     languageService = inject(LanguageService);
     contentService = inject(FirestoreContentService);
-  
     legalContent = this.contentService.getLegalContent();
 }

@@ -2,6 +2,15 @@
 
 .project-container{
     width: 536px;
+    &:hover {
+        .img-project {
+            transform: scale(1.05);
+        }
+
+        .bg-linear-gradient {
+            opacity: 1;
+        }
+    }
 }
 
 .projects-link-container{
@@ -10,20 +19,14 @@
     @include flex-center;
     border-radius: 20px;
     overflow: hidden;
+
     .contact-btn{
         position: absolute;
         right: 20px;
         bottom: 20px;
         pointer-events: auto;
     }
-    &:hover {
-        .img-project {
-            transform: scale(1.05);
-        }
-        .bg-linear-gradient {
-            opacity: 1;
-        }
-    }
+    
     .sticker-container{
         position: absolute;
         z-index: 100;
@@ -99,8 +102,6 @@ p{
     .img-project {
         width: 340px;
     }
-
-
 }
 
 @media screen and (max-width: $displayWidth-xs) {

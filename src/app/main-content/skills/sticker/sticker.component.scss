@@ -33,7 +33,7 @@
   background-repeat: no-repeat;
   will-change: clip-path, opacity;
   backface-visibility: hidden;
-  transform: translateZ(0); /* Hardware-Beschleunigung */
+  transform: translateZ(0);
 }
 
 #sticker-1 {
@@ -68,6 +68,7 @@
     width: 51px;
     height: 40px;
   }
+  
   p {
     font-size: 40px;
     font-weight: 400;

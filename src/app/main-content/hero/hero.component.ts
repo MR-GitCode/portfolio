@@ -21,6 +21,5 @@ import { FirestoreContentService } from '../../services/firestore-content.servic
 export class HeroComponent {
   languageService = inject(LanguageService);
   contentService = inject(FirestoreContentService);
-  
   heroContent = this.contentService.getHeroContent();
 }

@@ -17,7 +17,6 @@ import { FirestoreContentService } from '../../../services/firestore-content.ser
 export class ProjectsOverviewComponent {
   languageService = inject(LanguageService);
   contentService = inject(FirestoreContentService);
-    
   projects = this.contentService.getProjects();
   projectsContent = this.contentService.getProjectsContent();
 }

@@ -15,7 +15,4 @@ import { ViewportScroller } from '@angular/common';
 })
 export class AppComponent {
   title = 'portfolio';
-  private readonly router = inject(Router);
-  private readonly viewportScroller = inject(ViewportScroller)
-
 }

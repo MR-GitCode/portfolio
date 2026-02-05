@@ -11,7 +11,6 @@ describe('PrivacyPolicyComponent', () => {
       imports: [PrivacyPolicyComponent]
     })
     .compileComponents();
-    
     fixture = TestBed.createComponent(PrivacyPolicyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

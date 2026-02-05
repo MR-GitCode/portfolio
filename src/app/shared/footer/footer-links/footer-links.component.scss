@@ -22,7 +22,8 @@
   width: max-content;
   @include flex-center;
   padding: 0 24px;
-  cursor: pointer;;
+  cursor: pointer;
+
   &:hover{
     background-color: $blue;
     border-radius: 100px;
@@ -66,7 +67,7 @@
   height: 45px;
   width: max-content;
   cursor: pointer;
-    &::after {
+  &::after {
     content: "";
     position: absolute;
     background-size: cover;
@@ -82,6 +83,7 @@
     width: 90px;
     height: 42px;
   }
+
   &:hover::after {
     animation: drawLeftToRight 0.25s;
   }
@@ -93,6 +95,7 @@
     width: 120px;
     height: 42px;
   }
+  
   &:hover::after {
     animation: drawLeftToRight 0.25s;
   }

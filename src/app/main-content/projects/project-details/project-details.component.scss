@@ -51,6 +51,7 @@
             text-align: justify
         }
     }
+
     .project-skills{
         display: flex;
         gap: 12px;
@@ -82,6 +83,7 @@
     a{
         text-decoration: none;
     }
+
     .arrow-back{
         color: $black;
         display: flex;
@@ -104,6 +106,7 @@
     position: absolute;
     bottom: 2%;
     right: 0;
+
     .buttons{
         padding-top: 48px;
         display: flex;
@@ -121,10 +124,12 @@
     font-weight: 700;
     color: $white;
     cursor: pointer;
+
     img{
         width: 24px;
         height: 24px;
     }
+
     &:hover{
         color: $yellow;
     }
@@ -133,6 +138,7 @@
 .headline{
     width: fit-content;
     min-width: 120px;
+
     #drawline{
         position: relative;
         height: 25px;
@@ -140,6 +146,7 @@
             background-image: url('/assets/img/00_hand-drawn-lines/01_About_me/color_option_1.webp');
             @include drawline;
         }
+
         &.drawline-visible::after {
             animation: drawLeftToRight 0.25s;
         }
@@ -157,7 +164,6 @@
     color: $white;
     mix-blend-mode: difference;      
 }
-
 
 @media screen and (max-width: 1350px) {
     .projects-details-container{

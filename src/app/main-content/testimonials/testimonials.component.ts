@@ -16,10 +16,10 @@ import { FirestoreContentService } from '../../services/firestore-content.servic
     templateUrl: './testimonials.component.html',
     styleUrl: './testimonials.component.scss'
 })
+
 export class TestimonialsComponent {
     languageService = inject(LanguageService);
     contentService = inject(FirestoreContentService);
-
     testimonials = this.contentService.getTestimonials();
     testimonialsContent = this.contentService.getTestimonialsContent();
 }

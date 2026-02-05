@@ -12,6 +12,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+
     div{
         width: 420px;
     };
@@ -26,15 +27,18 @@
     font-weight: 500;
     width: 560px;
     height: 432px;
+
     h1{
         font-size: 64px;
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 0;
     }
+
     p {
         margin: 0;
     }
+
     span{
         line-height: 30px;
         text-align: justify;
@@ -50,6 +54,7 @@
 
 .about-btn{
     border-color: $black;
+
     p {
         color: $black;
     }
@@ -57,6 +62,7 @@
     &:hover {
         background: transparent;
     }
+
     &:active {
         background-color: red;
         box-shadow: 0 0 0 0;
@@ -71,10 +77,12 @@
 #drawline{
     position: relative;
     height: 20px;
+
     &::after{
        background-image: url('/assets/img/00_hand-drawn-lines/01_About_me/color_option_1.webp');
        @include drawline;
     }
+
     &.drawline-visible::after {
         animation: drawLeftToRight 0.25s;
     }
@@ -120,6 +128,7 @@
         h1{
             font-size: 45px;
         }
+        
         div{
             width: 280px;
         }

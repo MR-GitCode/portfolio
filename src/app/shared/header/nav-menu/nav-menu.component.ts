@@ -14,6 +14,7 @@ import { NavMenuService } from '../../../services/nav-menu.service';
   templateUrl: './nav-menu.component.html',
   styleUrl: './nav-menu.component.scss',
 })
+
 export class NavMenuComponent {
   navMenuService = inject(NavMenuService) 
 }

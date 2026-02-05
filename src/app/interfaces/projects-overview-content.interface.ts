@@ -3,10 +3,12 @@ export interface ProjectsOverviewContent {
         de: string;
         en: string;
     };
+
     text: {
         de: string;
         en: string;
     };
+
     title: {
         de: string;
         en: string;
@@ -15,10 +17,12 @@ export interface ProjectsOverviewContent {
 
 export interface Project {
     title: string;
+
     description: {
         de: string;
         en: string;
     };
+    
     imgURL: string;
     demoURL: string;
     order?: number;

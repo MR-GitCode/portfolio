@@ -98,10 +98,12 @@
     top: -5px;
     right: 20px;
     transform: rotate(8deg);
+
     .polaroid {
         position: relative;
         width: 100%;
         height: 100%; 
+
         img{
             position: absolute;
             top: 0;
@@ -109,10 +111,12 @@
             width: 100%;
             height: auto; 
         }
+
         .hover-polaroid,
         .hover-name {
             opacity: 0;
         }
+
         &:hover {
             .default-polaroid,
             .default-name {
@@ -178,6 +182,7 @@
         width: fit-content !important;
         height: 320px !important;
     }
+    
     .polaroid-container{
         top: unset !important;
         right: unset !important;

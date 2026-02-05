@@ -38,6 +38,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .stack-1 {
     z-index: 2;
     background-image: url('/assets/img/03_stickers/02_Testimonials/B.webp');
@@ -46,6 +47,7 @@
     background-position: center;
     background-repeat: no-repeat;
 }
+
 .stack-2 {
     z-index: 1;
     background-image: url('/assets/img/03_stickers/02_Testimonials/A.webp');
@@ -73,6 +75,7 @@ app-feedback:hover {
        margin: 0;
        z-index: 4;
     }
+
     p{
         font-size: 20px;
         font-weight: 500;
@@ -95,6 +98,7 @@ app-feedback:hover {
             background-image: url('/assets/img/00_hand-drawn-lines/04_Testimonials/Color_option_1.webp');
             @include drawline;
             }
+
             &.drawline-visible::after {
                 animation: drawRightToLeft 0.25s;
             }
@@ -103,17 +107,18 @@ app-feedback:hover {
 }
 
 @media screen and (max-width: 1200px) {
-  .testimonials-content {
-    .testimonials-cards {
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    .testimonials-content {
+        .testimonials-cards {
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .testimonials-cards app-feedback:not(:first-child) {
+            margin-left: 0;
+        }
     }
-    .testimonials-cards app-feedback:not(:first-child) {
-        margin-left: 0;
-    }
-  }
 
     app-feedback {
         position: relative !important;

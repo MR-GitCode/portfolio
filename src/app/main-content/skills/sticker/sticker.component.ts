@@ -12,23 +12,26 @@ import { FirestoreContentService } from '../../../services/firestore-content.ser
     styleUrl: './sticker.component.scss'
 })
 export class StickerComponent {
-state: 'default' | 'peeling' | 'peeled' | 'unpeeling' = 'default';
-private peelTimer?: number;
-contentService = inject(FirestoreContentService);
+  state: 'default' | 'peeling' | 'peeled' | 'unpeeling' = 'default';
+  private peelTimer?: number;
+  contentService = inject(FirestoreContentService);
+  skills = this.contentService.getSkills();
 
-skills = this.contentService.getSkills();
+  /**
+   * Toggles the peel animation state.
+   * @returns 
+   */
+  togglePeel() {
+    if (this.state === 'peeling' || this.state === 'unpeeling') return;
 
-togglePeel() {
-  if (this.state === 'peeling' || this.state === 'unpeeling') return;
+    window.clearTimeout(this.peelTimer);
 
-  window.clearTimeout(this.peelTimer);
-
-  if (this.state === 'default') {
-    this.state = 'peeling';
-    this.peelTimer = window.setTimeout(() => this.state = 'peeled', 400);
-  } else if (this.state === 'peeled') {
-    this.state = 'unpeeling';
-    this.peelTimer = window.setTimeout(() => this.state = 'default', 400);
+    if (this.state === 'default') {
+      this.state = 'peeling';
+      this.peelTimer = window.setTimeout(() => this.state = 'peeled', 400);
+    } else if (this.state === 'peeled') {
+      this.state = 'unpeeling';
+      this.peelTimer = window.setTimeout(() => this.state = 'default', 400);
+    }
   }
-}
 }

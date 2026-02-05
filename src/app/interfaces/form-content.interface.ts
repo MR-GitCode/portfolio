@@ -23,6 +23,7 @@ export interface FormContent {
             en: string;
         }
     },
+    
     message: {
         error: {
             de: string;

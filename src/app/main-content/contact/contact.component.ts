@@ -19,8 +19,8 @@ import { FirestoreContentService } from '../../services/firestore-content.servic
 })
 export class ContactComponent {
   languageService = inject(LanguageService);
+  contentService = inject(FirestoreContentService);
   private readonly firestore = inject(Firestore);
 
-  contentService = inject(FirestoreContentService);
   contactContent = this.contentService.getContactContent();
 }

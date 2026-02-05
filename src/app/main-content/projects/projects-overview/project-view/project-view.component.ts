@@ -20,6 +20,10 @@ export class ProjectViewComponent {
   readonly languageService = inject(LanguageService);
   private router = inject(Router);
 
+  /**
+   * Navigate to the projectdetails site.
+   * @param projectId The name of the Project.
+   */
   openProjectDetails(projectId: string): void{
     this.router.navigate(['/projects', projectId]);
   }

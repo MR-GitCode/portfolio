@@ -22,10 +22,12 @@
     display: flex;
     position: relative;
     width: fit-content;
+
     .sticker-position{
         position: absolute;
         right: -50px;
     }
+
     .skill-icons {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -41,12 +43,14 @@
     display: flex;
     gap: 48px;
     color: $white;
+
     h1{
        font-size: 64px;
        font-weight: 700;
        margin: 0;
        z-index: 4;
     }
+
     p{
         font-size: 20px;
         font-weight: 500;
@@ -67,12 +71,14 @@
     height: 80px;
     width: 261px;
     pointer-events: none;
+
     &::after {
         background-image: url('/assets/img/00_hand-drawn-lines/02_Skills/color_option_1.webp');
         height: 80px;
         width: 261px;
         @include drawline;
     }
+
     &.drawline-visible::after {
         animation: drawTopToBottom 0.25s;
     }
@@ -80,10 +86,12 @@
 
 .paper-description{
     position: relative;
+
     img{
         width: 656px;
         height: 144px;
     }
+
     p{
         position: absolute;
         font-size: 18px;
@@ -115,6 +123,7 @@
         .skill-icons {
             grid-template-columns: repeat(4, 1fr);
         }
+
         .sticker-position{
             bottom: 105px;
             right: 200px;
@@ -149,6 +158,7 @@
         p{
             padding: 45px 23px;
         }
+
         img {
             width: 500px;
             height: 191px;
@@ -163,6 +173,7 @@
             font-size: 16px;
             line-height: 20px;
         }
+
         img {
             width: 350px;
             height: 200px;
@@ -178,6 +189,7 @@
             grid-column-gap: 30px;
             grid-row-gap: 30px;
         }
+        
         .sticker-position {
             position: unset;
             height: 100px;

@@ -7,6 +7,7 @@
   align-items: center;
   width: 480px;
   height: 560px;
+
   form{
     position: relative;
     display: flex;
@@ -14,10 +15,12 @@
     flex-direction: column;
     height: 520px;
   }
+
   label{
     font-size: 24px;
     font-weight: 500;
   }
+
   input::placeholder,
   textarea::placeholder {
     font-size: 18px;
@@ -35,12 +38,15 @@
   width: 480px;
   min-height: 91px;
   border-bottom: 1px solid $yellow;
+
   label{
     padding-left: 16px;
   }
+
   textarea{
     height: 30px !important;
   }
+
   span{
     color: $red;
   }
@@ -90,6 +96,7 @@ textarea:-moz-autofill {
   display: flex;
   gap: 8px;
   padding-top: 30px;
+
   img{
     cursor: pointer;
     width: 24px;
@@ -99,6 +106,7 @@ textarea:-moz-autofill {
       border-radius: 5px
     }
   };
+
   a{
     text-decoration: none;
     color: $blue;
@@ -131,6 +139,7 @@ textarea:-moz-autofill {
 .message-container{
   position: relative;
   width: 400px;
+  
   .success-message {
     position: absolute;
     margin: 20px 0;
@@ -141,6 +150,7 @@ textarea:-moz-autofill {
     border-radius: 20px;
     text-align: center;
   }
+
   .error-message {
     position: absolute;
     margin-top: 20px;

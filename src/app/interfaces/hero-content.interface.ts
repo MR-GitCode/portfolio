@@ -3,7 +3,9 @@ export interface HeroContent {
         de: string;
         en: string;
     };
+
     buttonURL: string;
+
     greeting: {
         de: {
             text1: string;
@@ -14,6 +16,7 @@ export interface HeroContent {
             text2: string;
         }
     };
+    
     title: {
         text1: {
             de: string;

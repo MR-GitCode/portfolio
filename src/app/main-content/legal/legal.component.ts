@@ -12,6 +12,4 @@ import { FooterComponent } from '../../shared/footer/footer.component';
     templateUrl: './legal.component.html',
     styleUrl: './legal.component.scss'
 })
-export class LegalComponent {
-
-}
+export class LegalComponent {}
