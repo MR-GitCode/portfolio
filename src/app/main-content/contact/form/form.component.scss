@@ -41,6 +41,7 @@
 
   label{
     padding-left: 16px;
+    cursor: none;
   }
 
   textarea{
@@ -59,10 +60,10 @@ input[type=text], input[type=email], textarea {
   background-color: unset;
   border: unset;
   padding-left: 16px;
-  cursor: pointer;
-    outline: none;
-    color: $white;
-    font-size: 18px;
+  cursor: none;
+  outline: none;
+  color: $white;
+  font-size: 18px;
   &:focus {
     outline: none;
     color: $white;
@@ -98,7 +99,6 @@ textarea:-moz-autofill {
   padding-top: 30px;
 
   img{
-    cursor: pointer;
     width: 24px;
     height: 24px;
     &:hover{

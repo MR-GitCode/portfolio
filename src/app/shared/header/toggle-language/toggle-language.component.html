@@ -1,5 +1,5 @@
 <div class="toggle-slider-language">
-    <div id="label-en" class="span-container" (click)="select('en')">
+    <div id="label-en" class="span-container hover-target" (click)="select('en')">
       <span [class.active]="lang === 'en'" [class.inactive]="lang !== 'en'">EN</span>
     </div>
     
@@ -7,7 +7,7 @@
       <div class="slider" [ngStyle]="{ left: lang === 'en' ? '-2px' : '18px' }"></div>
     </div>
 
-    <div id="label-de" class="span-container" (click)="select('de')">
+    <div id="label-de" class="span-container hover-target" (click)="select('de')">
       <span [class.active]="lang === 'de'" [class.inactive]="lang !== 'de'">DE</span> 
     </div>
 </div>

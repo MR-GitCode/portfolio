@@ -7,7 +7,6 @@
     border-radius: 100px;
     height: 40px;
     @include flex-center;
-    cursor: pointer;
     box-shadow: 2px 4px 0px 0px var(--shadow, $white);
 
     p{

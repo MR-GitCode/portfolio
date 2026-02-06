@@ -1,11 +1,11 @@
 @if (hasUrl) {
-    <button class="contact-bt" [disabled]="disabled">
+    <button class="contact-bt hover-target" [disabled]="disabled">
         <div class="border" [ngClass]="class">
            <a href="{{urlBtn}}"><p>{{textBtn}}</p></a> 
         </div>
     </button> 
 } @else {
-    <button class="contact-bt" [ngClass]="class" [disabled]="disabled">
+    <button class="contact-bt hover-target" [ngClass]="class" [disabled]="disabled">
         <p>{{textBtn}}</p>
     </button> 
 }

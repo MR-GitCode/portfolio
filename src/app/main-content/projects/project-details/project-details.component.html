@@ -1,7 +1,7 @@
 @if (projectDetails$ | async; as projectDetails) {
   <section class="section-bg">
     <div class="projects-details-container">
-        <div class="arrow-back-container">
+        <div class="arrow-back-container hover-target">
             <a (click)="navigateToProjectOverview(projectDetails.id)">
               <div class="arrow-back">
                 <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Breadcrumb_arrow_1.webp">
@@ -54,7 +54,7 @@
             <app-contact-button textBtn="GitHub" urlBtn="{{ projectDetails.githubURL }}" class="blend-diff"></app-contact-button>
             <app-contact-button textBtn="Live Test" urlBtn="{{ projectDetails.demoURL }}" class="blend-diff"></app-contact-button>
           </div>
-          <div class="arrow-next" (click)="nextProject(projectDetails.id)">
+          <div class="arrow-next hover-target" (click)="nextProject(projectDetails.id)">
             <p>Next Project</p>
             <img src="/assets/img/00_hand-drawn-lines/03_Portfolio/Breadcrumbs/Next_project_arrow_1.webp">
           </div>

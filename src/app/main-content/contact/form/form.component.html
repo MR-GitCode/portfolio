@@ -1,21 +1,21 @@
 @if (formContent(); as formContent) {
   <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
-      <div class="input-container">
+      <div class="input-container hover-target">
         <label for="name">{{ formContent.name.title[languageService.lang] }}</label>
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ formContent.name.input[languageService.lang] }}" required>
         @if (!name.valid && name.touched) {
           <span>{{ formContent.name.validationMessage[languageService.lang] }}</span>
         }
       </div>
-      <div class="input-container">
+      <div class="input-container hover-target">
         <label for="email">{{ formContent.email.title[languageService.lang] }}</label>
         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{ formContent.email.input[languageService.lang] }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
         @if (!email.valid && email.touched) {
           <span>{{ formContent.email.validationMessage[languageService.lang] }}</span>
         }
       </div>
-      <div class="input-container">
+      <div class="input-container hover-target">
         <label for="message">{{ formContent.interest.title[languageService.lang] }}</label>
         <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{ formContent.interest.input[languageService.lang] }}" style="height:200px" required></textarea>
         @if (!message.valid && message.touched) {
@@ -23,7 +23,7 @@
         }
       </div>
       <div class="check-policy">
-        <div class="checkbox-container" (click)="togglePrivacy()">
+        <div class="checkbox-container hover-target" (click)="togglePrivacy()">
           @if (privacyAccepted()) {
             <img src="/assets/icons/contact/checked_mark.svg" alt="Checked">
           } @else {

@@ -29,7 +29,6 @@ header{
 .logo{
   width: 40px;
   height: 40px;
-  cursor: pointer;
 }
 
 a {
@@ -45,7 +44,6 @@ a {
 
 .nav-menu-icon{
   display: none;
-  cursor: pointer;
   &:hover{
     img {
       content:url('/assets/icons/header/hover.webp');

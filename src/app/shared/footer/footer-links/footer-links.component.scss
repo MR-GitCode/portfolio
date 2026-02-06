@@ -22,7 +22,6 @@
   width: max-content;
   @include flex-center;
   padding: 0 24px;
-  cursor: pointer;
 
   &:hover{
     background-color: $blue;
@@ -66,7 +65,6 @@
   @include flex-center;
   height: 45px;
   width: max-content;
-  cursor: pointer;
   &::after {
     content: "";
     position: absolute;

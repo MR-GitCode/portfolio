@@ -22,7 +22,6 @@ nav{
   @include flex-center;
   height: 45px;
   width: 110px;
-  cursor: pointer;
   &::after {
     content: "";
     position: absolute;
