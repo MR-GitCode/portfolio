@@ -8,6 +8,7 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+    min-height: 700px;
     @include flex-center;   
 }
 
@@ -172,6 +173,7 @@
     .section-bg{
         align-items: unset;
         padding-top: 100px;
+        min-height: 750px;
     }
 
     .hero{

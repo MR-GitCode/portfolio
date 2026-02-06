@@ -12,6 +12,9 @@ export class NavMenuService {
      */
     openNavMenu() {
       this.isNavMenuOpen.set(true);
+      document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
     }
     
     /**
@@ -20,5 +23,8 @@ export class NavMenuService {
      */
     closeNavMenu() {
       this.isNavMenuOpen.set(false);
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
     }
 }

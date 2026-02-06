@@ -11,6 +11,10 @@ export class ImageBounceDirective implements OnInit, OnDestroy {
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
+  /**
+   * Adds the bounce animation and registers hover listeners
+   * on the parent project container.
+   */
   ngOnInit() {
     if (this.appImageBounce) {
       this.renderer.addClass(this.el.nativeElement, 'bounce-animation');
@@ -24,14 +28,24 @@ export class ImageBounceDirective implements OnInit, OnDestroy {
     }
   }
 
+  /**
+   * Pauses the CSS animation of the host element.
+   */
   private pauseAnimation = () => {
     this.renderer.setStyle(this.el.nativeElement, 'animation-play-state', 'paused');
   }
 
+  /**
+   * Resumes the CSS animation of the host element.
+   */
   private resumeAnimation = () => {
     this.renderer.setStyle(this.el.nativeElement, 'animation-play-state', 'running');
   }
 
+  /**
+   * Angular lifecycle hook that cleans up event listeners
+   * and removes applied styles and classes.
+   */
   ngOnDestroy() {
     if (this.projectContainer) {
       this.projectContainer.removeEventListener('mouseenter', this.pauseAnimation);
