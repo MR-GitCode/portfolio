@@ -16,6 +16,7 @@
 .projects-link-container{
     position: relative;
     width: 560px;
+    height: 360px;
     @include flex-center;
     border-radius: 20px;
     overflow: hidden;
@@ -70,6 +71,19 @@ p{
     display: none;
     justify-content: flex-end;
     padding-top: 22px;
+}
+
+.bounce-animation {
+  animation: bounceUpDown 2s ease-in-out infinite;
+}
+
+@keyframes bounceUpDown {
+  0%, 100% { 
+    transform: translateY(0); 
+  }
+  50% { 
+    transform: translateY(-20px); 
+  }
 }
 
 @media screen and (max-width: $displayWidth-sm) {

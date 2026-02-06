@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { FormComponent } from './form/form.component';
-import { LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../shared/services/language.service';
 import { Firestore } from '@angular/fire/firestore';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circle.component';
-import { FirestoreContentService } from '../../services/firestore-content.service';
+import { FirestoreContentService } from '../../shared/services/firestore-content.service';
 
 @Component({
     selector: 'app-contact',

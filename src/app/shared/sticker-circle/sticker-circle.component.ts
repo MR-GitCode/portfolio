@@ -1,6 +1,6 @@
 import { Component, inject, Input} from '@angular/core';
-import { LanguageService } from '../../services/language.service';
-import { STICKER_TEXTS } from '../../services/circleStickerText';
+import { LanguageService } from '../services/language.service';
+import { STICKER_TEXTS } from '../services/circleStickerText';
 
 export type StickerKey = 'orange' | 'blue' | 'yellow';
 type centerImgKey = 'logo' | 'arrow';
@@ -57,7 +57,6 @@ export class StickerCircleComponent {
       bottomTextOffset: 15,
     },
   };
-
 
   readonly stickerSrc: Record<StickerKey, string> = {
     orange: '/assets/img/03_stickers/00_Round/01_Color_option_1_Orange.webp',

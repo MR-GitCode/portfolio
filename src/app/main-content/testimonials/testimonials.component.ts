@@ -1,9 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LanguageService } from '../../services/language.service';
+import { LanguageService } from '../../shared/services/language.service';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
-import { FirestoreContentService } from '../../services/firestore-content.service';
+import { FirestoreContentService } from '../../shared/services/firestore-content.service';
 
 @Component({
     selector: 'app-testimonials',

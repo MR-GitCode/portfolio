@@ -2,15 +2,15 @@ import { Injectable, inject } from '@angular/core';
 import { Firestore, collection, collectionData, doc, docData, orderBy, query } from '@angular/fire/firestore';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
-import { AboutContent } from '../interfaces/about-content.interface';
-import { ContactContent } from '../interfaces/contact-content.interface';
-import { FormContent } from '../interfaces/form-content.interface';
-import { HeroContent } from '../interfaces/hero-content.interface';
-import { LegalContent } from '../interfaces/legal-content.interface';
-import { Testimonial, TestimonialsContent } from '../interfaces/testimonials.interface';
-import { Skill, SkillContent } from '../interfaces/skill-content.interface';
-import { Project, ProjectsOverviewContent } from '../interfaces/projects-overview-content.interface';
-import { NavContent } from '../interfaces/nav-content.interface';
+import { AboutContent } from '../../interfaces/about-content.interface';
+import { ContactContent } from '../../interfaces/contact-content.interface';
+import { FormContent } from '../../interfaces/form-content.interface';
+import { HeroContent } from '../../interfaces/hero-content.interface';
+import { LegalContent } from '../../interfaces/legal-content.interface';
+import { Testimonial, TestimonialsContent } from '../../interfaces/testimonials.interface';
+import { Skill, SkillContent } from '../../interfaces/skill-content.interface';
+import { Project, ProjectsOverviewContent } from '../../interfaces/projects-overview-content.interface';
+import { NavContent } from '../../interfaces/nav-content.interface';
 
 
 @Injectable({

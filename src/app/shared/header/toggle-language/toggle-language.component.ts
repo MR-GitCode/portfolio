@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { Language, LanguageService } from '../../../services/language.service';
+import { Language, LanguageService } from '../../services/language.service';
 
 @Component({
     selector: 'app-toggle-language',

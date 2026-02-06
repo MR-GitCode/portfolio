@@ -2,9 +2,9 @@ import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
-import { LanguageService } from '../../../services/language.service';
+import { LanguageService } from '../../../shared/services/language.service';
 import { RouterLink } from '@angular/router';
-import { FirestoreContentService } from '../../../services/firestore-content.service';
+import { FirestoreContentService } from '../../../shared/services/firestore-content.service';
 import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 
 @Component({

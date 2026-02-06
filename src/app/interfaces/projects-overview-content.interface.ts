@@ -16,6 +16,8 @@ export interface ProjectsOverviewContent {
 }
 
 export interface Project {
+    animationImg: boolean;
+
     title: string;
 
     description: {

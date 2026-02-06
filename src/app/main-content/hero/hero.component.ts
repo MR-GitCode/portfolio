@@ -3,8 +3,8 @@ import { HeroSocialsComponent } from './hero-socials/hero-socials.component';
 import { HeroTitleComponent } from './hero-title/hero-title.component';
 import { ContactButtonComponent } from '../../shared/contact-button/contact-button.component';
 import { IconRollDirective } from "../../shared/directives/icon-roll.directive";
-import { LanguageService } from '../../services/language.service';
-import { FirestoreContentService } from '../../services/firestore-content.service';
+import { LanguageService } from '../../shared/services/language.service';
+import { FirestoreContentService } from '../../shared/services/firestore-content.service';
 
 @Component({
     selector: 'app-hero',

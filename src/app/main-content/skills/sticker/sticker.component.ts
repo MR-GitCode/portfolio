@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
-import { FirestoreContentService } from '../../../services/firestore-content.service';
+import { FirestoreContentService } from '../../../shared/services/firestore-content.service';
 
 @Component({
     selector: 'app-sticker',

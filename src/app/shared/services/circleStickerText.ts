@@ -1,4 +1,4 @@
-import { StickerVariant } from "../shared/sticker-circle/sticker-circle.component";
+import { StickerVariant } from "../sticker-circle/sticker-circle.component";
 import { Language } from "./language.service";
 
 export const STICKER_TEXTS: Record<Language, Record<StickerVariant, { top: string; bottom: string }>> = {

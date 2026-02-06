@@ -2,8 +2,8 @@ import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from './skill-icon/skill-icon.component';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 import { StickerComponent } from './sticker/sticker.component';
-import { FirestoreContentService } from '../../services/firestore-content.service';
-import { LanguageService } from '../../services/language.service';
+import { FirestoreContentService } from '../../shared/services/firestore-content.service';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
     selector: 'app-skills',

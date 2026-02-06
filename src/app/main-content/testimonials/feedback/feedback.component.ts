@@ -1,6 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
 import { Testimonial } from '../../../interfaces/testimonials.interface';
-import { LanguageService } from '../../../services/language.service';
+import { LanguageService } from '../../../shared/services/language.service';
 
 @Component({
     selector: 'app-feedback',

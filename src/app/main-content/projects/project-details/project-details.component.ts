@@ -3,13 +3,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
 import { map, Observable, Subject, takeUntil } from 'rxjs';
 import { ProjectDetails } from '../../../interfaces/project-details.interface';
-import { LanguageService } from '../../../services/language.service';
+import { LanguageService } from '../../../shared/services/language.service';
 import { CommonModule, ViewportScroller } from '@angular/common';
 import { SkillsProjectDetails } from '../../../interfaces/skills-project-details.interface';
 import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-scroll.directive';
 import { StickerCircleComponent } from '../../../shared/sticker-circle/sticker-circle.component';
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
-import { NavMenuService } from '../../../services/nav-menu.service';
+import { NavMenuService } from '../../../shared/services/nav-menu.service';
 
 @Component({
   selector: 'app-project-details',

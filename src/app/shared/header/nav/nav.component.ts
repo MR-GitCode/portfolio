@@ -1,9 +1,9 @@
 import { Component, inject, Input } from '@angular/core';
-import { LanguageService } from '../../../services/language.service';
+import { LanguageService } from '../../services/language.service';
 import { Router} from '@angular/router';
-import { FirestoreContentService } from '../../../services/firestore-content.service';
+import { FirestoreContentService } from '../../services/firestore-content.service';
 import { ViewportScroller } from '@angular/common';
-import { NavMenuService } from '../../../services/nav-menu.service';
+import { NavMenuService } from '../../services/nav-menu.service';
 
 @Component({
     selector: 'app-nav',

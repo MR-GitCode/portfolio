@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
-import { LanguageService } from '../../../services/language.service';
-import { FirestoreContentService } from '../../../services/firestore-content.service';
+import { LanguageService } from '../../../shared/services/language.service';
+import { FirestoreContentService } from '../../../shared/services/firestore-content.service';
 
 @Component({
     selector: 'app-imprint',

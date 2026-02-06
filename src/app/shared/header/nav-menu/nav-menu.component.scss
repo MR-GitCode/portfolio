@@ -15,8 +15,8 @@
 }
 
 .logo{
-    width: 24px;
-    height: 24px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
 }
 
@@ -40,10 +40,11 @@ a {
         justify-content: space-between;
         align-items: center;
             
-        margin: 0 $margin-md;
+        margin: 0 $margin-sm;
         padding-top: 16px;
+        padding-right: 15px;
     }
-    
+
     .menu-close{
         cursor: pointer;
         img{
