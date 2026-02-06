@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, PristineChangeEvent } from '@angular/forms';
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 import { LanguageService } from '../../../shared/services/language.service';
 import { RouterLink } from '@angular/router';
@@ -54,7 +54,7 @@ export class FormComponent {
   togglePrivacy() {
     this.privacyAccepted.set(!this.privacyAccepted());
   }
-  
+
   /**
    * Handles form submission and sends contact data to the server.
    * @param ngForm The Angular form instance.

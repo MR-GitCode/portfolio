@@ -1,6 +1,7 @@
 @if (formContent(); as formContent) {
   <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
       <div class="input-container hover-target">
         <label for="name">{{ formContent.name.title[languageService.lang] }}</label>
         <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name" placeholder="{{ formContent.name.input[languageService.lang] }}" required>
@@ -8,6 +9,7 @@
           <span>{{ formContent.name.validationMessage[languageService.lang] }}</span>
         }
       </div>
+
       <div class="input-container hover-target">
         <label for="email">{{ formContent.email.title[languageService.lang] }}</label>
         <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email" placeholder="{{ formContent.email.input[languageService.lang] }}" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
@@ -15,6 +17,7 @@
           <span>{{ formContent.email.validationMessage[languageService.lang] }}</span>
         }
       </div>
+
       <div class="input-container hover-target">
         <label for="message">{{ formContent.interest.title[languageService.lang] }}</label>
         <textarea #message="ngModel" minlength="4" [(ngModel)]="contactData.message" id="message" name="message" placeholder="{{ formContent.interest.input[languageService.lang] }}" style="height:200px" required></textarea>
@@ -22,6 +25,7 @@
           <span>{{ formContent.interest.validationMessage[languageService.lang] }}</span>
         }
       </div>
+
       <div class="check-policy">
         <div class="checkbox-container hover-target" (click)="togglePrivacy()">
           @if (privacyAccepted()) {
@@ -30,6 +34,7 @@
             <img src="/assets/icons/contact/check_mark.svg" alt="Unchecked">
           }
         </div>
+
         <span>
           {{ formContent.checkPolicy[languageService.lang][0] }}
           <a routerLink="/legal/privacy-policy">
@@ -46,11 +51,9 @@
           textBtn="{{ formContent.buttonText[languageService.lang] }}"
           type="submit"
           value="Submit"
-          [disabled]="!privacyAccepted()">
+          [disabled]="!privacyAccepted() || contactForm.invalid || false">
         </app-contact-button>
       </div>
-
-      
     </form>
 
     <div class="message-container">
