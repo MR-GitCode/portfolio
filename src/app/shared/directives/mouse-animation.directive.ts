@@ -12,16 +12,32 @@ export class MouseAnimationDirective implements OnInit, OnDestroy {
   private outlineX = 0;
   private outlineY = 0;
   private animationId: number | null = null;
+  private isTouchDevice = false;
 
   constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   /**
-   * Starts the mouse animation
+   * Starts the mouse animation if no touch device
    */
   ngOnInit() {
-    this.createCursorElements();
-    this.startAnimation();
-    this.setupHoverListeners();
+    this.isTouchDevice = this.checkIfTouchDevice();
+
+    if(!this.isTouchDevice) {
+      this.createCursorElements();
+      this.startAnimation();
+      this.setupHoverListeners();
+    }
+  }
+
+  /**
+   * Checks if device is a touch device.
+   * @returns 
+   */
+  private checkIfTouchDevice(): boolean {
+    return (
+      ('ontouchstart' in window) ||
+      (navigator.maxTouchPoints > 0)
+    );
   }
 
   /**
