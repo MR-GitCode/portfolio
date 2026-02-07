@@ -13,6 +13,16 @@ export interface SkillContent {
         de: string;
         en: string;
     };
+    sticker: {
+        default: {
+            de: string[];
+            en: string[];  
+        }
+        pulled: {
+            de: string[];
+            en: string[];  
+        }
+    }
 }
 
 export interface Skill {

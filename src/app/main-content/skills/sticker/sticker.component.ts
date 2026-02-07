@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 import { FirestoreContentService } from '../../../shared/services/firestore-content.service';
+import { LanguageService } from '../../../shared/services/language.service';
 
 @Component({
     selector: 'app-sticker',
@@ -16,6 +17,8 @@ export class StickerComponent {
   private peelTimer?: number;
   contentService = inject(FirestoreContentService);
   skills = this.contentService.getSkills();
+  languageService = inject(LanguageService);
+  skillContent = this.contentService.getSkillContent();
 
   /**
    * Toggles the peel animation state.

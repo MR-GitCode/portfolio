@@ -1,34 +1,36 @@
-<div class="sticker-container hover-target" (click)="togglePeel()"
-     [class.is-peeling]="state === 'peeling'"
-     [class.is-peeled]="state === 'peeled'"
-     [class.is-unpeeling]="state === 'unpeeling'">
+@if (skillContent(); as skillContent) {
+    <div class="sticker-container hover-target" (click)="togglePeel()"
+        [class.is-peeling]="state === 'peeling'"
+        [class.is-peeled]="state === 'peeled'"
+        [class.is-unpeeling]="state === 'unpeeling'">
 
-  <div id="sticker-1" class="sticker-content">
-    <div class="sticker-layer layer-default">
-        <div class="sticker-text sticker-default">
-            <img src="/assets/img/03_stickers/Arrow.webp">
-            <p>Pull to<br> peel</p>
+    <div id="sticker-1" class="sticker-content">
+        <div class="sticker-layer layer-default">
+            <div class="sticker-text sticker-default">
+                <img src="/assets/img/03_stickers/Arrow.webp">
+                <p>{{ skillContent.sticker.default[languageService.lang][0] }}<br> {{ skillContent.sticker.default[languageService.lang][1] }}</p>
+            </div>
         </div>
+
+        <div class="sticker-layer layer-transition"></div>
     </div>
 
-    <div class="sticker-layer layer-transition"></div>
-  </div>
-
-    <div id="sticker-2" class="sticker-content">
-        <img src="/assets/img/03_stickers/01_Skills - Peel off/Final.webp">
-        <div class="sticker-text sticker-final">
-            <p>Also. I'm interested<br> in diving into:</p>
-            <div class="interest-skills">
-                @for ( skill of skills(); track skill.name) {
-                    @if (skill.type == 'interest') {
-                        <app-skill-icon 
-                            [skill]="skill";
-                            style=" --icon-width: 50px;
-                                    --icon-height: 50px;">
-                        </app-skill-icon> 
-                    }
-                }  
+        <div id="sticker-2" class="sticker-content">
+            <img src="/assets/img/03_stickers/01_Skills - Peel off/Final.webp">
+            <div class="sticker-text sticker-final">
+                <p>{{ skillContent.sticker.pulled[languageService.lang][0] }}<br> {{ skillContent.sticker.pulled[languageService.lang][1] }}</p>
+                <div class="interest-skills">
+                    @for ( skill of skills(); track skill.name) {
+                        @if (skill.type == 'interest') {
+                            <app-skill-icon 
+                                [skill]="skill";
+                                style=" --icon-width: 50px;
+                                        --icon-height: 50px;">
+                            </app-skill-icon> 
+                        }
+                    }  
+                </div>
             </div>
         </div>
     </div>
-</div>
+}
