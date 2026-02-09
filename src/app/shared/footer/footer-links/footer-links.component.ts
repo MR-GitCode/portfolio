@@ -2,6 +2,8 @@ import { Component, inject } from '@angular/core';
 import { IconRollDirective } from '../../directives/icon-roll.directive';
 import { Router, RouterLink } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
+import { LanguageService } from '../../services/language.service';
+import { FirestoreContentService } from '../../services/firestore-content.service';
 
 @Component({
     selector: 'app-footer-links',
@@ -16,6 +18,9 @@ import { ViewportScroller } from '@angular/common';
 export class FooterLinksComponent {
     private router = inject(Router);
     private viewportScroller = inject(ViewportScroller);
+    languageService = inject(LanguageService);
+    contentService = inject(FirestoreContentService);
+    legalContent = this.contentService.getLegalContent();
 
     /**
      * Navigate to section contact

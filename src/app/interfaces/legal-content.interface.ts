@@ -14,6 +14,10 @@ export interface LegalContent {
         title: {
             de: string;
             en: string;
-        } 
+        }
+        titleFooter: {
+            de: string;
+            en: string;
+        }
     };
 }
