@@ -5,6 +5,8 @@ import { ContactButtonComponent } from '../../shared/contact-button/contact-butt
 import { IconRollDirective } from "../../shared/directives/icon-roll.directive";
 import { LanguageService } from '../../shared/services/language.service';
 import { FirestoreContentService } from '../../shared/services/firestore-content.service';
+import { Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 
 @Component({
     selector: 'app-hero',
@@ -19,7 +21,7 @@ import { FirestoreContentService } from '../../shared/services/firestore-content
     styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-  languageService = inject(LanguageService);
-  contentService = inject(FirestoreContentService);
-  heroContent = this.contentService.getHeroContent();
+    languageService = inject(LanguageService);
+    contentService = inject(FirestoreContentService);
+    heroContent = this.contentService.getHeroContent();
 }

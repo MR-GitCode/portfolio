@@ -16,7 +16,7 @@
         </div>
         <span>{{ aboutContent.text[languageService.lang] }}</span>
         <div class="contact-bt">
-          <app-contact-button textBtn="{{ aboutContent.buttonText[languageService.lang] }}" urlBtn="{{ aboutContent.buttonURL}}"
+          <app-contact-button textBtn="{{ aboutContent.buttonText[languageService.lang] }}" [urlBtn]="aboutContent.buttonURL"
                     style=" --border-color: #0E1013;
                             --font-color: #0E1013;
                             --shadow: #0E1013">

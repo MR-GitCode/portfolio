@@ -3,7 +3,7 @@ import { LanguageService } from '../../../../shared/services/language.service';
 import { ContactButtonComponent } from '../../../../shared/contact-button/contact-button.component';
 import { StickerCircleComponent } from '../../../../shared/sticker-circle/sticker-circle.component';
 import { Project } from '../../../../interfaces/projects-overview-content.interface';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { ImageBounceDirective } from '../../../../shared/directives/image-bounce.directive';
 
 @Component({
@@ -12,7 +12,8 @@ import { ImageBounceDirective } from '../../../../shared/directives/image-bounce
     imports: [
       ContactButtonComponent,
       StickerCircleComponent,
-      ImageBounceDirective
+      ImageBounceDirective,
+      RouterLink
   ],
     templateUrl: './project-view.component.html',
     styleUrl: './project-view.component.scss'

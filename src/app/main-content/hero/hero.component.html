@@ -14,7 +14,7 @@
         </div>
 
         <div class="bt-contact">
-          <app-contact-button textBtn="{{ heroContent.buttonText[languageService.lang] }}" urlBtn="{{ heroContent.buttonURL}}"></app-contact-button>
+          <app-contact-button textBtn="{{ heroContent.buttonText[languageService.lang] }}"  [urlBtn]="heroContent.buttonURL"></app-contact-button>
         </div>
 
         <div class="polaroid-container">

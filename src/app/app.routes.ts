@@ -6,14 +6,16 @@ import { PrivacyPolicyComponent } from './main-content/legal/privacy-policy/priv
 import { LegalComponent } from './main-content/legal/legal.component';
 
 export const routes: Routes = [
-    { path: '', component: MainContentComponent},
-    { path: 'projects/:id', component: ProjectDetailsComponent, title: 'Project Details'},
-    { path: 'legal', component: LegalComponent,
-        children: [
-            { path: 'imprint', component: ImprintComponent, title: 'Imprint' },
-            { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy' },
-            { path: '', redirectTo: 'imprint', pathMatch: 'full' }
-        ]
-    },
-    { path: '**', redirectTo: '' }     
-] as const;
+  { path: '', component: MainContentComponent },
+  { path: 'projects/:id', component: ProjectDetailsComponent, title: 'Project Details' },
+  {
+    path: 'legal',
+    component: LegalComponent,
+    children: [
+      { path: 'imprint', component: ImprintComponent, title: 'Imprint' },
+      { path: 'privacy-policy', component: PrivacyPolicyComponent, title: 'Privacy Policy' },
+      { path: '', redirectTo: 'imprint', pathMatch: 'full' }
+    ]
+  },
+  { path: '**', redirectTo: '' }
+];

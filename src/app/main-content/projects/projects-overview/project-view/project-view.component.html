@@ -13,7 +13,7 @@
       <app-contact-button
         class="contact-btn"
         textBtn="Project details"
-        (click)="openProjectDetails(project.id)">
+        [routerLink]="['/projects', project.id]">
       </app-contact-button>
     </div>
   </div>

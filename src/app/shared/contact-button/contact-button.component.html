@@ -1,11 +1,32 @@
-@if (hasUrl) {
-    <button class="contact-bt hover-target" [disabled]="disabled">
-        <div class="border" [ngClass]="class">
-           <a href="{{urlBtn}}"><p>{{textBtn}}</p></a> 
-        </div>
-    </button> 
-} @else {
-    <button class="contact-bt hover-target" [ngClass]="class" [disabled]="disabled">
+@if (isExternalLink) {
+    <!-- Externe Links -->
+    <a class="contact-bt hover-target" 
+       [href]="urlBtn"
+       target="_blank"
+       rel="noopener noreferrer"
+       [class]="class">
         <p>{{textBtn}}</p>
-    </button> 
+    </a>
+} @else if (isRouterLink) {
+    <!-- Interne Angular-Routen -->
+    <a class="contact-bt hover-target" 
+       [routerLink]="routerLink"
+       [class]="class">
+        <p>{{textBtn}}</p>
+    </a>
+} @else if (isInternalFragment) {
+    <!-- Anker-Links auf derselben Seite -->
+    <a class="contact-bt hover-target" 
+       [routerLink]="['/']" 
+       [fragment]="urlBtn"
+       [class]="class">
+        <p>{{textBtn}}</p>
+    </a>
+} @else {
+    <!-- Normaler Button ohne Link -->
+    <button class="contact-bt hover-target" 
+            [class]="class" 
+            [disabled]="disabled">
+        <p>{{textBtn}}</p>
+    </button>
 }
