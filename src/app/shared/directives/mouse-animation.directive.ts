@@ -178,6 +178,7 @@ export class MouseAnimationDirective implements OnInit, OnDestroy {
    */
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(e: MouseEvent) {
+    if (this.isTouchDevice || !this.cursorDot) return;
     this.mouseX = e.clientX;
     this.mouseY = e.clientY;
     this.cursorDot.style.left = this.mouseX + 'px';
@@ -190,6 +191,7 @@ export class MouseAnimationDirective implements OnInit, OnDestroy {
    */
   private startAnimation() {
     const animate = () => {
+      if (!this.cursorOutline) return;
       this.outlineX += (this.mouseX - this.outlineX) * 0.15;
       this.outlineY += (this.mouseY - this.outlineY) * 0.15;
       
