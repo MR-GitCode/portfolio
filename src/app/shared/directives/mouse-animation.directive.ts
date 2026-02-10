@@ -93,58 +93,83 @@ export class MouseAnimationDirective implements OnInit, OnDestroy {
   }
 
   /**
-   * Registers global hover listeners to detect interactions
+   * Registers global mouse hover listeners to control the custom cursor state.
    */
   private setupHoverListeners() {
-    this.mouseOverHoverListener();
-    this.mouseOutHoverElement();
-  }
-
-  /**
-   * Add hover listener for mouseover to targets.
-   */
-  private mouseOverHoverListener() {
     this.renderer.listen('document', 'mouseover', (event: MouseEvent) => {
       const target = event.target as HTMLElement;
-      // Definition of the elements selected as targets here: a, button, .hover-target
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('.hover-target')) {
-        this.onHoverStart();
+
+      if (this.isDisabledTarget(target)) {
+        this.setDisabledState();
+        return;
       }
+
+      if (this.isHoverTarget(target)) {
+        this.setHoverState();
+      }
+    });
+
+    this.renderer.listen('document', 'mouseout', () => {
+      this.setNormalState();
     });
   }
 
   /**
-   * Add hover listener for mouseout to targets.
+   * Checks whether the given target element represents a disabled interactive element.
+   * @param target The element currently under the mouse cursor
+   * @returns 
    */
-  private mouseOutHoverElement() {
-    this.renderer.listen('document', 'mouseout', (event: MouseEvent) => {
-      const target = event.target as HTMLElement;
-      if (target.tagName === 'A' || target.tagName === 'BUTTON' || target.closest('.hover-target')) {
-        this.onHoverEnd();
-      }
-    });
+  private isDisabledTarget(target: HTMLElement): boolean {
+    const button = target.closest('button');
+    if (button && (button as HTMLButtonElement).disabled) return true;
+    const ariaDisabled = target.closest('[aria-disabled="true"]');
+    return !!ariaDisabled;
   }
 
   /**
-   * Add style of target if hover starts.
+   * Determines whether the given target element should trigger the hover cursor state.
+   * @param target The element currently under the mouse cursor
+   * @returns 
    */
-  private onHoverStart() {
-    this.renderer.setStyle(this.cursorDot, 'transform', 'translate(-50%, -50%) scale(1.5)');
-    this.renderer.setStyle(this.cursorDot, 'background-color', '#ffd90000');
-    this.renderer.setStyle(this.cursorOutline, 'width', '60px');
-    this.renderer.setStyle(this.cursorOutline, 'height', '60px');
-    this.renderer.setStyle(this.cursorOutline, 'border-color', 'rgba(255, 215, 0, 0.6)');
+  private isHoverTarget(target: HTMLElement): boolean {
+    return (
+      target.tagName === 'A' ||
+      target.tagName === 'BUTTON' ||
+      !!target.closest('.hover-target')
+    );
   }
 
   /**
-   * Add style of target of hover end.
+   * Resets the cursor to its default (normal) visual state.
    */
-  private onHoverEnd() {
-    this.renderer.setStyle(this.cursorDot, 'transform', 'translate(-50%, -50%) scale(1)');
-    this.renderer.setStyle(this.cursorDot, 'background-color', '#3355FF');
+  private setNormalState() {
+    this.renderer.setStyle(this.cursorDot,'transform','translate(-50%, -50%) scale(1)');
+    this.renderer.setStyle(this.cursorDot,'background-color','#3355FF');
     this.renderer.setStyle(this.cursorOutline, 'width', '40px');
     this.renderer.setStyle(this.cursorOutline, 'height', '40px');
-    this.renderer.setStyle(this.cursorOutline, 'border-color', 'rgba(51, 85, 255, 0.8)');
+    this.renderer.setStyle(this.cursorOutline, 'border', '2px solid rgba(51, 85, 255, 0.8)');
+  }
+
+  /**
+   * Applies the hover visual state to the custom cursor.
+   */
+  private setHoverState() {
+    this.renderer.setStyle(this.cursorDot,'transform','translate(-50%, -50%) scale(1.5)');
+    this.renderer.setStyle(this.cursorDot,'background-color','transparent');
+    this.renderer.setStyle(this.cursorOutline, 'width', '60px');
+    this.renderer.setStyle(this.cursorOutline, 'height', '60px');
+    this.renderer.setStyle(this.cursorOutline, 'border', '3px solid rgba(255, 215, 0, 0.9)');
+  }
+
+  /**
+   *  Applies the disabled visual state to the custom cursor.
+   */
+  private setDisabledState() {
+    this.renderer.setStyle(this.cursorDot, 'transform', 'translate(-50%, -50%) scale(1)');
+    this.renderer.setStyle(this.cursorDot, 'background-color', 'rgba(150,150,150,0.8)');
+    this.renderer.setStyle(this.cursorOutline, 'width', '40px');
+    this.renderer.setStyle(this.cursorOutline, 'height', '40px');
+    this.renderer.setStyle(this.cursorOutline, 'border', '2px dashed rgba(150,150,150,0.6)');
   }
 
   /**

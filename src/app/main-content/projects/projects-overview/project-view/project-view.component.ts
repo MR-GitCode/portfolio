@@ -3,7 +3,7 @@ import { LanguageService } from '../../../../shared/services/language.service';
 import { ContactButtonComponent } from '../../../../shared/contact-button/contact-button.component';
 import { StickerCircleComponent } from '../../../../shared/sticker-circle/sticker-circle.component';
 import { Project } from '../../../../interfaces/projects-overview-content.interface';
-import { Router, RouterLink } from '@angular/router';
+import { RouterLink } from '@angular/router';
 import { ImageBounceDirective } from '../../../../shared/directives/image-bounce.directive';
 
 @Component({
@@ -21,13 +21,4 @@ import { ImageBounceDirective } from '../../../../shared/directives/image-bounce
 export class ProjectViewComponent {
   @Input({ required: true }) project!: Project;
   readonly languageService = inject(LanguageService);
-  private router = inject(Router);
-
-  /**
-   * Navigate to the projectdetails site.
-   * @param projectId The name of the Project.
-   */
-  openProjectDetails(projectId: string): void{
-    this.router.navigate(['/projects', projectId]);
-  }
 }

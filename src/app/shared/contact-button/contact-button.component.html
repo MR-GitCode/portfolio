@@ -8,14 +8,14 @@
         <p>{{textBtn}}</p>
     </a>
 } @else if (isRouterLink) {
-    <!-- Interne Angular-Routen -->
+    <!-- Intern Angular-Routen -->
     <a class="contact-bt hover-target" 
        [routerLink]="routerLink"
        [class]="class">
         <p>{{textBtn}}</p>
     </a>
 } @else if (isInternalFragment) {
-    <!-- Anker-Links auf derselben Seite -->
+    <!-- Anker-Links # -->
     <a class="contact-bt hover-target" 
        [routerLink]="['/']" 
        [fragment]="urlBtn"
@@ -23,7 +23,7 @@
         <p>{{textBtn}}</p>
     </a>
 } @else {
-    <!-- Normaler Button ohne Link -->
+    <!-- Normaler Button without links -->
     <button class="contact-bt hover-target" 
             [class]="class" 
             [disabled]="disabled">

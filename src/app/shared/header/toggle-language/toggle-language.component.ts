@@ -11,13 +11,16 @@ import { Language, LanguageService } from '../../services/language.service';
     templateUrl: './toggle-language.component.html',
     styleUrl: './toggle-language.component.scss'
 })
-
 export class ToggleLanguageComponent {
   private languageService = inject(LanguageService);
-  lang: Language = 'de';
+  lang: Language;
+
+  constructor() {
+    this.lang = this.languageService.getLanguage();
+  }
 
   select(lang: Language) {
-    this.languageService.lang = lang;
+    this.languageService.setLanguage(lang);
     this.lang = lang;  
   }
 }

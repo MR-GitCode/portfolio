@@ -27,7 +27,7 @@
     <app-contact-button
         class="contact-btn"
         textBtn="Project details"
-        (click)="openProjectDetails(project.id)"
+        [routerLink]="['/projects', project.id]"
         style=" --border-color: #0E1013;
                 --font-color: #0E1013;
                 --shadow: #0E1013">
