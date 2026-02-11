@@ -28,12 +28,12 @@
             </div>
 
             <div 
-              data-aos="fade-right" [attr.data-aos-delay]="250" class="duration">
+              data-aos="fade-right" [attr.data-aos-delay]="300" class="duration">
               <p><b>{{ projectDetails.duration.title[languageService.lang] }}: </b>{{ projectDetails.duration.duration[languageService.lang] }}</p>
             </div>
 
             <div >
-              <div data-aos="fade-right" [attr.data-aos-delay]="250" class="project-skills">
+              <div data-aos="fade-right" [attr.data-aos-delay]="400" class="project-skills">
                 @for (skill of skills$ | async; track skill) {
                   <div class="skill" >
                     <img [src]="skill.imgURL" [alt]="skill.name">
@@ -44,7 +44,7 @@
             </div>
           </div>
           <div class="project-links">
-            <div data-aos="fade-right" [attr.data-aos-delay]="300" class="img">
+            <div data-aos="fade-left" [attr.data-aos-delay]="100" class="img">
               <div class="sticker-container">
                 <app-sticker-circle
                   [variant]="projectDetails.sticker.variant"
@@ -57,7 +57,7 @@
         </div>
         
         <div class="btn-links">
-          <div class="buttons">
+          <div data-aos="fade-left" [attr.data-aos-delay]="300"  class="buttons">
             <app-contact-button textBtn="GitHub" urlBtn="{{ projectDetails.githubURL }}" class="blend-diff"></app-contact-button>
             <app-contact-button textBtn="Live Test" urlBtn="{{ projectDetails.demoURL }}" class="blend-diff"></app-contact-button>
           </div>

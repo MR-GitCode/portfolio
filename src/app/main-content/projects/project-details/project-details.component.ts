@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { AfterViewInit, Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Firestore, collection, collectionData, doc, docData } from '@angular/fire/firestore';
 import { map, Observable, Subject, takeUntil } from 'rxjs';
@@ -10,6 +10,8 @@ import { AnimateOnScrollDirective } from '../../../shared/directives/animate-on-
 import { StickerCircleComponent } from '../../../shared/sticker-circle/sticker-circle.component';
 import { ContactButtonComponent } from '../../../shared/contact-button/contact-button.component';
 import { NavMenuService } from '../../../shared/services/nav-menu.service';
+
+declare var AOS: any;
 
 @Component({
   selector: 'app-project-details',
@@ -23,7 +25,7 @@ import { NavMenuService } from '../../../shared/services/nav-menu.service';
   templateUrl: './project-details.component.html',
   styleUrl: './project-details.component.scss'
 })
-export class ProjectDetailsComponent implements OnInit {
+export class ProjectDetailsComponent implements OnInit, AfterViewInit {
   languageService = inject(LanguageService);
   navMenuService = inject(NavMenuService);
   private readonly firestore = inject(Firestore);
@@ -77,6 +79,16 @@ export class ProjectDetailsComponent implements OnInit {
       this.loadProjectDetails(id);
     });
   };
+
+  ngAfterViewInit() {
+    this.projectDetails$.subscribe(() => {
+      setTimeout(() => {
+        if (typeof AOS !== 'undefined') {
+          AOS.refreshHard();
+        }
+      }, 100);
+    });
+  }
 
   /**
    * Loads project details and related skills from Firestore

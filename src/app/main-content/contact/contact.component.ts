@@ -1,7 +1,6 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, effect } from '@angular/core';
 import { FormComponent } from './form/form.component';
 import { LanguageService } from '../../shared/services/language.service';
-import { Firestore } from '@angular/fire/firestore';
 import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scroll.directive';
 import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circle.component';
 import { FirestoreContentService } from '../../shared/services/firestore-content.service';
@@ -22,7 +21,19 @@ declare var AOS: any;
 export class ContactComponent {
   languageService = inject(LanguageService);
   contentService = inject(FirestoreContentService);
-  private readonly firestore = inject(Firestore);
 
   contactContent = this.contentService.getContactContent();
+
+  constructor() {
+    effect(() => {
+      const content = this.contactContent();
+
+      if (content && typeof AOS !== 'undefined') {
+        // Warten bis DOM durch @if wirklich gerendert ist
+        setTimeout(() => {
+          AOS.refreshHard();
+        }, 100);
+      }
+    });
+  }
 }

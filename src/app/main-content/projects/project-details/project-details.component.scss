@@ -18,7 +18,7 @@
     @include margin-left-right;
     flex-direction: column;
     width: 1440px;
-    margin-top: 110px;
+    padding-top: 110px;
     position: relative;
 }
 
@@ -107,7 +107,6 @@
     right: 0;
 
     .buttons{
-        padding-top: 48px;
         display: flex;
         justify-content: flex-end;
         gap: 32px;
@@ -163,6 +162,18 @@
     mix-blend-mode: difference !important;      
 }
 
+@media screen and (max-height: 950px) {
+    .projects-details-container{
+        padding-top: 55px;
+    }
+
+    .projects-details-content{
+        .project-description{
+            gap: 25px;
+        }
+    }
+}
+
 @media screen and (max-width: 1350px) {
     .projects-details-container{
         width: unset;
@@ -172,7 +183,6 @@
         flex-direction: column;
         align-items: center;
         
-        // Setze blend-mode direkt auf die animierten Container
         .description-project,
         .description-process,
         .duration,
