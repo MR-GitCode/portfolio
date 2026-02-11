@@ -1,7 +1,7 @@
 @if (aboutContent(); as aboutContent) {
   <section class="section-bg" id="about-me">
     <div class="about-me-content">
-      <div class="tag-container">
+      <div data-aos="zoom-out-right" class="tag-container">
         <app-about-tag
           [textBased]="aboutContent.tags[languageService.lang].tag1"
           [textRelocate]="aboutContent.tags[languageService.lang].tag2"
@@ -14,8 +14,8 @@
           <h1>{{ aboutContent.title[languageService.lang] }}</h1>
           <div id="drawline" appAnimateOnScroll [delay]="300"></div>
         </div>
-        <span>{{ aboutContent.text[languageService.lang] }}</span>
-        <div class="contact-bt">
+        <span data-aos="flip-up">{{ aboutContent.text[languageService.lang] }}</span>
+        <div data-aos="zoom-out-left" class="contact-bt">
           <app-contact-button textBtn="{{ aboutContent.buttonText[languageService.lang] }}" [urlBtn]="aboutContent.buttonURL"
                     style=" --border-color: #0E1013;
                             --font-color: #0E1013;

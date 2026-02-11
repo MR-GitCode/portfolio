@@ -14,10 +14,10 @@
           <p>{{ contactContent.subtitle[languageService.lang] }}</p>
           <h1>{{ contactContent.title[languageService.lang] }}</h1>
         </div>
-        <p>{{ contactContent.text[languageService.lang] }}</p>
+        <p data-aos="flip-up">{{ contactContent.text[languageService.lang] }}</p>
         <div id="drawline" appAnimateOnScroll [delay]="300"></div>
       </div>
-      <div class="form-container">
+      <div data-aos="zoom-in-left" [attr.data-aos-delay]="200" class="form-container">
         <div class="sticker-container">
           <app-sticker-circle
             variant="logo"

@@ -2,7 +2,7 @@
   <section class="section-bg" id="hero-section">
     <div class="hero">
       <div class="hero-content">
-        <div class="greeting-container">
+        <div data-aos="fade-down-right" class="greeting-container">
           <div class="greeting-message icon-roll" appIconRoll>
             <p class="text text-1">{{ heroContent.greeting[languageService.lang].text1 }}</p>
             <p class="text text-2">{{ heroContent.greeting[languageService.lang].text2 }}</p>
@@ -13,12 +13,12 @@
           <app-hero-title [textTitle1]="heroContent.title.text1[languageService.lang]" [textTitle2]="heroContent.title.text2[languageService.lang]"></app-hero-title>
         </div>
 
-        <div class="bt-contact">
+        <div data-aos="fade-up-left" class="bt-contact">
           <app-contact-button textBtn="{{ heroContent.buttonText[languageService.lang] }}"  [urlBtn]="heroContent.buttonURL"></app-contact-button>
         </div>
 
         <div class="polaroid-container">
-          <div class="polaroid">
+          <div  data-aos="fade-down-left" class="polaroid">
             <img class="default-polaroid" src="/assets/img/polaroid_foto_default.webp">
             <img class="hover-polaroid" src="/assets/img/polaroid_foto_hover.webp">
             <p class="default-name">Michael :)</p>

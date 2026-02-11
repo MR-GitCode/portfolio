@@ -9,10 +9,10 @@
                         <div id="drawline" appAnimateOnScroll [delay]="300"></div>
                     </div>
                 </div>
-                <p>{{ projectsContent.text[languageService.lang] }}</p>
+                <p data-aos="zoom-out-up">{{ projectsContent.text[languageService.lang] }}</p>
             </div>
             @for(project of projects(); track project.id ) {
-                <app-project-view [project]="project"></app-project-view>     
+                <app-project-view data-aos="zoom-out-up" [project]="project"></app-project-view>     
             }
         </div>
     </section>

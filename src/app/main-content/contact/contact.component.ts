@@ -6,6 +6,8 @@ import { AnimateOnScrollDirective } from '../../shared/directives/animate-on-scr
 import { StickerCircleComponent } from '../../shared/sticker-circle/sticker-circle.component';
 import { FirestoreContentService } from '../../shared/services/firestore-content.service';
 
+declare var AOS: any;
+
 @Component({
     selector: 'app-contact',
     standalone: true,

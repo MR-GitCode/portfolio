@@ -160,7 +160,7 @@
 
 .blend-diff {
     color: $white;
-    mix-blend-mode: difference;      
+    mix-blend-mode: difference !important;      
 }
 
 @media screen and (max-width: 1350px) {
@@ -168,13 +168,22 @@
         width: unset;
     }
 
-    .projects-details-content {
+        .projects-details-content {
         flex-direction: column;
         align-items: center;
-        p{
-            color: $white;
-            mix-blend-mode: difference;
-        } 
+        
+        // Setze blend-mode direkt auf die animierten Container
+        .description-project,
+        .description-process,
+        .duration,
+        .project-skills {
+            mix-blend-mode: difference !important;
+            
+            p, h2, b {
+                color: $white;
+            }
+        }
+        
         .project-description {
             gap: 30px;
         }

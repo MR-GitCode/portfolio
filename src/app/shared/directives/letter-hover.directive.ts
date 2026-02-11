@@ -36,8 +36,10 @@ export class LetterHoverDirective implements AfterViewInit, OnChanges {
         const element = this.el.nativeElement;
         const text = String(this.text ?? '');
 
-        element.innerHTML = [...text].map(letter => `<span>${letter}</span>`).join('');
-
+        element.innerHTML = [...text].map((letter, index) => {
+            const delay = index * 150; // 150ms pro letter
+            return `<span data-aos="fade-right" data-aos-delay="${delay}">${letter}</span>`;
+        }).join('');
         this.letterHoverEffect(element);
     }
 

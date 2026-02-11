@@ -16,13 +16,17 @@
 
             <div class="skills-container">
                 <div class="skill-icons">
-                    @for ( skill of skills(); track skill.name) {
+                    @for ( skill of skills(); track skill.name; let i = $index) {
                         @if (skill.type == 'skill') {
-                           <app-skill-icon [skill]="skill"></app-skill-icon> 
+                            <app-skill-icon
+                                data-aos="zoom-in-down"
+                                [skill]="skill"
+                                [attr.data-aos-delay]="i * 100">
+                            </app-skill-icon> 
                         }
                     }
                 </div>
-                <div class="sticker-position">
+                <div data-aos="zoom-out-left" class="sticker-position">
                     <app-sticker></app-sticker>    
                 </div>
             </div>
