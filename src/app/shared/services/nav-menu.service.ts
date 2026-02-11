@@ -11,10 +11,12 @@ export class NavMenuService {
      * Sets the navigation menu state to visible.
      */
     openNavMenu() {
-      this.isNavMenuOpen.set(true);
-      document.body.style.overflow = 'hidden';
-      document.body.style.position = 'fixed';
-      document.body.style.width = '100%';
+      setTimeout(() => {
+          this.isNavMenuOpen.set(true);
+          document.body.style.overflow = 'hidden';
+          document.body.style.position = 'fixed';
+          document.body.style.width = '100%';
+      }, 0);
     }
     
     /**

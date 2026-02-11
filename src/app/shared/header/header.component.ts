@@ -17,12 +17,12 @@ import { NavMenuService } from '../services/nav-menu.service';
 })
 
 export class HeaderComponent {
-    navMenuService = inject(NavMenuService);
+  navMenuService = inject(NavMenuService);
 
-    @HostListener('window:resize')
-onResize() {
-  if (window.innerWidth > 950 && this.navMenuService.isNavMenuOpen()) {
-    this.navMenuService.closeNavMenu();
+  @HostListener('window:resize')
+  onResize() {
+    if (window.innerWidth > 950 && this.navMenuService.isNavMenuOpen()) {
+      this.navMenuService.closeNavMenu();
+    }
   }
-}
 }
