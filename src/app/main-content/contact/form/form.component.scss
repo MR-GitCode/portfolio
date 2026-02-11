@@ -32,13 +32,13 @@
 .input-container{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: flex-start;
-  gap: 10px;
+  gap: 7px;
   width: 480px;
-  min-height: 110px;;
+  min-height: 90px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid $yellow;
+  padding-top: 10px;
 
   label{
     padding-left: 16px;
@@ -46,7 +46,7 @@
   }
 
   textarea{
-    height: 30px !important;
+    height: 28px !important;
   }
 
   span{
@@ -56,8 +56,9 @@
 
 input[type=text], input[type=email], textarea {
   width: 100%;
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+  height: 28px;
+  box-sizing: border-box;
+  resize: vertical;
   background-color: unset;
   border: unset;
   padding-left: 16px;

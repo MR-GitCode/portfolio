@@ -29,7 +29,6 @@ export class ContactComponent {
       const content = this.contactContent();
 
       if (content && typeof AOS !== 'undefined') {
-        // Warten bis DOM durch @if wirklich gerendert ist
         setTimeout(() => {
           AOS.refreshHard();
         }, 100);
