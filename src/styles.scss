@@ -50,3 +50,10 @@ a, button {
   -webkit-user-select: none;
   cursor: none;
 }
+
+@media (pointer: coarse) {
+  .cursor,
+  .cursor-pointer {
+    display: none !important;
+  }
+}

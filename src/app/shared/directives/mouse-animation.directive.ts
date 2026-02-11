@@ -34,16 +34,22 @@ export class MouseAnimationDirective implements OnInit, OnDestroy {
    * @returns 
    */
   private checkIfTouchDevice(): boolean {
+    const hasCoarsePointer = window.matchMedia('(any-pointer: coarse)').matches;
+    const hasFinePointer = window.matchMedia('(pointer: fine)').matches;
+    if (hasCoarsePointer && !hasFinePointer) {
+      return true;
+    }
+  
     const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
     if (isFirefox) {
-      const hasCoarsePointer = window.matchMedia?.('(any-pointer: coarse)').matches ?? false;
-      const hasHover = window.matchMedia?.('(any-hover: hover)').matches ?? false;
+      const hasHover = window.matchMedia('(any-hover: hover)').matches;
       const hasTouchPoints = navigator.maxTouchPoints > 0;
       return (hasCoarsePointer || hasTouchPoints) && !hasHover;
     } else {
       return (
         ('ontouchstart' in window) ||
-        (navigator.maxTouchPoints > 0)
+        (navigator.maxTouchPoints > 0) ||
+        hasCoarsePointer
       );
     }
   }
