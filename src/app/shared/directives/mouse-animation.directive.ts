@@ -1,4 +1,5 @@
 import { Directive, ElementRef, HostListener, OnInit, OnDestroy, Renderer2 } from '@angular/core';
+import { log } from 'node:console';
 
 @Directive({
   selector: '[appMouseAnimation]',

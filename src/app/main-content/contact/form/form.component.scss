@@ -204,8 +204,14 @@ textarea:-moz-autofill {
 
   .input-container {
     width: 360px;
+    padding-top: 3px;
+    gap: 0;
+    min-height: 90px;
     textarea {
       height: 45px !important;
+    }
+    input{
+      height: 45px;
     }
   }
 

@@ -44,11 +44,6 @@ a {
 
 .nav-menu-icon{
   display: none;
-  &:hover{
-    img {
-      content:url('/assets/icons/header/hover.webp');
-    }
-  }
 }
 
 #nav-menu-overlay {
@@ -68,6 +63,15 @@ a {
     pointer-events: auto;
   }
 }
+
+@media (pointer: fine) {
+  .nav-menu-icon:hover {
+    img {
+      content: url('/assets/icons/header/hover.webp');
+    }
+  }
+}
+
 
 @media (max-width: $displayWidth-lg) {
   .header-content{
