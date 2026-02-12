@@ -11,7 +11,6 @@ export class NavMenuService {
      * Sets the navigation menu state to visible.
      */
     openNavMenu() {
-      console.log('open menu');
       this.isNavMenuOpen.set(true);
       document.body.style.overflow = 'hidden';
       document.body.style.position = 'fixed';
@@ -23,7 +22,6 @@ export class NavMenuService {
      * Sets the navigation menu state to hidden
      */
     closeNavMenu() {
-      console.log('close menu');
       this.isNavMenuOpen.set(false);
       document.body.style.overflow = '';
       document.body.style.position = '';

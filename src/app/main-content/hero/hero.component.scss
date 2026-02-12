@@ -158,7 +158,10 @@
 @media only screen and  (max-width: $displayWidth-xs) {  
     .hero-content{
         width: 343px;
-        height: 260px !important;
+        height: 280px !important;
+    }
+    .section-bg{
+        padding-top: 50px !important;
     }
 }
 
@@ -181,7 +184,7 @@
 
     .hero-content{
         width: fit-content !important;
-        height: 320px !important;
+        height: 320px;
     }
     
     .polaroid-container{
