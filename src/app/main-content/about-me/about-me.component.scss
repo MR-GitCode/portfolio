@@ -99,6 +99,16 @@
         padding-bottom: 80px;
         width: 400px;
     }
+
+    .about-me-info {
+        position: unset;
+        height: unset;
+        gap: 25px;
+        .contact-bt {
+            position: unset;
+            align-self: end;  
+        }
+    }
 }
 
 @media only screen and  (max-width: 500px) {
@@ -114,18 +124,6 @@
 @media only screen and  (max-width: 450px) {
     .about-me-content {
         width: 320px !important;
-        div{
-            width: 315px;
-        }
-    }
-}
-
-@media only screen and  (max-width: $displayWidth-xs) { 
-    .about-me-info span{
-        font-size: 16px !important; 
-    }
-    
-    .about-me-content {
         h1{
             font-size: 45px;
         }
@@ -134,7 +132,12 @@
             width: 280px;
         }
     }
+}
 
+@media only screen and  (max-width: $displayWidth-xs) { 
+    .about-me-info span{
+        font-size: 16px !important; 
+    }
     #drawline{
         width: 220px;
     }

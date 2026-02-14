@@ -20,14 +20,12 @@
             <div class="sticker-text sticker-final">
                 <p>{{ skillContent.sticker.pulled[languageService.lang][0] }}<br> {{ skillContent.sticker.pulled[languageService.lang][1] }}</p>
                 <div class="interest-skills">
-                    @for ( skill of skills(); track skill.name) {
-                        @if (skill.type == 'interest') {
-                            <app-skill-icon 
-                                [skill]="skill";
-                                style=" --icon-width: 50px;
-                                        --icon-height: 50px;">
-                            </app-skill-icon> 
-                        }
+                    @for ( skill of interestSkills(); track skill.name) {
+                        <app-skill-icon 
+                            [skill]="skill"
+                            style=" --icon-width: 50px;
+                                    --icon-height: 50px;">
+                        </app-skill-icon> 
                     }  
                 </div>
             </div>

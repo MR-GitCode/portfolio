@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { SkillIconComponent } from '../skill-icon/skill-icon.component';
 import { FirestoreContentService } from '../../../shared/services/firestore-content.service';
 import { LanguageService } from '../../../shared/services/language.service';
@@ -19,7 +19,10 @@ export class StickerComponent {
   skills = this.contentService.getSkills();
   languageService = inject(LanguageService);
   skillContent = this.contentService.getSkillContent();
-
+  interestSkills = computed(() =>
+    this.skills().filter(skill => skill.type === 'interest')
+  );
+  
   /**
    * Toggles the peel animation state.
    * @returns 
@@ -37,4 +40,6 @@ export class StickerComponent {
       this.peelTimer = window.setTimeout(() => this.state = 'default', 400);
     }
   }
+
+  
 }
